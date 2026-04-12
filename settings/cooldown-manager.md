@@ -192,6 +192,7 @@ Configure proc/ready glow effects on Essential and Utility bar icons. Stored at 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
 | `customGlow.essentialEnabled` | boolean | `true` | Enable glow on Essential bar icons |
+| `customGlow.essentialPandemicEnabled` | boolean | `true` | Mirror Blizzard's pandemic refresh highlight on Essential tracked auras |
 | `customGlow.essentialGlowType` | string | `"Pixel Glow"` | Glow style: `"Pixel Glow"`, `"Autocast Shine"`, `"Button Glow"` |
 | `customGlow.essentialColor` | color | `{0.95, 0.95, 0.32, 1}` | Glow color (yellow/gold) |
 | `customGlow.essentialLines` | number | `14` | Number of lines (Pixel Glow) or spots (Autocast Shine) |
@@ -206,6 +207,7 @@ Configure proc/ready glow effects on Essential and Utility bar icons. Stored at 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
 | `customGlow.utilityEnabled` | boolean | `true` | Enable glow on Utility bar icons |
+| `customGlow.utilityPandemicEnabled` | boolean | `true` | Mirror Blizzard's pandemic refresh highlight on Utility tracked auras |
 | `customGlow.utilityGlowType` | string | `"Pixel Glow"` | Glow style: `"Pixel Glow"`, `"Autocast Shine"`, `"Button Glow"` |
 | `customGlow.utilityColor` | color | `{0.95, 0.95, 0.32, 1}` | Glow color (yellow/gold) |
 | `customGlow.utilityLines` | number | `14` | Number of lines or spots |
