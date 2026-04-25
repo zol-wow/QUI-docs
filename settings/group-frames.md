@@ -181,7 +181,21 @@ Buff and debuff icon display on group frames.
 | `auras.buffIconSize` | number | `14` | Buff icon size in pixels |
 | `auras.showBuffDurationText` | boolean | `true` | Show duration text under buff icons |
 | `auras.showDebuffDurationText` | boolean | `true` | Show duration text under debuff icons |
-| `auras.showDurationColor` | boolean | `true` | Color duration text based on remaining time |
+| `auras.showDurationColor` | boolean | `true` | Legacy fallback for remaining-time duration color |
+| `auras.buffDurationFont` | string | `""` | Buff duration font (`""` uses the frame font) |
+| `auras.buffDurationFontSize` | number | `9` | Buff duration font size |
+| `auras.buffDurationAnchor` | string | `"BOTTOM"` | Buff duration text anchor point on the icon |
+| `auras.buffDurationOffsetX` | number | `0` | Buff duration text horizontal offset |
+| `auras.buffDurationOffsetY` | number | `-6` | Buff duration text vertical offset |
+| `auras.buffDurationColor` | color | `{1, 1, 1, 1}` | Buff duration static text color |
+| `auras.buffDurationUseTimeColor` | boolean | `true` | Use remaining-time color bands for buff durations |
+| `auras.debuffDurationFont` | string | `""` | Debuff duration font (`""` uses the frame font) |
+| `auras.debuffDurationFontSize` | number | `9` | Debuff duration font size |
+| `auras.debuffDurationAnchor` | string | `"BOTTOM"` | Debuff duration text anchor point on the icon |
+| `auras.debuffDurationOffsetX` | number | `0` | Debuff duration text horizontal offset |
+| `auras.debuffDurationOffsetY` | number | `-6` | Debuff duration text vertical offset |
+| `auras.debuffDurationColor` | color | `{1, 1, 1, 1}` | Debuff duration static text color |
+| `auras.debuffDurationUseTimeColor` | boolean | `true` | Use remaining-time color bands for debuff durations |
 | `auras.showExpiringPulse` | boolean | `true` | Pulse animation when an aura is about to expire |
 
 ---
