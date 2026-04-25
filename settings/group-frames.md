@@ -179,7 +179,9 @@ Buff and debuff icon display on group frames.
 | `auras.showBuffs` | boolean | `false` | Show buff icons on frames |
 | `auras.maxBuffs` | number | `0` | Maximum number of buff icons displayed |
 | `auras.buffIconSize` | number | `14` | Buff icon size in pixels |
-| `auras.showDurationColor` | boolean | `true` | Color aura borders based on remaining duration |
+| `auras.showBuffDurationText` | boolean | `true` | Show duration text under buff icons |
+| `auras.showDebuffDurationText` | boolean | `true` | Show duration text under debuff icons |
+| `auras.showDurationColor` | boolean | `true` | Color duration text based on remaining time |
 | `auras.showExpiringPulse` | boolean | `true` | Pulse animation when an aura is about to expire |
 
 ---
