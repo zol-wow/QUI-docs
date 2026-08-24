@@ -8,16 +8,43 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.1
+## Current Release: 5.2.2
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.1 completes the aura-display and combat-safety work from the beta
-series, with incoming-cast tracking and group-frame dispel improvements.
+QUI 5.2.2 expands profile sharing, combat feedback, and group tools while
+hardening Cooldown Manager, protected UI, and native event handling.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.2.2
+
+### Profiles and displays
+
+- **Feature settings can be shared across profiles**, including Aura Displays
+  and Group / Raid Frames, without replacing click-cast bindings.
+- **Tracked aura displays can keep inactive icons visible** with configurable
+  placeholder behavior and styling.
+
+### Combat feedback
+
+- **Action Bar range and usability colors follow native state events** through
+  paging, stance, combat, and slot changes without disrupting shared events.
+- **Cooldown Manager icons support configurable pressed effects** and preserve
+  cast highlights across reanchored, pooled, and remapped icons.
+- **Cooldown and consumable state follows Blizzard's live sources**, including
+  charge metadata, aura phases, item counts, and partial source updates.
+
+### Group content and utility
+
+- **Group-frame debuff gradients expose non-dispellable types** while actionable
+  dispels keep their full overlay and cleanse-ready glow.
+- **Group-frame click-casting supports items**, and raid releases can require
+  Ctrl after a three-second safety delay.
+- **The Lust Timer follows Blizzard's native aura state** during combat, while
+  castbars, bank controls, and startup paths avoid protected mutations.
 
 ## What's New in 5.2.1
 
