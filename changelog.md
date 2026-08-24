@@ -8,23 +8,30 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.2-beta7
+## Current Release: 5.2.2-beta8
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.2-beta7 continues the 5.2.2 beta line with Cooldown Manager proc-glow
-cleanup for recycled icon frames.
+QUI 5.2.2-beta8 continues the 5.2.2 beta line with combat-safe Lust Timer,
+castbar anchoring, and Cooldown Manager count fixes.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.2-beta7
+## What's New in 5.2.2-beta8
+
+### Combat HUD
+
+- **The Lust Timer follows Blizzard's live aura state**, keeping its countdown
+  and visibility current when Lust is applied or expires during combat.
+- **Target and boss castbars stay mutable in combat**, avoiding protected
+  unit-frame anchors while preserving their configured position and width.
 
 ### Cooldown Manager
 
-- **Proc glows stop when Cooldown Manager icons are released**, preventing
-  stale animations from carrying into recycled frames.
+- **Owned cooldown icons show spell cast and use counts**, including resource
+  counts such as Vengeance Soul Fragments, without reading protected values.
 
 ## What's New in 5.2.1
 
