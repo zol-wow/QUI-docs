@@ -8,36 +8,61 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.2-beta9
+## Current Release: 5.2.3-beta1
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.2-beta9 continues the 5.2.2 beta line with safer raid releases,
-group-frame dispel awareness, and more reliable combat feedback.
+QUI 5.2.3-beta1 starts the 5.2.3 beta line with global profile controls,
+automatic form-resource refreshes, and safer Cooldown Manager Edit Mode updates.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.2-beta9
+## What's New in 5.2.3-beta1
 
-### Group Content
+### Profiles
 
-- **Raid releases can require Ctrl after a three-second safety delay**, helping
-  prevent accidental releases while a battle resurrection is available.
-- **Group frames can show non-dispellable debuff types as health gradients**,
-  while actionable dispels retain the full overlay and cleanse-ready glow.
-- **Group-frame range fading preserves dead, offline, and other life-state
-  visuals**, and hidden aura buttons no longer intercept mouse input.
+- **Aura Displays and Group / Raid Frames can be pinned across all profiles**
+  from one canonical source, including active-specialization layout settings.
+- **Individual destination profiles can Ignore a global pin for local edits**
+  and use Apply to restore the shared settings.
 
-### Combat Feedback
+### Combat UI
 
-- **Action Bar range and usability colors follow native state events**, staying
-  current through paging, stance, and combat transitions.
-- **Cooldown Manager icons can mirror held button presses** with Off, Blizzard,
-  or QUI effects configured per icon container.
-- **Cast highlights and held-press effects follow reanchored, pooled, and
-  remapped cooldown icons** without carrying stale state between abilities.
+- **Resource bars refresh automatically when Fluid Form changes forms**, so Cat
+  Form combo points appear without a manual refresh.
+- **Action Bar range and usability colors clear when their live condition
+  ends**, including after mount and display changes.
+- **Cooldown Manager Edit Mode corrections save once and immediately require a
+  reload**, avoiding protected Cooldown Viewer errors during continued play.
+
+## What's New in 5.2.2
+
+### Profiles and displays
+
+- **Feature settings can be shared across profiles**, including Aura Displays
+  and Group / Raid Frames, without replacing click-cast bindings.
+- **Tracked aura displays can keep inactive icons visible** with configurable
+  placeholder behavior and styling.
+
+### Combat feedback
+
+- **Action Bar range and usability colors follow native state events** through
+  paging, stance, combat, and slot changes without disrupting shared events.
+- **Cooldown Manager icons support configurable pressed effects** and preserve
+  cast highlights across reanchored, pooled, and remapped icons.
+- **Cooldown and consumable state follows Blizzard's live sources**, including
+  charge metadata, aura phases, item counts, and partial source updates.
+
+### Group content and utility
+
+- **Group-frame debuff gradients expose non-dispellable types** while actionable
+  dispels keep their full overlay and cleanse-ready glow.
+- **Group-frame click-casting supports items**, and raid releases can require
+  Ctrl after a three-second safety delay.
+- **The Lust Timer follows Blizzard's native aura state** during combat, while
+  castbars, bank controls, and startup paths avoid protected mutations.
 
 ## What's New in 5.2.1
 
