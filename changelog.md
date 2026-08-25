@@ -8,18 +8,19 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.3-beta1
+## Current Release: 5.2.3-beta2
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta1 starts the 5.2.3 beta line with global profile controls,
-automatic form-resource refreshes, and safer Cooldown Manager Edit Mode updates.
+QUI 5.2.3-beta2 keeps Action Bar range and usability tints hidden with their
+autohidden bars, alongside the 5.2.3 profile, resource, and Cooldown Manager
+updates.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.3-beta1
+## What's New in 5.2.3-beta2
 
 ### Profiles
 
@@ -34,6 +35,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   Form combo points appear without a manual refresh.
 - **Action Bar range and usability colors clear when their live condition
   ends**, including after mount and display changes.
+- **New Action Bar tints respect autohide state**, staying hidden through full
+  and partial fades until the bar is fully revealed.
 - **Cooldown Manager Edit Mode corrections save once and immediately require a
   reload**, avoiding protected Cooldown Viewer errors during continued play.
 
