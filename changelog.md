@@ -59,7 +59,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 - **Action Bar range and usability colors follow native state events** through
   paging, stance, combat, and slot changes without disrupting shared events.
-- **Cooldown Manager icons support configurable pressed effects** and preserve
+- **Cooldown Manager cooldown icons support configurable pressed effects** and preserve
   cast highlights across reanchored, pooled, and remapped icons.
 - **Cooldown and consumable state follows Blizzard's live sources**, including
   charge metadata, aura phases, item counts, and partial source updates.
