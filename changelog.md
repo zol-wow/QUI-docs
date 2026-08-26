@@ -8,19 +8,19 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.3-beta3
+## Current Release: 5.2.3-beta4
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta3 keeps Blizzard-owned UI transitions and Group Frame aura
-updates safe, alongside the 5.2.3 profile, resource, Action Bar, and Cooldown
-Manager updates.
+QUI 5.2.3-beta4 keeps expanding Group Frame aura settings and inactive Aura
+Display movers usable, while limiting pressed effects to Cooldown Manager
+cooldown icons.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.3-beta3
+## What's New in 5.2.3-beta4
 
 ### Profiles
 
@@ -31,6 +31,12 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Combat UI
 
+- **Expanding Group Frame aura settings keeps every following control in
+  place**, including Targeted Spells, Dispel settings, and guidance text.
+- **Inactive Aura Display movers remain usable in Layout Mode** at their saved
+  size instead of collapsing when the display has no active icons.
+- **Cooldown Manager pressed effects apply only to cooldown icon containers**,
+  leaving buff icons unaffected.
 - **Group Frame aura layering waits until combat ends** instead of reading
   protected frame state during combat.
 - **Resource bars refresh automatically when Fluid Form changes forms**, so Cat
