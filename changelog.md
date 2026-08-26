@@ -8,19 +8,18 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.3-beta4
+## Current Release: 5.2.3-beta5
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta4 keeps expanding Group Frame aura settings and inactive Aura
-Display movers usable, while limiting pressed effects to Cooldown Manager
-cooldown icons.
+QUI 5.2.3-beta5 keeps Objective Tracker aura handling native and prevents
+keybind scans from invoking OPie's macro editor.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.3-beta4
+## What's New in 5.2.3-beta5
 
 ### Profiles
 
@@ -31,6 +30,10 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Combat UI
 
+- **Objective Tracker module layouts remain on Blizzard's native path**,
+  avoiding restricted Scenario aura reads after QUI styling updates.
+- **Keybind scans skip OPie macro-editor widgets**, preventing its editor-only
+  `GetAction` API from being called as an action button.
 - **Expanding Group Frame aura settings keeps every following control in
   place**, including Targeted Spells, Dispel settings, and guidance text.
 - **Inactive Aura Display movers remain usable in Layout Mode** at their saved
