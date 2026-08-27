@@ -8,16 +8,27 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.3-beta6
+## Current Release: 5.2.3-beta7
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta6 tightens Objective Tracker and Cooldown Manager ownership
-boundaries and restores manual castbar sizing.
+QUI 5.2.3-beta7 makes the Alts window resizable and adapts its Weeklies and
+Currencies tables to their localized content.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.2.3-beta7
+
+### Alts
+
+- **The Alts window can be resized from its bottom-right corner**, with its
+  position, anchor, width, and height preserved across reloads.
+- **Weeklies now has localized column headers**, and both Weeklies and
+  Currencies size their left-aligned columns from the rendered text.
+- **An active Alts move or resize stops cleanly when combat begins**, preventing
+  the window from continuing to follow the cursor through combat.
 
 ## What's New in 5.2.3-beta6
 
