@@ -13,8 +13,8 @@ This page summarizes the user-facing changes since the last mainline release. Fo
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta7 makes the Alts window resizable and adapts its Weeklies and
-Currencies tables to their localized content.
+QUI 5.2.3-beta7 makes the Alts window resizable and fits its Weeklies and
+Currencies columns to their rendered content.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
@@ -25,12 +25,10 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 - **The Alts window can be resized from its bottom-right corner**, with its
   position, anchor, width, and height preserved across reloads.
-- **Weeklies now has localized column headers**, and both Weeklies and
+- **Weeklies now shows column headers**, and both Weeklies and
   Currencies size their left-aligned columns from the rendered text.
 - **An active Alts move or resize stops cleanly when combat begins**, preventing
   the window from continuing to follow the cursor through combat.
-
-## What's New in 5.2.3-beta6
 
 ### Profiles
 
