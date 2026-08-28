@@ -8,18 +8,18 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.3-beta8
+## Current Release: 5.2.3-beta9
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta8 keeps Cooldown Manager swipes synchronized with active
-cooldowns while retaining the Alts window improvements from beta7.
+QUI 5.2.3-beta9 adds conditional HUD visibility for Aura Displays and improves
+currency tooltips, chat tab overflow, and moved Blizzard panel stacking.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.3-beta8
+## What's New in 5.2.3-beta9
 
 ### Alts
 
@@ -29,6 +29,19 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   Currencies size their left-aligned columns from the rendered text.
 - **An active Alts move or resize stops cleanly when combat begins**, preventing
   the window from continuing to follow the cursor through combat.
+
+### Interface and utility
+
+- **Aura Displays can use the shared HUD Visibility rules**, including combat,
+  target, group, instance, mouseover, mount, location-hide, opacity, and fade
+  controls without bypassing each display's gameplay visibility gates.
+- **Currency tooltips show saved per-character balances**, while account-wide
+  currencies render one live Warband total instead of duplicated character
+  values.
+- **Overflowing QUI Chat tabs open a direct picker**, and conversation tabs gain
+  close buttons with predictable adjacent-tab selection after closing.
+- **Newly opened moved Blizzard panels stay above overlapping panels** after QUI
+  restores their saved positions.
 
 ### Profiles
 
