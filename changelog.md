@@ -8,18 +8,19 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.3-beta9
+## Current Release: 5.2.3-beta10
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta9 adds conditional HUD visibility for Aura Displays and improves
-currency tooltips, chat tab overflow, and moved Blizzard panel stacking.
+QUI 5.2.3-beta10 keeps Action Bar proc glows current through ability, paging,
+flyout, visibility, and special-bar changes, alongside the beta line's HUD and
+interface improvements.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.3-beta9
+## What's New in 5.2.3-beta10
 
 ### Alts
 
@@ -52,6 +53,9 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Combat UI
 
+- **Action Bar proc glows update as their current action changes**, including
+  paging, special bars, flyouts, duplicate slots, and hidden-bar reveals,
+  without disrupting Rotation Assist highlights.
 - **Cooldown Manager swipes remain visible for the full cooldown**, including
   ordinary abilities and charge recharges, instead of disappearing while the
   icon remains desaturated.
