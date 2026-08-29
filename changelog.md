@@ -55,9 +55,9 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Action Bar proc glows update as their current action changes**, including
   paging, special bars, flyouts, duplicate slots, and hidden-bar reveals,
   without disrupting Rotation Assist highlights.
-- **Cooldown Manager swipes remain visible for the full cooldown**, including
-  ordinary abilities and charge recharges, instead of disappearing while the
-  icon remains desaturated.
+- **Cooldown Manager swipes remain visible for the full cooldown** without
+  flashing as a full overlay when their texture refreshes, including ordinary
+  abilities and charge recharges.
 - **Objective Tracker styling stays off Blizzard's native update and resize
   paths**, preserves native Scenario dimensions, and restores the Scenario
   tracker after QUI's Mythic+ timer closes.
@@ -81,10 +81,18 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   ends**, including after mount and display changes.
 - **New Action Bar tints respect autohide state**, staying hidden through full
   and partial fades until the bar is fully revealed.
+- **Mythic+ enemy forces follow the selected Count, Percentage, or Both
+  format**, including current and required counts alongside percentage when
+  Both is selected.
+- **Freshly shown nameplates initialize their absorb bar immediately** instead
+  of waiting for a later health update.
+- **Blizzard's vehicle exit button remains available when the active vehicle
+  permits leaving**, while QUI continues to skin the surrounding override bar.
 - **Cooldown Manager Edit Mode corrections save once and immediately require a
   reload**, avoiding protected Cooldown Viewer errors during continued play.
 - **Micro Menu ownership stays with Blizzard during temporary UI transitions**,
-  including Override Action Bars and Pet Battles.
+  including Override Action Bars and Pet Battles, then completes a deferred
+  cold-start build after Blizzard releases it.
 - **The custom Info Bar Micro Menu no longer duplicates Blizzard's Shop
   button.** The native Micro Menu remains the supported path for opening the
   Shop.
