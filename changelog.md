@@ -8,6 +8,87 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
+## Current Release: 5.2.3
+
+{: .warning }
+**WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
+
+QUI 5.2.3 expands shared HUD visibility and cross-profile controls while
+hardening Action Bars, Cooldown Manager, Blizzard-owned UI, and utility windows.
+
+{: .important }
+Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.2.3
+
+### Alts
+
+- **The Alts window can be resized from its bottom-right corner**, with its
+  position, anchor, width, and height preserved across reloads.
+- **Weeklies now shows column headers**, and both Weeklies and
+  Currencies size their left-aligned columns from the rendered text.
+- **An active Alts move or resize stops cleanly when combat begins**, preventing
+  the window from continuing to follow the cursor through combat.
+
+### Interface and utility
+
+- **Aura Displays can use the shared HUD Visibility rules**, including combat,
+  target, group, instance, mouseover, mount, location-hide, opacity, and fade
+  controls without bypassing each display's gameplay visibility gates.
+- **Currency tooltips show saved per-character balances**, while account-wide
+  currencies render one live Warband total instead of duplicated character
+  values.
+- **Overflowing QUI Chat tabs open a direct picker**, and conversation tabs gain
+  close buttons with predictable adjacent-tab selection after closing.
+- **Newly opened moved Blizzard panels stay above overlapping panels** after QUI
+  restores their saved positions.
+
+### Profiles
+
+- **Aura Displays and Group / Raid Frames can be pinned across all profiles**
+  from one canonical source, including active-specialization layout settings.
+- **Individual destination profiles can Ignore a global pin for local edits**
+  and use Apply to restore the shared settings.
+
+### Combat UI
+
+- **Action Bar proc glows update as their current action changes**, including
+  paging, special bars, flyouts, duplicate slots, and hidden-bar reveals,
+  without disrupting Rotation Assist highlights.
+- **Cooldown Manager swipes remain visible for the full cooldown**, including
+  ordinary abilities and charge recharges, instead of disappearing while the
+  icon remains desaturated.
+- **Objective Tracker styling stays off Blizzard's native update and resize
+  paths**, preserves native Scenario dimensions, and restores the Scenario
+  tracker after QUI's Mythic+ timer closes.
+- **Cooldown Manager waits for Blizzard to load its native viewer**, avoiding
+  tainted settings callbacks during later loadout changes.
+- **Manual castbar widths work when Auto-Width is off or the anchor is
+  disabled**, and the settings preview shows the configured width.
+- **Keybind scans skip OPie macro-editor widgets**, preventing its editor-only
+  `GetAction` API from being called as an action button.
+- **Expanding Group Frame aura settings keeps every following control in
+  place**, including Targeted Spells, Dispel settings, and guidance text.
+- **Inactive Aura Display movers remain usable in Layout Mode** at their saved
+  size instead of collapsing when the display has no active icons.
+- **Cooldown Manager pressed effects apply only to cooldown icon containers**,
+  leaving buff icons unaffected.
+- **Group Frame aura layering waits until combat ends** instead of reading
+  protected frame state during combat.
+- **Resource bars refresh automatically when Fluid Form changes forms**, so Cat
+  Form combo points appear without a manual refresh.
+- **Action Bar range and usability colors clear when their live condition
+  ends**, including after mount and display changes.
+- **New Action Bar tints respect autohide state**, staying hidden through full
+  and partial fades until the bar is fully revealed.
+- **Cooldown Manager Edit Mode corrections save once and immediately require a
+  reload**, avoiding protected Cooldown Viewer errors during continued play.
+- **Micro Menu ownership stays with Blizzard during temporary UI transitions**,
+  including Override Action Bars and Pet Battles.
+- **The custom Info Bar Micro Menu no longer duplicates Blizzard's Shop
+  button.** The native Micro Menu remains the supported path for opening the
+  Shop.
+
 ## Current Release: 5.2.2
 
 {: .warning }
