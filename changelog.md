@@ -97,7 +97,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   button.** The native Micro Menu remains the supported path for opening the
   Shop.
 
-## Current Release: 5.2.2
+## Previous Release: 5.2.2
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
