@@ -39,7 +39,7 @@ Right-click the header to open a context menu:
 
 Meter Type and `Current` / `Overall` choices persist across reloads.
 
-Click any **row** to replace that meter window with a scrollable per-source breakdown of up to 40 rows. It updates with its parent window and closes from its X, background, or detail rows. Hovering a spell row can show Blizzard's native spell tooltip.
+Click any **row** to replace the meter body below its persistent header with a scrollable per-source breakdown of up to 40 rows. It updates with its parent window and closes from its background or detail rows. Hovering a spell row can show Blizzard's native spell tooltip.
 
 **Hover** a row for a fresh spell, target, attacker, or Death recap preview. The default shows up to 15 rows; compact mode shows 8. During combat, rich details remain available for the local player's row and Death recaps, while restricted rows fall back to a summary tooltip. Death details include event timing, HP, healing/damage, and overkill; an unavailable custom recap falls back to Blizzard's native recap on click.
 
@@ -61,7 +61,7 @@ Click any **row** to replace that meter window with a scrollable per-source brea
 | Auto Reset on Key Start | Clears all stored meter sessions when a Mythic+ key starts, so Overall begins at zero for that run. |
 | Number Format | *Minimal* (1K / 2M) / *Compact* (1.5K / 2.4M) / *Complete* (1,500 / 2,400,000). |
 | Icon Style | *Spec icon* / *Class icon* / *None*. |
-| Breakdown Preview Position | *Next to hovered row* / *Center of screen* / *Left of meter* / *Right of meter*. |
+| Breakdown Preview Position | *Above hovered row* / *Center of screen* / *Left of meter* / *Right of meter*. |
 
 ### Appearance: Bars
 
