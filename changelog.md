@@ -8,19 +8,44 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.2.3-beta10
+## Current Release: 5.3-beta1
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.2.3-beta10 keeps Action Bar proc glows current through ability, paging,
-flyout, visibility, and special-bar changes, alongside the beta line's HUD and
-interface improvements.
+QUI 5.3-beta1 opens the 5.3 beta line with a modern Damage Meter detail
+workspace, broader Blizzard-frame styling, and focused combat UI corrections.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.2.3-beta10
+## What's New in 5.3-beta1
+
+### Damage Meter
+
+- **Damage Meter rows open a reusable five-pane detail workspace** for spells,
+  targets, attackers, and death recaps while row-hover details remain
+  independent and interactive.
+- **Historical sessions and individual windows have richer controls**, with
+  persisted pane sizes and safer combat and Mythic+ state selection.
+
+### Interface
+
+- **Unrestricted Blizzard frames remain movable during combat**, while secure
+  and proxy-owned frames continue to wait until combat ends.
+- **Shared frame styling is more consistent** across Social, talents, Crafting
+  Orders, tabs, text, and close controls.
+- **Initiative Tasks use QUI's Objective Tracker styling**, and Mail's Open All
+  action keeps the Mail window above overlapping moved panels.
+
+### Combat UI
+
+- **Group Frame summon indicators handle secret status values safely** and
+  refresh when combat ends.
+- **Mail's Open All action keeps the Mail window above overlapping moved
+  panels.**
+
+## What's New in 5.2.3
 
 ### Alts
 
