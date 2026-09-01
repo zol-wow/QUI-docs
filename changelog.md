@@ -8,18 +8,18 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3-beta1
+## Current Release: 5.3-beta2
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta1 opens the 5.3 beta line with a modern Damage Meter detail
-workspace, broader Blizzard-frame styling, and focused combat UI corrections.
+QUI 5.3-beta2 adds alert controls, tighter combat-HUD layouts, and focused
+Damage Meter and Chat corrections to the 5.3 beta line.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta1
+## What's New in 5.3-beta2
 
 ### Damage Meter
 
@@ -28,6 +28,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   independent and interactive.
 - **Historical sessions and individual windows have richer controls**, with
   persisted pane sizes and safer combat and Mythic+ state selection.
+- **The detail workspace is resizable and remembers its dimensions.** Target
+  rows drill down to their spells, and player hover details refresh item levels.
 
 ### Interface
 
@@ -37,9 +39,18 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   Orders, tabs, text, and close controls.
 - **Initiative Tasks use QUI's Objective Tracker styling**, and Mail's Open All
   action keeps the Mail window above overlapping moved panels.
+- **Incoming Casts can collapse readable hidden icons** so visible casts pack
+  together while restricted targets retain fixed-width gaps.
+- **The Battle Res Counter can hide without charge information**, removing its
+  unavailable icon between supported encounters and in unsupported content.
+- **Player chat bodies preserve literal apostrophes and percent tokens** instead
+  of treating ordinary messages as format templates.
 
 ### Combat UI
 
+- **The Group Death Alert can name the killing blow**, optionally include the
+  attacker, color the player name by class, limit alerts to instances, and use
+  a configurable on-screen duration.
 - **Aura Displays can play Blizzard-native sounds** when an aura is applied,
   gains stacks, or is removed.
 - **Cooldown Manager entries have sound and text-to-speech alerts** for
