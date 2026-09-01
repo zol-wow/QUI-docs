@@ -40,6 +40,13 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Combat UI
 
+- **Aura Displays can play Blizzard-native sounds** when an aura is applied,
+  gains stacks, or is removed.
+- **Cooldown Manager entries have sound and text-to-speech alerts** for
+  cooldown and aura state changes, with searchable sounds and previews.
+- **Cooldown Manager no longer writes Blizzard's Edit Mode layouts during
+  login.** Layout mismatches are detected without mutation and corrected through
+  guided Edit Mode steps, preventing protected Cooldown Viewer errors.
 - **Group Frame summon indicators handle secret status values safely** and
   refresh when combat ends.
 
