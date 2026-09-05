@@ -100,7 +100,8 @@ Standalone buff/proc icon display, typically anchored near the CDM bars.
 | `ncdm.buff.iconSize` | number | `32` | Icon size in pixels |
 | `ncdm.buff.borderSize` | number | `1` | Border thickness (0-8) |
 | `ncdm.buff.aspectRatioCrop` | number | `1.0` | Aspect ratio (1.0 = square) |
-| `ncdm.buff.growthDirection` | string | `"CENTERED_HORIZONTAL"` | Growth direction: `"CENTERED_HORIZONTAL"`, `"LEFT"`, `"RIGHT"` |
+| `ncdm.buff.growthDirection` | string | `"CENTERED_HORIZONTAL"` | Order icons are added in: `"CENTERED_HORIZONTAL"`, `"RIGHT"`, `"LEFT"`, `"UP"`, `"DOWN"` |
+| `ncdm.buff.growthAnchor` | string | `"CENTER"` | Edge that stays put as icons appear/disappear during free placement: `"CENTER"`, `"LEFT"`, `"RIGHT"`, `"TOP"`, `"BOTTOM"` |
 | `ncdm.buff.zoom` | number | `0` | Icon texture zoom (0-0.2) |
 | `ncdm.buff.padding` | number | `4` | Spacing between icons (-20 to 20) |
 | `ncdm.buff.durationSize` | number | `14` | Duration text font size (8-24) |
