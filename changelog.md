@@ -8,18 +8,18 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3-beta4
+## Current Release: 5.3-beta5
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta4 adds summon automation and visible teleport cooldowns, with
-castbar and settings layout fixes alongside the cumulative 5.3 beta improvements.
+QUI 5.3-beta5 fixes blocked unit-frame castbar updates during combat, alongside
+the cumulative 5.3 beta improvements below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta4
+## What's New in 5.3-beta5
 
 ### Quality of Life and Travel
 
@@ -72,6 +72,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Combat UI
 
+- **Unit-frame castbars no longer trigger blocked resize errors during combat.**
 - **Unit-frame castbars defer restricted layout changes** and retry their
   positioning without attaching to protected targets.
 - **The Group Death Alert can name the killing blow**, optionally include the
