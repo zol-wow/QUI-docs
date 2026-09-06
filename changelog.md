@@ -8,21 +8,33 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3-beta5
+## Current Release: 5.3-beta6
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta5 fixes blocked unit-frame castbar updates during combat, alongside
-the cumulative 5.3 beta improvements below.
+QUI 5.3-beta6 adds Aura Display creation and layout tools, buff-icon growth
+controls, and focused combat UI fixes alongside the cumulative beta improvements below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta5
+## What's New in 5.3-beta6
 
+### Aura Displays
+
+- **Aura Displays have templates, guided setup, and custom creation.** Browse
+  spells with clearer same-name variants, choose a display style, and configure
+  its unit, position, and load conditions.
+- **Aura Displays support nested groups, draggable previews, and share strings**
+  for individual displays or whole groups, with configurable spacing,
+  alignment, and sizing.
+- **Aura Displays can collapse gaps left by inactive tracked icons.** Compatible
+  grouped displays watching the same unit can also pack together.
 ### Quality of Life and Travel
 
+- **Group Death Alert settings now live under QoL → Notifications.** Existing
+  pinned alert settings open the new tab.
 - **Auto Accept Summons offers Off, Always, and Out of Combat modes.** Always
   waits until combat ends before accepting a still-active summon; Out of Combat
   leaves summons received during combat for manual confirmation.
@@ -33,6 +45,9 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Damage Meter
 
+- **Spell names and healing rows remain visible during combat.** When
+  restricted values prevent combining healing and absorbs, the native healing
+  view remains available.
 - **Damage Meter rows open a reusable five-pane detail workspace** for spells,
   targets, attackers, and death recaps while row-hover details remain
   independent and interactive.
@@ -72,6 +87,16 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Combat UI
 
+- **Cooldown Manager buff icons have growth direction and anchor controls.**
+  Grow centered, left, right, up, or down; choose which edge stays fixed during
+  free placement. Existing anchors to other frames remain in control.
+
+- **Cooldown Manager respects per-spell duration-text visibility overrides**
+  on native icons, and settings tooltips remain above the override panel.
+- **Replaced Blizzard buff bars stay hidden through HUD fades**, and tracked
+  bars refresh after closing Blizzard's Cooldown Manager settings.
+- **Hidden unit-frame castbars can appear during combat** when Blizzard allows
+  the frame to be shown.
 - **Unit-frame castbars no longer trigger blocked resize errors during combat.**
 - **Unit-frame castbars defer restricted layout changes** and retry their
   positioning without attaching to protected targets.
