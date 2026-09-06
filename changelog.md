@@ -8,21 +8,48 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3-beta2
+## Current Release: 5.3-beta7
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta2 adds alert controls, tighter combat-HUD layouts, and focused
-Damage Meter and Chat corrections to the 5.3 beta line.
+QUI 5.3-beta7 fixes lingering confirmation popups after automatic summon
+acceptance, alongside the cumulative beta improvements below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta2
+## What's New in 5.3-beta7
+
+### Aura Displays
+
+- **Aura Displays have templates, guided setup, and custom creation.** Browse
+  spells with clearer same-name variants, choose a display style, and configure
+  its unit, position, and load conditions.
+- **Aura Displays support nested groups, draggable previews, and share strings**
+  for individual displays or whole groups, with configurable spacing,
+  alignment, and sizing.
+- **Aura Displays can collapse gaps left by inactive tracked icons.** Compatible
+  grouped displays watching the same unit can also pack together.
+### Quality of Life and Travel
+
+- **Auto-accepted summons now close Blizzard's confirmation popup**, including
+  summons accepted after combat or a teleport finishes.
+- **Group Death Alert settings now live under QoL → Notifications.** Existing
+  pinned alert settings open the new tab.
+- **Auto Accept Summons offers Off, Always, and Out of Combat modes.** Always
+  waits until combat ends before accepting a still-active summon; Out of Combat
+  leaves summons received during combat for manual confirmation.
+- **Dungeon teleport buttons show cooldowns** in the Mythic+ window and world
+  map, while the Info Bar travel flyout shows countdowns for known teleports.
+- **QoL Automation settings stay in two columns**, including the final DELETE
+  confirmation control.
 
 ### Damage Meter
 
+- **Spell names and healing rows remain visible during combat.** When
+  restricted values prevent combining healing and absorbs, the native healing
+  view remains available.
 - **Damage Meter rows open a reusable five-pane detail workspace** for spells,
   targets, attackers, and death recaps while row-hover details remain
   independent and interactive.
@@ -37,6 +64,13 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   and proxy-owned frames continue to wait until combat ends.
 - **Shared frame styling is more consistent** across Social, talents, Crafting
   Orders, tabs, text, and close controls.
+- **QUI settings have clearer contrast and more consistent interaction states.**
+  Tooltips fade smoothly, scrolling is animated, and buttons, checkboxes,
+  dropdowns, tabs, and disabled controls share consistent visual feedback.
+- **The Character window skin now covers its full chrome**, including the
+  shell, bottom tabs, equipment and title popouts, and Reputation and Currency
+  panes. Character and Inspect settings flyouts now share the same styling and
+  scrolling behavior.
 - **Initiative Tasks use QUI's Objective Tracker styling**, and Mail's Open All
   action keeps the Mail window above overlapping moved panels.
 - **Incoming Casts can collapse readable hidden icons** so visible casts pack
@@ -46,8 +80,28 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Player chat bodies preserve literal apostrophes and percent tokens** instead
   of treating ordinary messages as format templates.
 
+### Bags
+
+- **Bank and guild-bank money dialogs accept exact gold, silver, and copper**
+  and close cleanly with their bank window.
+- **Guild-bank item transfers work from the displayed tab**, including the
+  combined All view, and continue working after closing and reopening the bank.
+
 ### Combat UI
 
+- **Cooldown Manager buff icons have growth direction and anchor controls.**
+  Grow centered, left, right, up, or down; choose which edge stays fixed during
+  free placement. Existing anchors to other frames remain in control.
+
+- **Cooldown Manager respects per-spell duration-text visibility overrides**
+  on native icons, and settings tooltips remain above the override panel.
+- **Replaced Blizzard buff bars stay hidden through HUD fades**, and tracked
+  bars refresh after closing Blizzard's Cooldown Manager settings.
+- **Hidden unit-frame castbars can appear during combat** when Blizzard allows
+  the frame to be shown.
+- **Unit-frame castbars no longer trigger blocked resize errors during combat.**
+- **Unit-frame castbars defer restricted layout changes** and retry their
+  positioning without attaching to protected targets.
 - **The Group Death Alert can name the killing blow**, optionally include the
   attacker, color the player name by class, limit alerts to instances, and use
   a configurable on-screen duration.
@@ -60,6 +114,11 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   guided Edit Mode steps, preventing protected Cooldown Viewer errors.
 - **Group Frame summon indicators handle secret status values safely** and
   refresh when combat ends.
+- **Incoming Casts and group-frame targeted-spell markers remain reliable
+  through combat transitions** without creating new UI elements during combat.
+- **Cooldown Manager leaves Blizzard's native viewer setting under Blizzard's
+  control.** Replaced native buff bars hide during early loading and restore
+  correctly when suppression is disabled.
 
 ## What's New in 5.2.3
 
