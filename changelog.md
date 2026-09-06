@@ -8,18 +8,18 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3-beta6
+## Current Release: 5.3-beta7
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta6 adds Aura Display creation and layout tools, buff-icon growth
-controls, and focused combat UI fixes alongside the cumulative beta improvements below.
+QUI 5.3-beta7 fixes lingering confirmation popups after automatic summon
+acceptance, alongside the cumulative beta improvements below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta6
+## What's New in 5.3-beta7
 
 ### Aura Displays
 
@@ -33,6 +33,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   grouped displays watching the same unit can also pack together.
 ### Quality of Life and Travel
 
+- **Auto-accepted summons now close Blizzard's confirmation popup**, including
+  summons accepted after combat or a teleport finishes.
 - **Group Death Alert settings now live under QoL → Notifications.** Existing
   pinned alert settings open the new tab.
 - **Auto Accept Summons offers Off, Always, and Out of Combat modes.** Always
