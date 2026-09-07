@@ -8,18 +8,18 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3-beta7
+## Current Release: 5.3-beta10
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta7 fixes lingering confirmation popups after automatic summon
-acceptance, alongside the cumulative beta improvements below.
+QUI 5.3-beta10 adds a native minimap rotation toggle and improves action-bar
+state, cooldown visibility, and compatibility with other addons’ pull commands.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta7
+## What's New in 5.3-beta10
 
 ### Aura Displays
 
@@ -32,6 +32,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Aura Displays can collapse gaps left by inactive tracked icons.** Compatible
   grouped displays watching the same unit can also pack together.
 ### Quality of Life and Travel
+
+- **QUI preserves other addons’ `/pull` commands** during registration and cleanup.
 
 - **Auto-accepted summons now close Blizzard's confirmation popup**, including
   summons accepted after combat or a teleport finishes.
@@ -60,6 +62,18 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Interface
 
+- **Rotate Minimap is available in minimap settings** and follows Blizzard's
+  native rotation setting, including changes made outside QUI.
+- **Action-bar suppression preserves Blizzard's secure button state**, and
+  cooldown animations recover when faded buttons become visible again.
+- **Cooldown Manager icons stay correctly hidden and anchored**, with more
+  consistent viewer visibility when Blizzard refreshes it.
+
+- **Weapon-oil timers refresh after entering an instance or changing zones**
+  to recover missing enchantment durations.
+- **Right-side Blizzard action bars recover their positioning after minimap
+  updates.** The hidden Blizzard minimap cluster now recalculates its bounds
+  after button visibility and layout changes.
 - **Unrestricted Blizzard frames remain movable during combat**, while secure
   and proxy-owned frames continue to wait until combat ends.
 - **Shared frame styling is more consistent** across Social, talents, Crafting
