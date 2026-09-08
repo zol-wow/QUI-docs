@@ -8,18 +8,27 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3-beta15
+## Current Release: 5.3.1-beta1
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta15 restores the custom Info Bar Shop button with its beta13
-behavior. The button opens and closes Blizzard's shop and remains disabled
-during combat. Aura Display, death-recap, Cooldown Manager setup, MicroMenu,
-and earlier beta improvements remain included below.
+QUI 5.3.1-beta1 opens the beta line for the next planned stable release,
+5.3.1. It carries forward the v5.3 runtime after synchronizing beta with main.
+This release updates version metadata and release notes; it introduces no
+gameplay or UI behavior changes from v5.3-beta15.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.3.1-beta1
+
+### Changed
+
+- **Opens the 5.3.1 beta line** for the next planned stable release.
+- **Carries forward the v5.3 runtime after synchronizing beta with main.**
+  This release updates version metadata and release notes; it introduces no
+  gameplay or UI behavior changes from v5.3-beta15.
 
 ## What's New in 5.3-beta15
 
