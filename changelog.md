@@ -6,22 +6,37 @@ nav_order: 5
 
 # Changelog
 
-This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
+This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.3-beta13
+## Current Release: 5.5.0-ptr-alpha2
 
 {: .warning }
-**WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
+**WoW 12.1.5 PTR only.** This alpha build targets interface 120105 and is for PTR testing.
 
-QUI 5.3-beta13 keeps possession abilities visible on Action Bar 1 and preserves
-your usual action keys when Blizzard falls back to the main bar. These abilities
-stay visible after fade timers expire. It also includes the raid-marker fixes,
-library compatibility updates, and alt-tracking and UI improvements below.
+QUI 5.5.0-ptr-alpha2 brings the latest beta fixes to the PTR alongside native
+aura labels, animation options, and Unicode-aware search. It improves possession
+action bars, encounter-gated Aura Displays, death recap selection, and castbar
+recovery while retaining the PTR-specific features below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta13
+## What's New in 5.5.0-ptr-alpha2
+
+- **PTR aura controls add optional caster labels, pandemic pulses, and entry
+  flashes.** Search uses native Unicode case folding.
+- **Possession abilities stay visible and keep your usual keys**, including
+  after fade timers expire. Raid markers remain visible with restricted values.
+- **Encounter-gated Aura Displays prepare before combat**, and individual
+  previews restore group packing when closed. Imports validate legacy duration
+  settings, and aura sound settings reconcile without render-time changes.
+- **Damage Meter keeps the selected death recap across refreshes**, and boss
+  castbars coalesce deferred retries and cancel them when the cast ends.
+- **Cooldown Manager explains when Blizzard's native viewers are disabled.**
+  Microbar ownership recovers after Blizzard releases it; the custom Info Bar
+  Shop button is removed to preserve Blizzard's store behavior.
+
+## Included Features and Improvements
 
 ### Alt Tracking
 
