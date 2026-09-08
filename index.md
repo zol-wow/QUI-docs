@@ -10,7 +10,7 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1.5 PTR that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.0-ptr-alpha2**
+**Current Release: 5.5.0-ptr-alpha3**
 {: .label .label-purple }
 
 {: .warning }

@@ -8,21 +8,22 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha2
+## Current Release: 5.5.0-ptr-alpha3
 
 {: .warning }
 **WoW 12.1.5 PTR only.** This alpha build targets interface 120105 and is for PTR testing.
 
-QUI 5.5.0-ptr-alpha2 brings the latest beta fixes to the PTR alongside native
-aura labels, animation options, and Unicode-aware search. It improves possession
-action bars, encounter-gated Aura Displays, death recap selection, and castbar
-recovery while retaining the PTR-specific features below.
+QUI 5.5.0-ptr-alpha3 restores the custom Info Bar Shop button while retaining
+existing Shop visibility preferences and combat, kiosk, and toggle behavior.
+It includes the beta fixes and PTR-specific features below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-ptr-alpha2
+## What's New in 5.5.0-ptr-alpha3
 
+- **The custom Info Bar Shop button is restored**, preserving existing settings
+  and its established opening and closing behavior.
 - **PTR aura controls add optional caster labels, pandemic pulses, and entry
   flashes.** Search uses native Unicode case folding.
 - **Possession abilities stay visible and keep your usual keys**, including
@@ -33,8 +34,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Damage Meter keeps the selected death recap across refreshes**, and boss
   castbars coalesce deferred retries and cancel them when the cast ends.
 - **Cooldown Manager explains when Blizzard's native viewers are disabled.**
-  Microbar ownership recovers after Blizzard releases it; the custom Info Bar
-  Shop button is removed to preserve Blizzard's store behavior.
+  Microbar ownership recovers after Blizzard releases it.
 
 ## Included Features and Improvements
 
@@ -248,9 +248,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Micro Menu ownership stays with Blizzard during temporary UI transitions**,
   including Override Action Bars and Pet Battles, then completes a deferred
   cold-start build after Blizzard releases it.
-- **The custom Info Bar Micro Menu no longer duplicates Blizzard's Shop
-  button.** The native Micro Menu remains the supported path for opening the
-  Shop.
+- **The custom Info Bar Micro Menu includes the Shop button**, preserving its
+  existing visibility setting and store toggle behavior.
 
 ## What's New in 5.2.2
 
