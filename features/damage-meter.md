@@ -39,7 +39,9 @@ Right-click the header to open a context menu:
 
 Meter Type and `Current` / `Overall` choices persist across reloads.
 
-Click any **row** to open a per-source spell breakdown popup, listing every spell that source used in the current view. The popup follows the row by default (mirrors to the opposite side when it would clip off-screen), updates live on the same ticker as the parent window, and dismisses on any outside click.
+Click any **row** to open a reusable five-pane detail workspace for spells, targets, attackers, and death recaps. Resize the workspace and its panes to suit your layout; their sizes are saved. Target rows drill down to their spells. Row-hover details remain independent and interactive.
+
+Spell names and healing rows remain available during combat. When restricted values prevent combining healing and absorbs, QUI retains the native healing view.
 
 **Hover** a row to see a GameTooltip with class-colored name, the source's class, the full total in "Complete" formatting, per-second, and percent of the top source.
 
