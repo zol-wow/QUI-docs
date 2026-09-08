@@ -6,22 +6,23 @@ nav_order: 5
 
 # Changelog
 
-This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
+This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3-beta13
+## Current Release: 5.3-beta14
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta13 keeps possession abilities visible on Action Bar 1 and preserves
-your usual action keys when Blizzard falls back to the main bar. These abilities
-stay visible after fade timers expire. It also includes the raid-marker fixes,
-library compatibility updates, and alt-tracking and UI improvements below.
+QUI 5.3-beta14 fixes encounter-gated Aura Display groups, editing previews,
+legacy imports, and Damage Meter death-recap selection. It adds setup guidance
+when Blizzard's Cooldown Manager is disabled, restores deferred MicroMenu
+initialization, and reduces repeated combat work. Possession, raid-marker,
+library compatibility, and earlier beta improvements remain included below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta13
+## What's New in 5.3-beta14
 
 ### Alt Tracking
 
@@ -48,6 +49,11 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Aura Displays
 
+- **Encounter-gated Aura Display groups activate during combat**, and individual
+  editing previews stay visible when their group uses dynamic packing.
+- **Aura Display imports reject malformed legacy duration and color settings**
+  before they can cause rendering errors.
+- **Aura Display visibility and sound processing do less repeated work during combat.**
 - **Aura Displays have templates, guided setup, and custom creation.** Browse
   spells with clearer same-name variants, choose a display style, and configure
   its unit, position, and load conditions.
@@ -74,6 +80,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Damage Meter
 
+- **Death recaps retain the selected death**, including when the same player
+  dies multiple times and when the detail view refreshes.
 - **Spell names and healing rows remain visible during combat.** When
   restricted values prevent combining healing and absorbs, the native healing
   view remains available.
@@ -87,6 +95,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Interface
 
+- **The MicroMenu finishes initializing after a temporary owner releases it.**
+  The custom Info Bar Shop button is removed to leave shop opening to Blizzard.
 - **Rotate Minimap is available in minimap settings** and follows Blizzard's
   native rotation setting, including changes made outside QUI.
 - **Action-bar suppression preserves Blizzard's secure button state**, and
@@ -141,6 +151,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Unit-frame castbars no longer trigger blocked resize errors during combat.**
 - **Unit-frame castbars defer restricted layout changes** and retry their
   positioning without attaching to protected targets.
+- **Boss castbars keep one cancellable retry while Blizzard restricts updates**,
+  avoiding repeated retry chains during combat.
 - **The Group Death Alert can name the killing blow**, optionally include the
   attacker, color the player name by class, limit alerts to instances, and use
   a configurable on-screen duration.
@@ -158,6 +170,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Cooldown Manager leaves Blizzard's native viewer setting under Blizzard's
   control.** Replaced native buff bars hide during early loading and restore
   correctly when suppression is disabled.
+- **Cooldown Manager shows setup instructions when Blizzard's native viewers
+  are disabled**, without changing Blizzard's settings.
 
 ## What's New in 5.2.3
 
