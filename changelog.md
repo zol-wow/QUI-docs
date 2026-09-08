@@ -8,19 +8,20 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3-beta12
+## Current Release: 5.3-beta13
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta12 restores raid markers on focus and other unit frames when WoW
-restricts marker values, and updates bundled libraries for chat and inventory
-API compatibility. It also includes the alt-tracking and UI improvements below.
+QUI 5.3-beta13 keeps possession abilities visible on Action Bar 1 and preserves
+your usual action keys when Blizzard falls back to the main bar. These abilities
+stay visible after fade timers expire. It also includes the raid-marker fixes,
+library compatibility updates, and alt-tracking and UI improvements below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta12
+## What's New in 5.3-beta13
 
 ### Alt Tracking
 
@@ -31,6 +32,9 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Latest UI Fixes
 
+- **Possession abilities stay visible on Action Bar 1 with your usual keys**
+  when Blizzard falls back to the main bar, even after fade timers expire.
+  Normal fading resumes when possession ends.
 - **Focus and other unit frames display raid markers when WoW restricts marker
   values**, instead of hiding them.
 - **Bundled libraries handle restricted chat values and updated inventory APIs**,
