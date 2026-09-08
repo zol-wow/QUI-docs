@@ -8,21 +8,20 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3-beta14
+## Current Release: 5.3-beta15
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3-beta14 fixes encounter-gated Aura Display groups, editing previews,
-legacy imports, and Damage Meter death-recap selection. It adds setup guidance
-when Blizzard's Cooldown Manager is disabled, restores deferred MicroMenu
-initialization, and reduces repeated combat work. Possession, raid-marker,
-library compatibility, and earlier beta improvements remain included below.
+QUI 5.3-beta15 restores the custom Info Bar Shop button with its beta13
+behavior. The button opens and closes Blizzard's shop and remains disabled
+during combat. Aura Display, death-recap, Cooldown Manager setup, MicroMenu,
+and earlier beta improvements remain included below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3-beta14
+## What's New in 5.3-beta15
 
 ### Alt Tracking
 
@@ -95,8 +94,9 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Interface
 
+- **The custom Info Bar Shop button is restored with its beta13 behavior.**
+  It opens and closes Blizzard's shop and remains disabled during combat.
 - **The MicroMenu finishes initializing after a temporary owner releases it.**
-  The custom Info Bar Shop button is removed to leave shop opening to Blizzard.
 - **Rotate Minimap is available in minimap settings** and follows Blizzard's
   native rotation setting, including changes made outside QUI.
 - **Action-bar suppression preserves Blizzard's secure button state**, and
