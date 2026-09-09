@@ -29,6 +29,7 @@ These are the commands most players actually use. Type them into the WoW chat wi
 | `/pull [seconds]` | Start a pull countdown timer. Accepts a value between 1 and 60 seconds. Defaults to 10 seconds if no value is given. |
 | `/qpull` or `/quipull` | Always-available pull timer aliases. |
 | `/qui perf` | Toggle the performance monitor overlay. |
+| `/qui bonusroll show` | Reopen an unexpired bonus-roll prompt hidden by QUI. You still choose Roll or Pass. |
 | `/qui debug` | Enable debug mode. Debug output persists for one reload, then turns off automatically. |
 
 ## Bags Commands
