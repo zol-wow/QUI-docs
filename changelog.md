@@ -8,22 +8,27 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta2
+## Current Release: 5.3.1-beta3
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta2 adds bonus-roll filtering and group-frame visibility options,
-with smoother setting pins and fixes for scaled anchors and castbar followers.
+QUI 5.3.1-beta3 adds optional defensive reminders, bonus-roll filtering, and
+group-frame visibility options, with fixes for rotation suggestions, castbar
+anchors, and settings search.
 This beta line targets the next planned stable release, 5.3.1.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta2
+## What's New in 5.3.1-beta3
 
 ### Added
 
+- **Reminders is a new optional module, off by default**, with defensive
+  callouts driven by BigWigs, DBM, or Blizzard's encounter timeline. Configure
+  per-spec defensive priorities and boss abilities under Gameplay → Reminders,
+  with movable callouts, sound or text-to-speech, optional chat, and CDM glows.
 - **Bonus Roll filters** under Quality of Life let you hide prompts by raid
   difficulty, boss, dungeon or Delve, or set a Mythic+ minimum key level.
   Filtering is off by default and saved per profile. Recover an unexpired
@@ -34,6 +39,12 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Rotation suggestions keep updating with Blizzard's assisted-combat
+  highlight disabled**, both on Cooldown Manager icons and the standalone
+  Rotation Assist icon. Unavailable suggestions clear instead of remaining stale.
+- **Danders party and raid anchors no longer restrict player castbar resizing.**
+- **Settings search skips restricted label text**, preventing errors while
+  gathering searchable labels.
 - **Pinning settings and unpinning unchanged values avoid unnecessary full
   addon refreshes.** Restoring a changed active value still applies it correctly.
 - **Castbar anchor chains no longer let protected followers restrict castbar
