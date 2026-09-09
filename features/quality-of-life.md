@@ -51,6 +51,18 @@ Most QoL features are individually toggled. To configure them:
 - **Auto delete confirmation** -- Automatically fills in the "DELETE" text when destroying items, removing the need to type it manually.
 - **Quick Salvage** -- Modifier-click to quickly salvage items without the usual confirmation flow. Default modifier is ALT. This is an opt-in feature that must be explicitly enabled.
 
+### Bonus Roll
+
+Open **Quality of Life → Bonus Roll** to choose which bonus-roll prompts appear. Filtering is off by default, and rules are saved in the active QUI profile.
+
+- **Raids and world bosses:** hide every roll at a difficulty, or select individual bosses from the Encounter Journal.
+- **Dungeons and Delves:** hide rolls for selected content types.
+- **Mythic+:** show all rolls, hide all rolls, or set a minimum key level. A minimum of 10 hides +9 and allows +10. If the key level is unknown, the minimum-level rule leaves the prompt visible.
+- **Chat recovery:** enable the hidden-roll notice to receive a clickable **[Show bonus roll]** link. Clicking it reopens that offer while it remains valid; you still choose Roll or Pass.
+- **Manual recovery:** use **Show Pending Roll** on the settings page or `/qui bonusroll show`. Hiding never extends the original timer. Expired links cannot open a later roll.
+
+Boss selections apply only to the chosen difficulty. Changing filters affects subsequent offers. Position the window through **Layout Mode → Bonus Roll**.
+
 ### Popup and Toast Blocker
 
 Granular control over which Blizzard notification popups and toast alerts are suppressed:
