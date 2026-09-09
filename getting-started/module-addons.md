@@ -30,6 +30,7 @@ Most toggles are account-wide because they enable or disable an addon folder, no
 | Skinning | On | QUI visual treatment for supported Blizzard windows and alerts |
 | Quality of Life | On | Automation, dungeon tools, tooltip helpers, combat helpers, and miscellaneous utility |
 | Damage Meter | On | Native QUI damage meter windows |
+| Reminders | Off | Defensive callouts driven by BigWigs, DBM, or the Blizzard encounter timeline |
 | Info Bar | Off | Optional top or bottom datatext bar with micro menu, travel, and spec widgets |
 | Bags | Off | Optional bag, bank, Warband bank, guild bank, search, sorting, and item tools |
 | Alts | Off | Optional account-wide character tracker and item search window |
