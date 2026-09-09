@@ -8,27 +8,41 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta1
+## Current Release: 5.3.1-beta2
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta1 opens the beta line for the next planned stable release,
-5.3.1. It carries forward the v5.3 runtime after synchronizing beta with main.
-This release updates version metadata and release notes; it introduces no
-gameplay or UI behavior changes from v5.3-beta15.
+QUI 5.3.1-beta2 adds bonus-roll filtering and group-frame visibility options,
+with smoother setting pins and fixes for scaled anchors and castbar followers.
+This beta line targets the next planned stable release, 5.3.1.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta1
+## What's New in 5.3.1-beta2
 
-### Changed
+### Added
 
-- **Opens the 5.3.1 beta line** for the next planned stable release.
-- **Carries forward the v5.3 runtime after synchronizing beta with main.**
-  This release updates version metadata and release notes; it introduces no
-  gameplay or UI behavior changes from v5.3-beta15.
+- **Bonus Roll filters** under Quality of Life let you hide prompts by raid
+  difficulty, boss, dungeon or Delve, or set a Mythic+ minimum key level.
+  Filtering is off by default and saved per profile. Recover an unexpired
+  hidden offer through its chat link, the settings page, or `/qui bonusroll show`.
+- **Group Frames can hide raid groups 7 and 8 in Mythic raids**, while keeping
+  those groups visible outside Mythic.
+- **Group Frames can hide unit tooltips during combat.**
+
+### Fixed
+
+- **Pinning settings and unpinning unchanged values avoid unnecessary full
+  addon refreshes.** Restoring a changed active value still applies it correctly.
+- **Castbar anchor chains no longer let protected followers restrict castbar
+  resizing.** Follower positions refresh as targets change, protected followers
+  reconcile after combat, and absolute anchors account for frame scale.
+
+### Beta Line
+
+- Carries forward the v5.3 runtime after synchronizing beta with main.
 
 ## What's New in 5.3-beta15
 
