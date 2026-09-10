@@ -8,20 +8,20 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta4
+## Current Release: 5.3.1-beta5
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta4 adds optional defensive reminders, bonus-roll filtering, and
-group-frame visibility options, with fixes for arena target class colors,
-rotation suggestions, castbar anchors, and settings search.
+QUI 5.3.1-beta5 adds optional defensive reminders, bonus-roll filtering, and
+group-frame visibility options, with fixes for combat whispers, arena target
+class colors, rotation suggestions, castbar anchors, and settings search.
 This beta line targets the next planned stable release, 5.3.1.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta4
+## What's New in 5.3.1-beta5
 
 ### Added
 
@@ -39,6 +39,12 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Combat whispers opened through Reply, character links, or Battle.net use
+  a visible QUI chat input**, preserving Blizzard's recipient selection and
+  reply history.
+- **Whispers from restricted identities use a shared Whispers tab.**
+- **The chat input follows the active QUI window**, including after switching
+  windows or deleting the active window.
 - **Arena target health bars retain class colors when WoW restricts class
   information**, instead of falling back to hostility colors.
 - **Rotation suggestions keep updating with Blizzard's assisted-combat
