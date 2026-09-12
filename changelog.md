@@ -8,23 +8,25 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta7
+## Current Release: 5.3.1-beta8
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta7 adds optional defensive reminders, bonus-roll filtering, and
+QUI 5.3.1-beta8 adds optional defensive reminders, bonus-roll filtering, and
 group-frame visibility options, with fixes for combat whispers, arena target
 class colors, rotation suggestions, castbar anchors, and settings search.
 It also updates Cooldown Manager aura tracking, buff layouts, glow refreshes,
 and chat recipient routing, reduces startup and raid-frame work, and fixes
 restricted achievement messages and saved minimap datatext positions.
+Native aura sound and text-to-speech configuration stays in Blizzard's
+Cooldown Manager editor to prevent protected aura and cooldown errors.
 This beta line targets the next planned stable release, 5.3.1.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta7
+## What's New in 5.3.1-beta8
 
 ### Added
 
@@ -52,6 +54,10 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Cooldown Manager avoids tainting Blizzard's native aura sound layouts**,
+  preventing protected aura and cooldown errors. Configure or disable native
+  sound-kit and text-to-speech aura alerts in Blizzard's Cooldown Manager
+  settings; QUI's sound status explains this even when its alert checkbox is off.
 - **Minimap datatext keeps its saved position during minimap refreshes**,
   preserving Layout Mode placement and preventing circular-anchor errors.
 - **Achievement messages format correctly when WoW restricts their text or
