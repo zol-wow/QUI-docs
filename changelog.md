@@ -8,22 +8,23 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta6
+## Current Release: 5.3.1-beta7
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta6 adds optional defensive reminders, bonus-roll filtering, and
+QUI 5.3.1-beta7 adds optional defensive reminders, bonus-roll filtering, and
 group-frame visibility options, with fixes for combat whispers, arena target
 class colors, rotation suggestions, castbar anchors, and settings search.
 It also updates Cooldown Manager aura tracking, buff layouts, glow refreshes,
-and chat recipient routing.
+and chat recipient routing, reduces startup and raid-frame work, and fixes
+restricted achievement messages and saved minimap datatext positions.
 This beta line targets the next planned stable release, 5.3.1.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta6
+## What's New in 5.3.1-beta7
 
 ### Added
 
@@ -41,12 +42,22 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Changed
 
+- **Settings load when needed**, reducing startup work and avoiding repeated
+  skin refreshes when the settings window is created.
+- **Raid frames prepare only the selected layout** and reuse unit buttons,
+  reducing allocations and repeated styling during roster updates.
 - **Cooldown Manager uses Blizzard's native aura tracking for custom entries**,
   including Buff Bars, fallback Buff Icons, and custom containers. Aura alert
   settings explain native sound and text-to-speech limitations.
 
 ### Fixed
 
+- **Minimap datatext keeps its saved position during minimap refreshes**,
+  preserving Layout Mode placement and preventing circular-anchor errors.
+- **Achievement messages format correctly when WoW restricts their text or
+  sender information**, including guild achievements.
+- **Chat channel names without a numeric prefix no longer trigger formatting
+  errors.**
 - **Mixed Cooldown Manager buff rows retain configured spacing and alignment**,
   including custom auras, row wrapping, and group boundaries.
 - **Cooldown Manager glow animations keep their progress during layout
