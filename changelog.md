@@ -36,6 +36,74 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Cooldown Manager explains when Blizzard's native viewers are disabled.**
   Microbar ownership recovers after Blizzard releases it.
 
+## Integrated from Beta through 5.3.1-beta8
+
+
+### Added
+
+- **Reminders is a new optional module, off by default**, with defensive
+  callouts driven by BigWigs, DBM, or Blizzard's encounter timeline. Configure
+  per-spec defensive priorities and boss abilities under Gameplay → Reminders,
+  with movable callouts, sound or text-to-speech, optional chat, and CDM glows.
+- **Bonus Roll filters** under Quality of Life let you hide prompts by raid
+  difficulty, boss, dungeon or Delve, or set a Mythic+ minimum key level.
+  Filtering is off by default and saved per profile. Recover an unexpired
+  hidden offer through its chat link, the settings page, or `/qui bonusroll show`.
+- **Group Frames can hide raid groups 7 and 8 in Mythic raids**, while keeping
+  those groups visible outside Mythic.
+- **Group Frames can hide unit tooltips during combat.**
+
+### Changed
+
+- **Settings load when needed**, reducing startup work and avoiding repeated
+  skin refreshes when the settings window is created.
+- **Raid frames prepare only the selected layout** and reuse unit buttons,
+  reducing allocations and repeated styling during roster updates.
+- **Cooldown Manager uses Blizzard's native aura tracking for custom entries**,
+  including Buff Bars, fallback Buff Icons, and custom containers. Aura alert
+  settings explain native sound and text-to-speech limitations.
+
+### Fixed
+
+- **Cooldown Manager avoids tainting Blizzard's native aura sound layouts**,
+  preventing protected aura and cooldown errors. Configure or disable native
+  sound-kit and text-to-speech aura alerts in Blizzard's Cooldown Manager
+  settings; QUI's sound status explains this even when its alert checkbox is off.
+- **Minimap datatext keeps its saved position during minimap refreshes**,
+  preserving Layout Mode placement and preventing circular-anchor errors.
+- **Achievement messages format correctly when WoW restricts their text or
+  sender information**, including guild achievements.
+- **Chat channel names without a numeric prefix no longer trigger formatting
+  errors.**
+- **Mixed Cooldown Manager buff rows retain configured spacing and alignment**,
+  including custom auras, row wrapping, and group boundaries.
+- **Cooldown Manager glow animations keep their progress during layout
+  refreshes**, inactive proc animations stop, and unchanged aura filters and
+  effect settings avoid repeated updates.
+- **Native aura effects no longer trigger blocked animation-script warnings.**
+- **Combat replies and sender clicks select the current whisper recipient**,
+  including Battle.net links with restricted recipient information.
+- **Chat channel context menus create a QUI tab filtered to that channel.**
+- **Combat whispers opened through Reply, character links, or Battle.net use
+  a visible QUI chat input**, preserving Blizzard's recipient selection and
+  reply history.
+- **Whispers from restricted identities use a shared Whispers tab.**
+- **The chat input follows the active QUI window**, including after switching
+  windows or deleting the active window.
+- **Arena target health bars retain class colors when WoW restricts class
+  information**, instead of falling back to hostility colors.
+- **Rotation suggestions keep updating with Blizzard's assisted-combat
+  highlight disabled**, both on Cooldown Manager icons and the standalone
+  Rotation Assist icon. Unavailable suggestions clear instead of remaining stale.
+- **Danders party and raid anchors no longer restrict player castbar resizing.**
+- **Settings search skips restricted label text**, preventing errors while
+  gathering searchable labels.
+- **Pinning settings and unpinning unchanged values avoid unnecessary full
+  addon refreshes.** Restoring a changed active value still applies it correctly.
+- **Castbar anchor chains no longer let protected followers restrict castbar
+  resizing.** Follower positions refresh as targets change, protected followers
+  reconcile after combat, and absolute anchors account for frame scale.
+
 ## Included Features and Improvements
 
 ### Alt Tracking

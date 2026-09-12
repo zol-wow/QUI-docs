@@ -30,6 +30,7 @@ QUI can handle as much or as little of your UI as you want. Some players come fo
 | [Custom Trackers](custom-trackers) | Extra utility bars for niche spells, items, or encounter tools |
 | [HUD Visibility](hud-visibility) | Keeping the HUD clean outside combat without losing information when it matters |
 | [Damage Meter](damage-meter) | Native damage meter windows with QUI styling and Layout Mode placement |
+| [Reminders](reminders) | Boss-mod driven callouts naming the defensive to press, with per-spec priority lists |
 
 ### Interface Polish
 
