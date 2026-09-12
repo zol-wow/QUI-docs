@@ -8,20 +8,22 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta5
+## Current Release: 5.3.1-beta6
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta5 adds optional defensive reminders, bonus-roll filtering, and
+QUI 5.3.1-beta6 adds optional defensive reminders, bonus-roll filtering, and
 group-frame visibility options, with fixes for combat whispers, arena target
 class colors, rotation suggestions, castbar anchors, and settings search.
+It also updates Cooldown Manager aura tracking, buff layouts, glow refreshes,
+and chat recipient routing.
 This beta line targets the next planned stable release, 5.3.1.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta5
+## What's New in 5.3.1-beta6
 
 ### Added
 
@@ -37,8 +39,23 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   those groups visible outside Mythic.
 - **Group Frames can hide unit tooltips during combat.**
 
+### Changed
+
+- **Cooldown Manager uses Blizzard's native aura tracking for custom entries**,
+  including Buff Bars, fallback Buff Icons, and custom containers. Aura alert
+  settings explain native sound and text-to-speech limitations.
+
 ### Fixed
 
+- **Mixed Cooldown Manager buff rows retain configured spacing and alignment**,
+  including custom auras, row wrapping, and group boundaries.
+- **Cooldown Manager glow animations keep their progress during layout
+  refreshes**, inactive proc animations stop, and unchanged aura filters and
+  effect settings avoid repeated updates.
+- **Native aura effects no longer trigger blocked animation-script warnings.**
+- **Combat replies and sender clicks select the current whisper recipient**,
+  including Battle.net links with restricted recipient information.
+- **Chat channel context menus create a QUI tab filtered to that channel.**
 - **Combat whispers opened through Reply, character links, or Battle.net use
   a visible QUI chat input**, preserving Blizzard's recipient selection and
   reply history.
