@@ -8,19 +8,20 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha3
+## Current Release: 5.5.0-ptr-alpha4
 
 {: .warning }
 **WoW 12.1.5 PTR only.** This alpha build targets interface 120105 and is for PTR testing.
 
-QUI 5.5.0-ptr-alpha3 restores the custom Info Bar Shop button while retaining
-existing Shop visibility preferences and combat, kiosk, and toggle behavior.
-It includes the beta fixes and PTR-specific features below.
+QUI 5.5.0-ptr-alpha4 brings the updates through 5.3.1-beta8 to the PTR,
+including the optional Reminders module, Bonus Roll filters, and fixes for
+Cooldown Manager, chat, and frame layout. It retains the PTR aura controls,
+native Unicode search, and restored custom Info Bar Shop button below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-ptr-alpha3
+## What's New in 5.5.0-ptr-alpha4
 
 - **The custom Info Bar Shop button is restored**, preserving existing settings
   and its established opening and closing behavior.
