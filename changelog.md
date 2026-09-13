@@ -8,12 +8,12 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta9
+## Current Release: 5.3.1-beta10
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta9 adds optional defensive reminders, bonus-roll filtering, and
+QUI 5.3.1-beta10 adds optional defensive reminders, bonus-roll filtering, and
 group-frame visibility options, with fixes for combat whispers, arena target
 class colors, rotation suggestions, castbar anchors, and settings search.
 It also updates Cooldown Manager aura tracking, buff layouts, glow refreshes,
@@ -24,12 +24,16 @@ buff rows, refresh auras when target or focus changes, and honor pandemic
 glow styles and chat realm-name preferences.
 Native aura sound and text-to-speech configuration stays in Blizzard's
 Cooldown Manager editor to prevent protected aura and cooldown errors.
+New raid members now use your configured frame size. Native buff slots stay
+distinct through combat, glow sizing avoids restricted-value errors, upgraded
+bag items retain their correct item levels, and imported click-cast macros
+keep their names.
 This beta line targets the next planned stable release, 5.3.1.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta9
+## What's New in 5.3.1-beta10
 
 ### Added
 
@@ -56,6 +60,18 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   settings explain native sound and text-to-speech limitations.
 
 ### Fixed
+
+- **New party and raid members use your configured frame dimensions**,
+  including separate raid groups, self frames, and spotlights.
+- **Native Cooldown Manager proc and cast-highlight glows avoid restricted
+  size errors**, preserving your chosen glow style and offsets.
+- **Native buff slots stay distinct and retain their placement in combat**,
+  keeping related buffs from collapsing into one icon and hiding duplicate
+  base icons behind managed aura displays.
+- **Bag item levels stay correct for upgraded copies of the same item**,
+  with cached details kept separately for each item link.
+- **Imported click-cast macros keep their names in the binding list**,
+  instead of displaying only “Macro”.
 
 - **Cooldown Manager keeps custom buff icons from duplicating in combat**
   when WoW restricts aura configuration.
