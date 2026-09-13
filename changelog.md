@@ -8,17 +8,20 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta8
+## Current Release: 5.3.1-beta9
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta8 adds optional defensive reminders, bonus-roll filtering, and
+QUI 5.3.1-beta9 adds optional defensive reminders, bonus-roll filtering, and
 group-frame visibility options, with fixes for combat whispers, arena target
 class colors, rotation suggestions, castbar anchors, and settings search.
 It also updates Cooldown Manager aura tracking, buff layouts, glow refreshes,
 and chat recipient routing, reduces startup and raid-frame work, and fixes
 restricted achievement messages and saved minimap datatext positions.
+The latest fixes keep buff icons from duplicating in combat, center visible
+buff rows, refresh auras when target or focus changes, and honor pandemic
+glow styles and chat realm-name preferences.
 Native aura sound and text-to-speech configuration stays in Blizzard's
 Cooldown Manager editor to prevent protected aura and cooldown errors.
 This beta line targets the next planned stable release, 5.3.1.
@@ -26,7 +29,7 @@ This beta line targets the next planned stable release, 5.3.1.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta8
+## What's New in 5.3.1-beta9
 
 ### Added
 
@@ -54,6 +57,16 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Cooldown Manager keeps custom buff icons from duplicating in combat**
+  when WoW restricts aura configuration.
+- **Centered mixed buff rows follow the visible icons** as auras appear and
+  expire, including during combat.
+- **Target and focus aura tracking refreshes when you switch units**,
+  including built-in buff mirrors and custom aura containers.
+- **Pandemic glows honor the selected style, color, and offsets**, including
+  per-spell overrides, and update when toggled during an active refresh window.
+- **Chat honors your realm-name preference for restricted senders**,
+  including guild chat.
 - **Cooldown Manager avoids tainting Blizzard's native aura sound layouts**,
   preventing protected aura and cooldown errors. Configure or disable native
   sound-kit and text-to-speech aura alerts in Blizzard's Cooldown Manager
