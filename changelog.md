@@ -8,12 +8,15 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.1-beta10
+## Current Release: 5.3.1-beta11
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.3.1-beta10 adds optional defensive reminders, bonus-roll filtering, and
+Beta11 updates release versions only; runtime behavior is unchanged from beta10.
+The cumulative changes below cover the full 5.3.1 beta line.
+
+The QUI 5.3.1 beta line adds optional defensive reminders, bonus-roll filtering, and
 group-frame visibility options, with fixes for combat whispers, arena target
 class colors, rotation suggestions, castbar anchors, and settings search.
 It also updates Cooldown Manager aura tracking, buff layouts, glow refreshes,
@@ -33,7 +36,7 @@ This beta line targets the next planned stable release, 5.3.1.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.1-beta10
+## What's New in 5.3.1-beta11
 
 ### Added
 
