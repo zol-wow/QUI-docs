@@ -6,9 +6,122 @@ nav_order: 5
 
 # Changelog
 
-This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
+This page summarizes the user-facing changes in each stable release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.3
+## Current Release: 5.3.1
+
+{: .warning }
+**WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
+
+QUI 5.3.1 brings the beta improvements to stable. It adds optional defensive reminders, bonus-roll filtering, and
+group-frame visibility options, with fixes for combat whispers, arena target
+class colors, rotation suggestions, castbar anchors, and settings search.
+It also updates Cooldown Manager aura tracking, buff layouts, glow refreshes,
+and chat recipient routing, reduces startup and raid-frame work, and fixes
+restricted achievement messages and saved minimap datatext positions.
+The latest fixes keep buff icons from duplicating in combat, center visible
+buff rows, refresh auras when target or focus changes, and honor pandemic
+glow styles and chat realm-name preferences.
+Native aura sound and text-to-speech configuration stays in Blizzard's
+Cooldown Manager editor to prevent protected aura and cooldown errors.
+New raid members now use your configured frame size. Native buff slots stay
+distinct through combat, glow sizing avoids restricted-value errors, upgraded
+bag items retain their correct item levels, and imported click-cast macros
+keep their names.
+
+{: .important }
+Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.3.1
+
+### Added
+
+- **Reminders is a new optional module, off by default**, with defensive
+  callouts driven by BigWigs, DBM, or Blizzard's encounter timeline. Configure
+  per-spec defensive priorities and boss abilities under Gameplay → Reminders,
+  with movable callouts, sound or text-to-speech, optional chat, and CDM glows.
+- **Bonus Roll filters** under Quality of Life let you hide prompts by raid
+  difficulty, boss, dungeon or Delve, or set a Mythic+ minimum key level.
+  Filtering is off by default and saved per profile. Recover an unexpired
+  hidden offer through its chat link, the settings page, or `/qui bonusroll show`.
+- **Group Frames can hide raid groups 7 and 8 in Mythic raids**, while keeping
+  those groups visible outside Mythic.
+- **Group Frames can hide unit tooltips during combat.**
+
+### Changed
+
+- **Settings load when needed**, reducing startup work and avoiding repeated
+  skin refreshes when the settings window is created.
+- **Raid frames prepare only the selected layout** and reuse unit buttons,
+  reducing allocations and repeated styling during roster updates.
+- **Cooldown Manager uses Blizzard's native aura tracking for custom entries**,
+  including Buff Bars, fallback Buff Icons, and custom containers. Aura alert
+  settings explain native sound and text-to-speech limitations.
+
+### Fixed
+
+- **New party and raid members use your configured frame dimensions**,
+  including separate raid groups, self frames, and spotlights.
+- **Native Cooldown Manager proc and cast-highlight glows avoid restricted
+  size errors**, preserving your chosen glow style and offsets.
+- **Native buff slots stay distinct and retain their placement in combat**,
+  keeping related buffs from collapsing into one icon and hiding duplicate
+  base icons behind managed aura displays.
+- **Bag item levels stay correct for upgraded copies of the same item**,
+  with cached details kept separately for each item link.
+- **Imported click-cast macros keep their names in the binding list**,
+  instead of displaying only “Macro”.
+
+- **Cooldown Manager keeps custom buff icons from duplicating in combat**
+  when WoW restricts aura configuration.
+- **Centered mixed buff rows follow the visible icons** as auras appear and
+  expire, including during combat.
+- **Target and focus aura tracking refreshes when you switch units**,
+  including built-in buff mirrors and custom aura containers.
+- **Pandemic glows honor the selected style, color, and offsets**, including
+  per-spell overrides, and update when toggled during an active refresh window.
+- **Chat honors your realm-name preference for restricted senders**,
+  including guild chat.
+- **Cooldown Manager avoids tainting Blizzard's native aura sound layouts**,
+  preventing protected aura and cooldown errors. Configure or disable native
+  sound-kit and text-to-speech aura alerts in Blizzard's Cooldown Manager
+  settings; QUI's sound status explains this even when its alert checkbox is off.
+- **Minimap datatext keeps its saved position during minimap refreshes**,
+  preserving Layout Mode placement and preventing circular-anchor errors.
+- **Achievement messages format correctly when WoW restricts their text or
+  sender information**, including guild achievements.
+- **Chat channel names without a numeric prefix no longer trigger formatting
+  errors.**
+- **Mixed Cooldown Manager buff rows retain configured spacing and alignment**,
+  including custom auras, row wrapping, and group boundaries.
+- **Cooldown Manager glow animations keep their progress during layout
+  refreshes**, inactive proc animations stop, and unchanged aura filters and
+  effect settings avoid repeated updates.
+- **Native aura effects no longer trigger blocked animation-script warnings.**
+- **Combat replies and sender clicks select the current whisper recipient**,
+  including Battle.net links with restricted recipient information.
+- **Chat channel context menus create a QUI tab filtered to that channel.**
+- **Combat whispers opened through Reply, character links, or Battle.net use
+  a visible QUI chat input**, preserving Blizzard's recipient selection and
+  reply history.
+- **Whispers from restricted identities use a shared Whispers tab.**
+- **The chat input follows the active QUI window**, including after switching
+  windows or deleting the active window.
+- **Arena target health bars retain class colors when WoW restricts class
+  information**, instead of falling back to hostility colors.
+- **Rotation suggestions keep updating with Blizzard's assisted-combat
+  highlight disabled**, both on Cooldown Manager icons and the standalone
+  Rotation Assist icon. Unavailable suggestions clear instead of remaining stale.
+- **Danders party and raid anchors no longer restrict player castbar resizing.**
+- **Settings search skips restricted label text**, preventing errors while
+  gathering searchable labels.
+- **Pinning settings and unpinning unchanged values avoid unnecessary full
+  addon refreshes.** Restoring a changed active value still applies it correctly.
+- **Castbar anchor chains no longer let protected followers restrict castbar
+  resizing.** Follower positions refresh as targets change, protected followers
+  reconcile after combat, and absolute anchors account for frame scale.
+
+## Previous Release: 5.3
 
 > ⚠️ **WoW 12.1 ONLY.** This build targets patch 12.1 (interface 120100) and
 > will not load on the 12.0.x client.
