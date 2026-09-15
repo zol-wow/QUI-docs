@@ -13,7 +13,7 @@ This page summarizes the user-facing changes since the last mainline release. Fo
 {: .warning }
 **WoW 12.1.5 PTR only.** This alpha build targets interface 120105 and is for PTR testing.
 
-QUI 5.5.0-ptr-alpha4 brings the updates through 5.3.1-beta8 to the PTR,
+This alpha branch includes the updates through stable 5.3.1 for PTR testing,
 including the optional Reminders module, Bonus Roll filters, and fixes for
 Cooldown Manager, chat, and frame layout. It retains the PTR aura controls,
 native Unicode search, and restored custom Info Bar Shop button below.
@@ -37,7 +37,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Cooldown Manager explains when Blizzard's native viewers are disabled.**
   Microbar ownership recovers after Blizzard releases it.
 
-## Integrated from Beta through 5.3.1-beta8
+## Integrated from Stable 5.3.1
 
 
 ### Added
@@ -66,6 +66,28 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **New party and raid members use your configured frame dimensions**,
+  including separate raid groups, self frames, and spotlights.
+- **Native Cooldown Manager proc and cast-highlight glows avoid restricted
+  size errors**, preserving your chosen glow style and offsets.
+- **Native buff slots stay distinct and retain their placement in combat**,
+  keeping related buffs from collapsing into one icon and hiding duplicate
+  base icons behind managed aura displays.
+- **Bag item levels stay correct for upgraded copies of the same item**,
+  with cached details kept separately for each item link.
+- **Imported click-cast macros keep their names in the binding list**,
+  instead of displaying only “Macro”.
+
+- **Cooldown Manager keeps custom buff icons from duplicating in combat**
+  when WoW restricts aura configuration.
+- **Centered mixed buff rows follow the visible icons** as auras appear and
+  expire, including during combat.
+- **Target and focus aura tracking refreshes when you switch units**,
+  including built-in buff mirrors and custom aura containers.
+- **Pandemic glows honor the selected style, color, and offsets**, including
+  per-spell overrides, and update when toggled during an active refresh window.
+- **Chat honors your realm-name preference for restricted senders**,
+  including guild chat.
 - **Cooldown Manager avoids tainting Blizzard's native aura sound layouts**,
   preventing protected aura and cooldown errors. Configure or disable native
   sound-kit and text-to-speech aura alerts in Blizzard's Cooldown Manager
