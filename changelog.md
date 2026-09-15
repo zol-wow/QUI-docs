@@ -408,7 +408,7 @@ The broader 5.2 feature set remains available below.
 
 ## Upgrade Notes
 
-- Install 5.2 over the existing QUI folders; saved variables remain in `QUIDB` and `QUI_StorageDB`.
+- Install this release over the existing QUI folders; saved variables remain in `QUIDB` and `QUI_StorageDB`.
 - Manual installs must copy every top-level `QUI*` folder from the release zip, not only the `QUI` folder.
 - If a feature does not open, check `/qui` > **Module Addons** before troubleshooting its settings.
 - Some account-cache data, especially offline inventory and equipment, repopulates as each character logs in.
