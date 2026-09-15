@@ -8,22 +8,30 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta1
+## Current Release: 5.3.2-beta2
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-The first beta for the planned 5.3.2 release starts from stable 5.3.1.
-This release updates version metadata only; runtime behavior is unchanged from 5.3.1.
+The 5.3.2 beta line starts from stable 5.3.1.
+This beta adds optional, location-specific resurrection automation.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta1
+## What's New in 5.3.2-beta2
+
+### Added
+
+- **Auto Accept Resurrection** under QoL → Automation offers separate settings
+  for dungeons, raids, PvP, and the open world. Each defaults to **Off**, with
+  **Out of Combat** and **Always** options. **Always** also accepts battle
+  resurrections during combat. Hold **Shift** when an offer arrives to keep it
+  manual; offers with resurrection sickness or a recovery delay stay manual.
 
 ### Beta Line
 
-- Starts the 5.3.2 beta line from the stable 5.3.1 release.
+- Beta1 started the 5.3.2 beta line from the stable 5.3.1 release.
 
 ## What's New in 5.3.1
 
