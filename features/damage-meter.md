@@ -39,7 +39,9 @@ Right-click the header to open a context menu:
 
 Meter Type and `Current` / `Overall` choices persist across reloads.
 
-Click any **row** to replace the meter body below its persistent header with a scrollable per-source breakdown of up to 40 rows. It updates with its parent window and closes from its background or detail rows. Hovering a spell row can show Blizzard's native spell tooltip.
+Click any **row** to open a reusable five-pane detail workspace for spells, targets, attackers, and death recaps. Resize the workspace and its panes to suit your layout; their sizes are saved. Target rows drill down to their spells. Row-hover details remain independent and interactive.
+
+Spell names and healing rows remain available during combat. When restricted values prevent combining healing and absorbs, QUI retains the native healing view.
 
 **Hover** a row for a fresh spell, target, attacker, or Death recap preview. The default shows up to 15 rows; compact mode shows 8. During combat, rich details remain available for the local player's row and Death recaps, while restricted rows fall back to a summary tooltip. Death details include event timing, HP, healing/damage, and overkill; an unavailable custom recap falls back to Blizzard's native recap on click.
 
