@@ -8,12 +8,12 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha4
+## Current Release: 5.5.0-ptr-alpha5
 
 {: .warning }
 **WoW 12.1.5 PTR only.** This alpha build targets interface 120105 and is for PTR testing.
 
-This alpha branch includes the updates through stable 5.3.1 for PTR testing,
+QUI 5.5.0-ptr-alpha5 brings the updates through stable 5.3.1 to PTR testing,
 including the optional Reminders module, Bonus Roll filters, and fixes for
 Cooldown Manager, chat, and frame layout. It retains the PTR aura controls,
 native Unicode search, and restored custom Info Bar Shop button below.
@@ -21,8 +21,14 @@ native Unicode search, and restored custom Info Bar Shop button below.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-ptr-alpha4
+## What's New in 5.5.0-ptr-alpha5
 
+- **Stable 5.3.1 fixes are now included**, covering native buff placement,
+  centered buff rows, target and focus aura refreshes, chat realm names,
+  new raid-member sizes, upgraded bag item levels, and imported macro names.
+- **Pandemic glows follow the configured icon size when WoW restricts
+  frame dimensions**, including after resizing, while retaining the chosen
+  glow style, color, and offsets.
 - **The custom Info Bar Shop button is restored**, preserving existing settings
   and its established opening and closing behavior.
 - **PTR aura controls add optional caster labels, pandemic pulses, and entry
