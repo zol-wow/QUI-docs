@@ -73,6 +73,10 @@ Convenience features that automate common tasks.
 | `autoRepair` | string | `"personal"` | Auto repair mode: `"off"`, `"personal"`, `"guild"` |
 | `autoRoleAccept` | boolean | `true` | Auto-accept role confirmations in groups |
 | `autoAcceptInvites` | string | `"all"` | Auto accept group invites: `"off"`, `"all"`, `"friends"`, `"guild"`, `"both"` |
+| `autoAcceptResurrection.dungeon` | string | `"off"` | Accept resurrection offers in dungeons, including Mythic+: `"off"`, `"outOfCombat"`, `"always"` |
+| `autoAcceptResurrection.raid` | string | `"off"` | Accept resurrection offers in raids: `"off"`, `"outOfCombat"`, `"always"` |
+| `autoAcceptResurrection.pvp` | string | `"off"` | Accept resurrection offers in battlegrounds and arenas: `"off"`, `"outOfCombat"`, `"always"` |
+| `autoAcceptResurrection.world` | string | `"off"` | Accept resurrection offers outside instances: `"off"`, `"outOfCombat"`, `"always"` |
 | `autoAcceptQuest` | boolean | `false` | Auto-accept quests from NPCs |
 | `autoTurnInQuest` | boolean | `false` | Auto turn-in completed quests |
 | `questHoldShift` | boolean | `true` | Hold Shift to override auto quest accept/turn-in |
@@ -81,6 +85,14 @@ Convenience features that automate common tasks.
 | `autoCombatLog` | boolean | `false` | Auto start/stop combat logging in M+ dungeons |
 | `autoCombatLogRaid` | boolean | `false` | Auto start/stop combat logging in raids |
 | `autoDeleteConfirm` | boolean | `true` | Auto-fill the DELETE confirmation text when deleting items |
+
+### Auto Accept Resurrection
+
+In **QoL → Automation**, each location has its own **Off / Out of Combat / Always** dropdown. All four default to **Off**.
+
+**Out of Combat** requires clear encounter, group, and resurrector combat checks; uncertain offers stay manual. **Always** also accepts battle resurrections during combat. Hold **Shift** when an offer arrives to keep that offer manual. Offers with resurrection sickness or a recovery delay always stay manual.
+
+This feature handles incoming resurrection offers only. Self-resurrection, battleground spirit-healer queues, delves, and scenarios remain manual or Blizzard-controlled.
 
 ---
 
