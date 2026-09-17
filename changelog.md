@@ -8,20 +8,46 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha5
+## Current Release: 5.5.0-ptr-alpha6
 
 {: .warning }
-**WoW 12.1.5 PTR only.** This alpha build targets interface 120105 and is for PTR testing.
+**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental; full feature parity and live gameplay validation are still pending.
 
-QUI 5.5.0-ptr-alpha5 brings the updates through stable 5.3.1 to PTR testing,
-including the optional Reminders module, Bonus Roll filters, and fixes for
-Cooldown Manager, chat, and frame layout. It retains the PTR aura controls,
-native Unicode search, and restored custom Info Bar Shop button below.
+QUI 5.5.0-ptr-alpha6 adds initial WoW Forever support and fixes its reported
+action-bar, chat, and Collections errors. It retains the updates through stable
+5.3.1, PTR aura controls, native Unicode search, and restored custom Info Bar
+Shop button below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-ptr-alpha5
+## What's New in 5.5.0-ptr-alpha6
+
+- **The same alpha archive now supports WoW Forever 1.60.1 and Midnight
+  12.1.5 PTR.** Type `/qui client` to check the detected client and build.
+- **Forever build 69893 keeps Blizzard's action buttons and party/raid
+  controls** while avoiding its reported secure-execution failure. QUI styles
+  and positions native action bars, waits for settings registration, and
+  prevents native layout changes from creating circular anchors.
+- **Collections tabs open and switch without the reported script-hook error**,
+  keeping their icons and selected-tab highlight. Chat hyperlink handling
+  also avoids constructing an incomplete native chat frame.
+- **New profile exports identify their client**, and imports reject a different
+  tagged client before applying settings. Older untagged exports remain accepted.
+
+### Forever Alpha Limits
+
+- Forever uses Blizzard's bank UI; secondary resource bars and automatic
+  defensive-spell suggestions that need the bundled LibOpenRaid dataset are
+  unavailable.
+- On Forever build 69893, QUI clickcasting, GSE integration, Quick Salvage,
+  and protected-frame mover placement are unavailable. Native action-bar controls remain subject
+  to Blizzard's Edit Mode limits.
+- Headless checks cover both clients. Combat behavior, native skins, spell/spec
+  defaults, and other gameplay-specific features still need live verification.
+  See the [Forever support strategy](https://github.com/zol-wow/QUI-docs/blob/alpha/blizzard/forever-support-strategy.md).
+
+### Included PTR Features and Fixes
 
 - **Stable 5.3.1 fixes are now included**, covering native buff placement,
   centered buff rows, target and focus aura refreshes, chat realm names,
