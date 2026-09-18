@@ -8,18 +8,19 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta2
+## Current Release: 5.3.2-beta3
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
 The 5.3.2 beta line starts from stable 5.3.1.
-This beta adds optional, location-specific resurrection automation.
+This beta adds optional, location-specific resurrection automation and improves
+damage-meter text readability when outlines are disabled.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta2
+## What's New in 5.3.2-beta3
 
 ### Added
 
@@ -28,6 +29,13 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   **Out of Combat** and **Always** options. **Always** also accepts battle
   resurrections during combat. Hold **Shift** when an offer arrives to keep it
   manual; offers with resurrection sickness or a recovery delay stay manual.
+
+### Fixed
+
+- **Damage Meter text is easier to read without font outlines.** Bright fills
+  automatically darken behind light text while preserving their hue and opacity,
+  and unoutlined window text gets a black shadow. Dark-text and outlined bar
+  styles keep their original fills.
 
 ### Beta Line
 
