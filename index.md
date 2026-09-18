@@ -10,11 +10,11 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1.5 PTR and WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.0-ptr-alpha7**
+**Current Release: 5.5.0-ptr-alpha8**
 {: .label .label-purple }
 
 {: .warning }
-**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1 (interfaces 120105 and 16001).** Forever support is experimental, with native bank and group controls and some features unavailable. See the [release notes](changelog) for limits.
+**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1 (interfaces 120105 and 16001).** Forever support is experimental, with new bank, group-frame, and swing-timer support and temporary character-local storage. See the [release notes](changelog) for limits.
 
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Features](features/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
