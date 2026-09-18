@@ -27,9 +27,12 @@ QUI uses the AceDB-3.0 library for profile storage. All profile-level settings a
 
 ### Per-Character Assignment
 
-Each character can independently select which profile to use. On Retail, all characters initially share the `"Default"` profile. Switching profiles on one character does not affect other characters unless they share the same profile.
+Each character can independently select which profile to use. By default, all characters share the `"Default"` profile. Switching profiles on one character does not affect other characters unless they share the same profile.
 
-On Forever, the temporary character-local storage workaround keeps each character's profiles separate, including `"Default"`. Use same-client profile export/import to copy settings between characters; changes do not synchronize.
+Forever alpha9 restores account-wide profiles after alpha8's character-local
+workaround. Alpha8's character-local profiles are not automatically migrated
+back; see the upgrade guidance below. The reported Forever persistence issue
+remains unresolved.
 
 ### Reset All Movers
 
@@ -58,15 +61,19 @@ QUI persists data across sessions using two WoW SavedVariables entries, declared
 | Variable | Type | Description |
 |---|---|---|
 | `QUIDB` | table | Primary SavedVariables store managed by AceDB. Contains profile, character, and global settings. |
-| `QUI_StorageDB` | table | Shared storage for tracked character and inventory data. Character-local on Forever during the workaround. |
+| `QUI_StorageDB` | table | Account-wide storage for tracked character and inventory data. |
 
-On **Retail**, both use account-wide storage at
-`WTF/Account/<account>/SavedVariables/QUI.lua`. On **Forever** only, both use
-character storage at
-`WTF/Account/<account>/<realm>/<character>/SavedVariables/QUI.lua` as a temporary
-workaround for the client's persistence issue. Existing account-wide data is
-**not automatically migrated**. Back up your `WTF` folder before updating; the
-workaround is intended to be reverted once Blizzard fixes the underlying issue.
+On **Retail and Forever**, both use account-wide storage at
+`WTF/Account/<account>/SavedVariables/QUI.lua`. Early SavedVariables loading
+remains enabled.
+
+Forever alpha8 used character-local storage at
+`WTF/Account/<account>/<realm>/<character>/SavedVariables/QUI.lua`. Alpha9 does
+**not automatically migrate that data back**. Before upgrading, export any
+profile settings you want to keep and back up your `WTF` folder. You can import
+a same-client profile export afterward, but it does not include tracked data
+in `QUI_StorageDB`; keep the full backup to preserve that data. Restoring the
+account-wide declaration does not fix the reported Forever persistence issue.
 
 These are written to disk by the WoW client on logout, reload, or `/reload`. Manual editing of SavedVariables files is not recommended -- use the in-game profile import/export system instead.
 

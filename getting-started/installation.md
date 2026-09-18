@@ -22,7 +22,7 @@ For most players, the easiest path is an addon manager.
 
 ## Manual Install
 
-1. Download **5.5.0-ptr-alpha8** from one of these sources:
+1. Download **5.5.0-ptr-alpha9** from one of these sources:
    - [GitHub Releases](https://github.com/zol-wow/QUI/releases)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.
@@ -53,10 +53,11 @@ Compatible integrations are detected automatically when they are present, but QU
 Before installing an alpha build, back up your `WTF` folder. QUI takes automatic profile backups for some schema migrations, but a full `WTF` backup is still the safest rollback path.
 
 {: .warning }
-**Forever only:** this release temporarily saves QUI profiles and tracked data
-per character to work around the client's persistence issue. Old account-wide
-data is not automatically migrated, and characters no longer share that data.
-Keep your backup and any same-client profile exports before upgrading; a
-character may open with a fresh setup. **Retail retains normal account-wide
-storage.** The workaround is intended to be reverted after Blizzard fixes the
-issue. See [Profiles](profiles) for details.
+**Upgrading from alpha8 on Forever:** alpha9 restores account-wide storage for
+QUI profiles and tracked data. Alpha8's character-local data is **not
+automatically migrated back**. Before updating, export any profile settings you
+want to keep and back up your `WTF` folder. You can import the same-client
+profile export afterward; it does not include tracked data in `QUI_StorageDB`,
+so keep the full backup. Retail continues to use normal account-wide storage.
+The reported Forever persistence issue remains unresolved. See
+[Profiles](profiles) for details.

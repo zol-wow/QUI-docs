@@ -10,17 +10,17 @@ nav_order: 4
 Profiles are how QUI remembers your setup. If you understand this page, you can experiment much more freely without worrying about losing your preferred layout.
 
 {: .warning }
-**Forever alpha storage is temporarily per character.** Profiles and tracked
-data are not shared between characters, even when their profiles have the same
-name. Existing account-wide data is not automatically migrated. Back up your
-`WTF` folder and keep same-client profile exports; you can import an export
-separately on each character to copy settings. Retail keeps normal account-wide
-storage and shared profiles. This workaround is intended to be reverted once
-Blizzard fixes the persistence issue.
+**Alpha9 restores account-wide storage on Forever.** Alpha8's character-local
+profiles and tracked data are **not automatically migrated back**. Before
+updating, export any profile settings you want to keep and back up your `WTF`
+folder. Import your same-client profile export afterward if needed. Profile
+exports do not include tracked data in `QUI_StorageDB`; the full backup
+preserves that data. Retail continues to use account-wide storage. The reported
+Forever persistence issue remains unresolved.
 
 ## The Simple Version
 
-- On Retail, use **one shared profile** if you want multiple characters to look the same.
+- Use **one shared profile** if you want multiple characters to look the same.
 - Use a **character-specific profile** if one character needs a different layout or role setup.
 - Use **spec-based switching** if you want a healing layout in one spec and a damage layout in another.
 
@@ -33,7 +33,7 @@ New profiles are seeded from QUI's curated defaults automatically, so a fresh pr
 
 ## When To Use Each Option
 
-- **Shared profile (Retail)**: best for players who want one consistent UI everywhere.
+- **Shared profile**: best for players who want one consistent UI everywhere.
 - **Character profile**: best when one class needs unique spacing, trackers, or bars.
 - **Spec profile**: best when your roles are very different, like healing versus damage.
 
