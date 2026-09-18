@@ -8,23 +8,38 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha8
+## Current Release: 5.5.0-ptr-alpha9
 
 {: .warning }
 **Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental; full feature parity and live gameplay validation are still pending.
 
-QUI 5.5.0-ptr-alpha8 adds Forever swing-timer controls, enables more native
-Forever features, and fixes character stats and sidebar layout. A temporary
-Forever-only storage workaround saves QUI settings and tracked data per
-character; Retail keeps normal account-wide storage. This release retains
-alpha7 improvements and the cumulative PTR and stable updates below.
+QUI 5.5.0-ptr-alpha9 restores normal account-wide storage on Forever,
+removing alpha8's character-local workaround. Retail keeps account-wide storage.
+The reported Forever persistence issue remains unresolved. Earlier Forever
+features and cumulative PTR and stable improvements remain included below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-ptr-alpha8
+## What's New in 5.5.0-ptr-alpha9
 
-### Forever Features
+### Account-Wide Storage Restored
+
+- **Forever and Retail now both use account-wide `QUIDB` and `QUI_StorageDB`.**
+  Alpha8's Forever-only character-local workaround has been removed because it
+  did not establish a reliable fix. Early SavedVariables loading is retained.
+- **The reported Forever persistence issue remains unresolved.** Restoring the
+  original storage declaration does not establish that settings will persist.
+
+{: .warning }
+**Before updating from alpha8 on Forever, export any profile settings you want
+to keep and back up your `WTF` folder.** Alpha8's character-local data is **not
+automatically migrated back** to account-wide storage. After updating, import
+your same-client profile export to restore those settings if needed. Profile
+exports do not include tracked data in `QUI_StorageDB`; keep the full `WTF`
+backup to preserve that data.
+
+### Included from Alpha8
 
 - **Native swing timers now have QUI controls** under Gameplay → Swing Timers.
   Configure main-hand, off-hand, and ranged bars independently, including size,
@@ -43,18 +58,6 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   including corrected resistance labels. The stats panel fits its native
   viewport, refreshes after stat changes, and follows the correct sidebar tabs.
 
-### Temporary Forever Storage Workaround
-
-{: .warning }
-**Back up your `WTF` folder before updating.** On Forever only, `QUIDB` and
-`QUI_StorageDB` now save per character to work around the reported persistence
-issue. Existing account-wide data is **not automatically migrated**, and
-profiles and tracked data no longer synchronize between characters. A
-character can start with a fresh setup; use an existing same-client profile
-export to restore settings. Retail retains its normal account-wide storage.
-This workaround is temporary and is intended to be reverted once Blizzard
-fixes the underlying issue.
-
 ### Included from Alpha7
 
 - **Auto Accept Resurrection** under QoL → Automation offers separate settings
@@ -68,7 +71,8 @@ fixes the underlying issue.
   the main meter, spell and target breakdowns, and death recaps.
 - **Forever profile identity migration preserves character selections and
   Cooldown Manager ownership within the loaded database.** This is separate
-  from the storage workaround above, which does not migrate account-wide data.
+  from the storage declaration change above, which does not migrate alpha8's
+  character-local data.
   Invalid profile names are rejected before creation,
   selection, or spec assignment; invalid saved spec mappings are skipped
   without deleting their data.
@@ -105,8 +109,8 @@ fixes the underlying issue.
 - **Defensive suggestions are not a complete Forever dataset.** Known-spell
   filtering does not verify every effect, and other resource mappings still
   need client-specific verification.
-- **Profiles and tracked data are character-local on Forever** for the temporary
-  workaround above; account-wide sharing remains unchanged on Retail.
+- **Forever persistence remains unresolved.** Both clients use account-wide
+  storage again, but alpha8's character-local data is not automatically migrated.
 - Headless checks cover both clients. Combat behavior, native skins, spell/spec
   defaults, and other gameplay-specific features still need live verification.
   See the [Forever support strategy](https://github.com/zol-wow/QUI-docs/blob/alpha/blizzard/forever-support-strategy.md).
