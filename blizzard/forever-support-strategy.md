@@ -1,11 +1,51 @@
 # QUI Retail and WoW Forever support strategy
 
-Research and implementation date: 2026-09-17. Status: initial Alpha support implemented and headless-validated; first live boot reported; build 69893 secure-execution workaround awaits live retest.
+Initial research date: 2026-09-17. Feature-port follow-up: 2026-09-18; live gameplay verification pending.
 QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
 
-## Implemented Alpha support
+## September 18 feature ports
+
+This section supersedes the initial fallback policy below. The shared compiler
+guard now applies to the Forever client family, not an allowlist of build numbers.
+GSE integration remains excluded.
+
+| Feature | Implemented behavior |
+|---|---|
+| Bank | QUI's custom bank uses the native Camelot bag equipment and purchase handlers. The All view pages through 88 cells; individual bag tabs, account-bank switching and cached browsing remain available. Interaction callbacks open QUI directly so the suppressed native bank does not close the bank session. Empty unequipped bag caches clear only with live bank/equipment evidence. |
+| Group frames | Native header attributes replace restricted initializer snippets. Children are created and decorated outside combat so Blizzard's headers can assign/show them during combat roster changes. Party, raid grouping and spotlight use this path. |
+| Clickcasting | Mouse buttons and modifiers use native secure action buttons. Hover keyboard and wheel bindings still require the unavailable compiler; their saved configuration is retained and the settings explain the limitation. Global key overrides are not substituted for frame-scoped bindings. |
+| Quick Salvage | Forever uses Blizzard's `InsecureActionButtonTemplate`, whose native click handler permits actions only outside combat. The overlay clears on leave, modifier changes, disable and combat entry. Modern spellbook lookup distinguishes learned casting spells from crafting recipes. |
+| Protected placement | Registered, open Blizzard panels use native `UIPanelLayout` offsets and Blizzard's position delegate, retaining native clamping and combat deferral. Reset/disable/close restore the original attributes according to the selected persistence mode. Arbitrary protected popups/proxies and protected scaling still have no verified compiler-free replacement; their saved settings are retained. |
+| Resources and defensive candidates | Rogues and energy-form druids use native target combo points; other non-mana druid forms expose mana. Defensive candidates use upstream personal-defensive spell/class metadata filtered to spells the character actually knows, without importing Retail specs or LibOpenRaid runtime initialization. |
+
+The [library audit](forever-library-audit.md) records all 17 vendored runtime
+libraries, local patches, upstream revisions and the remaining data limitations.
+No upstream update supplies a dedicated Forever defensive dataset. LibSharedMedia
+has an unrelated asset-validation update; it is documented rather than included
+in these feature ports.
+
+Live acceptance still requires bank equip/purchase/open/close, combat group roster
+changes and clickcasting, salvage spell/recipe clicks, resource/form/target changes,
+and verification of suggested defensive effects. Headless native-source checks do
+not establish live-client taint safety or complete Forever spell coverage.
+
+The native placement regression exercises Blizzard's pinned
+`UIParentPanelManager.lua`, including non-unit UI/frame scales, native bottom
+clamping, repeated relayout, combat recovery and offset restoration. Panels must
+already be registered and occupy a native panel slot; QUI does not register
+arbitrary protected frames to force them through that manager.
+
+Verification: all nine `JOBS=12 bash tools/test.sh` gates passed, including 998
+unit files, 12 profile fixtures, both strict taint analyses, Lua 5.1 compilation,
+all 19 lint targets, tooling and generated-output checks. Final landing review
+fixed native panel drift recovery after a secret anchor read, with a regression
+that fails before the fix and passes afterward. Log:
+`/tmp/qui-forever-ports-landing-final-gates.log`. Live-client verification remains
+pending.
+
+## Initial Alpha support (historical)
 
 | Area | Current behavior |
 |---|---|
