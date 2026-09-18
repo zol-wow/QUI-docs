@@ -8,6 +8,16 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
+## Unreleased
+
+### Added
+
+- **Auto Accept Resurrection** under QoL → Automation offers separate settings
+  for dungeons, raids, PvP, and the open world. Each defaults to **Off**, with
+  **Out of Combat** and **Always** options. **Always** also accepts battle
+  resurrections during combat. Hold **Shift** when an offer arrives to keep it
+  manual; offers with resurrection sickness or a recovery delay stay manual.
+
 ## Current Release: 5.5.0-ptr-alpha6
 
 {: .warning }
