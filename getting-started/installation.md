@@ -22,7 +22,7 @@ For most players, the easiest path is an addon manager.
 
 ## Manual Install
 
-1. Download **5.5.0-ptr-alpha6** from one of these sources:
+1. Download **5.5.0-ptr-alpha7** from one of these sources:
    - [GitHub Releases](https://github.com/zol-wow/QUI/releases)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.

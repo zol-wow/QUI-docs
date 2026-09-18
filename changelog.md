@@ -8,7 +8,21 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Unreleased
+## Current Release: 5.5.0-ptr-alpha7
+
+{: .warning }
+**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental; full feature parity and live gameplay validation are still pending.
+
+QUI 5.5.0-ptr-alpha7 improves damage-meter readability, adds optional
+resurrection automation, and fixes more Forever profile and interface issues.
+It retains the dual-client support introduced in alpha6, updates through stable
+5.3.1, PTR aura controls, native Unicode search, and restored custom Info Bar
+Shop button below.
+
+{: .important }
+Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.0-ptr-alpha7
 
 ### Added
 
@@ -18,26 +32,32 @@ This page summarizes the user-facing changes since the last mainline release. Fo
   resurrections during combat. Hold **Shift** when an offer arrives to keep it
   manual; offers with resurrection sickness or a recovery delay stay manual.
 
-## Current Release: 5.5.0-ptr-alpha6
+### Fixed
 
-{: .warning }
-**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental; full feature parity and live gameplay validation are still pending.
+- **Damage Meter automatically darkens bright bars behind light text when an
+  outline is disabled**, improving readability for colors such as priest white
+  and rogue yellow. No-outline text also receives a shadow. This applies to
+  the main meter, spell and target breakdowns, and death recaps.
+- **Forever profile migration preserves existing character selections and
+  Cooldown Manager ownership.** Invalid profile names are rejected before creation,
+  selection, or spec assignment; invalid saved spec mappings are skipped
+  without deleting their data.
+- **Forever Reload buttons and confirmations use the client's supported
+  reload action**, including the settings sidebar and post-combat prompt.
+- **Forever character tabs and reputation bars avoid the reported layout and
+  styling errors.** Native main-bar dividers stay hidden, the Info Bar Legacy
+  button opens its panel, and item-quality colors use the supported API.
+- **Secure-execution and Cooldown Manager workarounds now apply across Forever
+  builds**, retaining native action-button and group-control behavior and
+  avoiding missing-icon errors in Edit Mode previews.
 
-QUI 5.5.0-ptr-alpha6 adds initial WoW Forever support and fixes its reported
-action-bar, chat, and Collections errors. It retains the updates through stable
-5.3.1, PTR aura controls, native Unicode search, and restored custom Info Bar
-Shop button below.
-
-{: .important }
-Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
-
-## What's New in 5.5.0-ptr-alpha6
+### Included from Alpha6
 
 - **The same alpha archive now supports WoW Forever 1.60.1 and Midnight
   12.1.5 PTR.** Type `/qui client` to check the detected client and build.
-- **Forever build 69893 keeps Blizzard's action buttons and party/raid
-  controls** while avoiding its reported secure-execution failure. QUI styles
-  and positions native action bars, waits for settings registration, and
+- **Forever keeps Blizzard's action buttons and party/raid controls** while
+  avoiding its reported secure-execution failure. QUI styles and positions
+  native action bars, waits for settings registration, and
   prevents native layout changes from creating circular anchors.
 - **Collections tabs open and switch without the reported script-hook error**,
   keeping their icons and selected-tab highlight. Chat hyperlink handling
@@ -50,9 +70,9 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - Forever uses Blizzard's bank UI; secondary resource bars and automatic
   defensive-spell suggestions that need the bundled LibOpenRaid dataset are
   unavailable.
-- On Forever build 69893, QUI clickcasting, GSE integration, Quick Salvage,
-  and protected-frame mover placement are unavailable. Native action-bar controls remain subject
-  to Blizzard's Edit Mode limits.
+- On Forever, QUI clickcasting, GSE integration, Quick Salvage, and
+  protected-frame mover placement are unavailable. Native action-bar controls
+  remain subject to Blizzard's Edit Mode limits.
 - Headless checks cover both clients. Combat behavior, native skins, spell/spec
   defaults, and other gameplay-specific features still need live verification.
   See the [Forever support strategy](https://github.com/zol-wow/QUI-docs/blob/alpha/blizzard/forever-support-strategy.md).
