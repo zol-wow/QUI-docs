@@ -8,38 +8,68 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha7
+## Current Release: 5.5.0-ptr-alpha8
 
 {: .warning }
 **Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental; full feature parity and live gameplay validation are still pending.
 
-QUI 5.5.0-ptr-alpha7 improves damage-meter readability, adds optional
-resurrection automation, and fixes more Forever profile and interface issues.
-It retains the dual-client support introduced in alpha6, updates through stable
-5.3.1, PTR aura controls, native Unicode search, and restored custom Info Bar
-Shop button below.
+QUI 5.5.0-ptr-alpha8 adds Forever swing-timer controls, enables more native
+Forever features, and fixes character stats and sidebar layout. A temporary
+Forever-only storage workaround saves QUI settings and tracked data per
+character; Retail keeps normal account-wide storage. This release retains
+alpha7 improvements and the cumulative PTR and stable updates below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-ptr-alpha7
+## What's New in 5.5.0-ptr-alpha8
 
-### Added
+### Forever Features
+
+- **Native swing timers now have QUI controls** under Gameplay → Swing Timers.
+  Configure main-hand, off-hand, and ranged bars independently, including size,
+  texture, text, and visibility. Layout Mode previews all three bars and lets
+  you move and resize them while Blizzard continues to handle weapon timing.
+- **QUI's bank and group frames now have Forever support.** The custom bank
+  uses native bag equipment and purchase controls, with paging in the All view.
+  Party, raid, and spotlight frames use native group-header controls; mouse
+  buttons and modifier clickcasting are available.
+- **Quick Salvage works outside combat**, and Blizzard Frame Mover can position
+  registered, open native panels while preserving Blizzard's clamping.
+- **Resource bars support rogue and energy-form druid combo points**, plus mana
+  in other non-mana druid forms. Defensive suggestions use known spells from
+  upstream class metadata; manual spell IDs remain available.
+- **Character stats follow Forever's native categories, values, and tooltips**,
+  including corrected resistance labels. The stats panel fits its native
+  viewport, refreshes after stat changes, and follows the correct sidebar tabs.
+
+### Temporary Forever Storage Workaround
+
+{: .warning }
+**Back up your `WTF` folder before updating.** On Forever only, `QUIDB` and
+`QUI_StorageDB` now save per character to work around the reported persistence
+issue. Existing account-wide data is **not automatically migrated**, and
+profiles and tracked data no longer synchronize between characters. A
+character can start with a fresh setup; use an existing same-client profile
+export to restore settings. Retail retains its normal account-wide storage.
+This workaround is temporary and is intended to be reverted once Blizzard
+fixes the underlying issue.
+
+### Included from Alpha7
 
 - **Auto Accept Resurrection** under QoL → Automation offers separate settings
   for dungeons, raids, PvP, and the open world. Each defaults to **Off**, with
   **Out of Combat** and **Always** options. **Always** also accepts battle
   resurrections during combat. Hold **Shift** when an offer arrives to keep it
   manual; offers with resurrection sickness or a recovery delay stay manual.
-
-### Fixed
-
 - **Damage Meter automatically darkens bright bars behind light text when an
   outline is disabled**, improving readability for colors such as priest white
   and rogue yellow. No-outline text also receives a shadow. This applies to
   the main meter, spell and target breakdowns, and death recaps.
-- **Forever profile migration preserves existing character selections and
-  Cooldown Manager ownership.** Invalid profile names are rejected before creation,
+- **Forever profile identity migration preserves character selections and
+  Cooldown Manager ownership within the loaded database.** This is separate
+  from the storage workaround above, which does not migrate account-wide data.
+  Invalid profile names are rejected before creation,
   selection, or spec assignment; invalid saved spec mappings are skipped
   without deleting their data.
 - **Forever Reload buttons and confirmations use the client's supported
@@ -55,7 +85,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 - **The same alpha archive now supports WoW Forever 1.60.1 and Midnight
   12.1.5 PTR.** Type `/qui client` to check the detected client and build.
-- **Forever keeps Blizzard's action buttons and party/raid controls** while
+- **Forever keeps Blizzard's action buttons** while
   avoiding its reported secure-execution failure. QUI styles and positions
   native action bars, waits for settings registration, and
   prevents native layout changes from creating circular anchors.
@@ -67,12 +97,16 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Forever Alpha Limits
 
-- Forever uses Blizzard's bank UI; secondary resource bars and automatic
-  defensive-spell suggestions that need the bundled LibOpenRaid dataset are
-  unavailable.
-- On Forever, QUI clickcasting, GSE integration, Quick Salvage, and
-  protected-frame mover placement are unavailable. Native action-bar controls
-  remain subject to Blizzard's Edit Mode limits.
+- **GSE integration remains unavailable.** Hover keyboard and mouse-wheel
+  clickcasting are also unavailable; saved bindings are retained.
+- **Protected-frame movement is limited to registered, open native panels.**
+  Arbitrary protected popups and protected scaling remain unsupported. Native
+  action-bar controls remain subject to Blizzard's Edit Mode limits.
+- **Defensive suggestions are not a complete Forever dataset.** Known-spell
+  filtering does not verify every effect, and other resource mappings still
+  need client-specific verification.
+- **Profiles and tracked data are character-local on Forever** for the temporary
+  workaround above; account-wide sharing remains unchanged on Retail.
 - Headless checks cover both clients. Combat behavior, native skins, spell/spec
   defaults, and other gameplay-specific features still need live verification.
   See the [Forever support strategy](https://github.com/zol-wow/QUI-docs/blob/alpha/blizzard/forever-support-strategy.md).

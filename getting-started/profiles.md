@@ -9,22 +9,31 @@ nav_order: 4
 
 Profiles are how QUI remembers your setup. If you understand this page, you can experiment much more freely without worrying about losing your preferred layout.
 
+{: .warning }
+**Forever alpha storage is temporarily per character.** Profiles and tracked
+data are not shared between characters, even when their profiles have the same
+name. Existing account-wide data is not automatically migrated. Back up your
+`WTF` folder and keep same-client profile exports; you can import an export
+separately on each character to copy settings. Retail keeps normal account-wide
+storage and shared profiles. This workaround is intended to be reverted once
+Blizzard fixes the persistence issue.
+
 ## The Simple Version
 
-- Use **one shared profile** if you want multiple characters to look the same.
+- On Retail, use **one shared profile** if you want multiple characters to look the same.
 - Use a **character-specific profile** if one character needs a different layout or role setup.
 - Use **spec-based switching** if you want a healing layout in one spec and a damage layout in another.
 
 Manage your profiles in `/qui` under **General > Profiles**.
 
 {: .note }
-Module Addons are not the same thing as profiles. Enabling or disabling a `QUI_*` feature addon is account-wide, while most styling, layout, and behavior choices remain profile-based.
+Module Addons are not the same thing as profiles. Enabling or disabling a `QUI_*` feature addon controls whether it loads, while most styling, layout, and behavior choices remain profile-based.
 
 New profiles are seeded from QUI's curated defaults automatically, so a fresh profile starts from a sensible setup rather than an empty one. Existing profiles are never touched. (Profiles older than schema v31, from before 3.5.11, are backed up and reseeded from the starter preset at login.)
 
 ## When To Use Each Option
 
-- **Shared profile**: best for players who want one consistent UI everywhere.
+- **Shared profile (Retail)**: best for players who want one consistent UI everywhere.
 - **Character profile**: best when one class needs unique spacing, trackers, or bars.
 - **Spec profile**: best when your roles are very different, like healing versus damage.
 
@@ -59,7 +68,7 @@ You do not always need to replace your whole setup. QUI can import only specific
 - **Layout / Positions** -- Update frame positions without changing visual settings.
 - **Module-specific** -- Update only the area you care about.
 
-Partial imports cover profile data. They do not install missing module folders or override the account-wide Module Addons enable state.
+Partial imports cover profile data. They do not install missing module folders or override the Module Addons enable state.
 
 This is especially useful when you like someone else's style but want to keep your own frame placement.
 

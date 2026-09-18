@@ -27,7 +27,9 @@ QUI uses the AceDB-3.0 library for profile storage. All profile-level settings a
 
 ### Per-Character Assignment
 
-Each character can independently select which profile to use. By default, all characters share the `"Default"` profile. Switching profiles on one character does not affect other characters unless they share the same profile.
+Each character can independently select which profile to use. On Retail, all characters initially share the `"Default"` profile. Switching profiles on one character does not affect other characters unless they share the same profile.
+
+On Forever, the temporary character-local storage workaround keeps each character's profiles separate, including `"Default"`. Use same-client profile export/import to copy settings between characters; changes do not synchronize.
 
 ### Reset All Movers
 
@@ -55,8 +57,16 @@ QUI persists data across sessions using two WoW SavedVariables entries, declared
 
 | Variable | Type | Description |
 |---|---|---|
-| `QUI_DB` | table | Primary SavedVariables store managed by AceDB. Contains all profile, character, and global settings. |
-| `QUIDB` | table | Secondary SavedVariables store for auxiliary data. |
+| `QUIDB` | table | Primary SavedVariables store managed by AceDB. Contains profile, character, and global settings. |
+| `QUI_StorageDB` | table | Shared storage for tracked character and inventory data. Character-local on Forever during the workaround. |
+
+On **Retail**, both use account-wide storage at
+`WTF/Account/<account>/SavedVariables/QUI.lua`. On **Forever** only, both use
+character storage at
+`WTF/Account/<account>/<realm>/<character>/SavedVariables/QUI.lua` as a temporary
+workaround for the client's persistence issue. Existing account-wide data is
+**not automatically migrated**. Back up your `WTF` folder before updating; the
+workaround is intended to be reverted once Blizzard fixes the underlying issue.
 
 These are written to disk by the WoW client on logout, reload, or `/reload`. Manual editing of SavedVariables files is not recommended -- use the in-game profile import/export system instead.
 
