@@ -90,7 +90,9 @@ Convenience features that automate common tasks.
 
 In **QoL → Automation**, each location has its own **Off / Out of Combat / Always** dropdown. All four default to **Off**.
 
-**Out of Combat** requires clear encounter, group, and resurrector combat checks; uncertain offers stay manual. **Always** also accepts battle resurrections during combat. Hold **Shift** when an offer arrives to keep that offer manual. Offers with resurrection sickness or a recovery delay always stay manual.
+**Out of Combat** accepts offers unless the identified resurrector is in combat. Other raid or party members' combat state does not block acceptance, and offers are still accepted when the resurrector cannot be identified. **Always** also accepts offers from resurrectors in combat. Neither mode requires the resurrector to be alive or online.
+
+Eligible offers are accepted immediately when they arrive. Hold **Shift** when an offer arrives to keep that offer manual. Offers with resurrection sickness or a recovery delay always stay manual.
 
 This feature handles incoming resurrection offers only. Self-resurrection, battleground spirit-healer queues, delves, and scenarios remain manual or Blizzard-controlled.
 
