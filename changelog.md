@@ -8,22 +8,27 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta3
+## Current Release: 5.3.2-beta4
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
 The 5.3.2 beta line starts from stable 5.3.1.
-This beta adds optional, location-specific resurrection automation and improves
-damage-meter text readability when outlines are disabled.
+This beta adds optional resurrection automation and appearance-buff removal,
+improves damage-meter text readability, and fixes cooldown and panel behavior.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta3
+## What's New in 5.3.2-beta4
 
 ### Added
 
+- **Optional appearance-buff removal** under Quality of Life → Automation lets
+  you choose which supported transformations and profession outfits to remove.
+  The feature defaults to Off.
+  Removal waits until combat and aura restrictions end, and fishing outfits
+  stay active while casting. Equipped transmog and class forms are unchanged.
 - **Auto Accept Resurrection** under QoL → Automation offers separate settings
   for dungeons, raids, PvP, and the open world. Each defaults to **Off**, with
   **Out of Combat** and **Always** options. **Always** also accepts battle
@@ -32,6 +37,18 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Resurrection automation accepts eligible raid offers reliably**, including
+  offers without a visible popup. Out of Combat mode checks the resurrector's
+  combat state, accepts unidentified offerers, and preserves the Shift override
+  and recovery exclusions.
+- **Cooldown Manager reuses released icons**, preventing abandoned frames from
+  accumulating during repeated layout changes. Hiding the Blizzard player
+  castbar also preserves the geometry needed by Edit Mode.
+- **Movable Blizzard panels stay in front when selected**, including during
+  merchant updates. Party keystones follow the instance window, the lust timer
+  stays below other panels, and extra ability buttons retain safe layout ownership.
+- **Battle.net friend invite menus hide disabled entries for other games**,
+  keeping the available invite choices easier to find.
 - **Damage Meter text is easier to read without font outlines.** Bright fills
   automatically darken behind light text while preserving their hue and opacity,
   and unoutlined window text gets a black shadow. Dark-text and outlined bar
