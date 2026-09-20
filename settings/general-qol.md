@@ -86,6 +86,14 @@ Convenience features that automate common tasks.
 | `autoCombatLogRaid` | boolean | `false` | Auto start/stop combat logging in raids |
 | `autoDeleteConfirm` | boolean | `true` | Auto-fill the DELETE confirmation text when deleting items |
 
+### Auto Remove Appearance Changes
+
+In **QoL → Automation**, enable **Auto Remove Appearance Changes**, then choose individual effects under **Profession Outfits**, **Holiday Costumes**, **Toy Transformations**, and **Consumables & Items**. The master toggle defaults to off. All 26 listed effects are preselected except Atomically Recalibrator and Atomically Regoblinator.
+
+Selected appearance buffs are canceled automatically when possible. Combat and restricted aura access delay removal until those restrictions end. Fishing outfits remain during the fishing channel. Ordinary equipment transmog and class forms are unaffected.
+
+Noggenfogger removes its skeleton and shrinking buffs, including the skeleton's underwater breathing effect; Slow Fall is preserved. Only the listed effects are covered. Settings are stored in `general.autoRemoveAppearanceChanges` and included in QoL profile exports.
+
 ### Auto Accept Resurrection
 
 In **QoL → Automation**, each location has its own **Off / Out of Combat / Always** dropdown. All four default to **Off**.
