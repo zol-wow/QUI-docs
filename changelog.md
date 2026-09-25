@@ -8,20 +8,20 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta5
+## Current Release: 5.3.2-beta6
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
 The 5.3.2 beta line starts from stable 5.3.1.
 This beta adds optional resurrection automation and appearance-buff removal,
-improves damage-meter text readability, and fixes cooldown, panel, action-bar,
-and chat behavior.
+improves damage-meter text readability, fixes cooldown, panel, action-bar,
+and chat behavior, and prevents duplicate gold totals.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta5
+## What's New in 5.3.2-beta6
 
 ### Added
 
@@ -38,6 +38,9 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Gold tooltips no longer double-count characters whose realm name changed
+  punctuation or spacing**, such as Kelthuzad and Kel'Thuzad. Removing a
+  character also clears matching legacy entries so they stay removed.
 - **Action-bar range indicators avoid duplicate full-bar scans** on clients with
   native range events. Range tint remains active when usability coloring is off,
   and configured hidden buttons are tracked before they become visible.
