@@ -47,6 +47,15 @@ Shows each group member's Mythic Plus keystone level directly on the M+ tab, so 
 - **Color customization** -- Custom color for the keystone text.
 - **Position and anchor** -- Control where keystone information appears relative to each group member entry.
 
+### Keystone Reroll Reminder
+
+After a non-practice Mythic Plus completion, QUI compares the completed key level
+with your owned key after a short refresh delay. When the completed level is at
+least your owned level, a large **“Re-roll key?”** reminder appears for 15 seconds.
+Starting or resetting a dungeon, or entering the world, clears an old reminder.
+No prompt appears without a valid owned key. This reminder is separate from
+keystone insertion and requires no additional setting.
+
 ### Dungeon Teleport
 
 Adds click-to-teleport functionality to dungeon icons on the M+ tab. If you have the teleport for a dungeon (from achieving a sufficient rating or earning the appropriate achievement), clicking the icon will teleport you directly to the dungeon entrance.
