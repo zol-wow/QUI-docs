@@ -50,11 +50,13 @@ Shows each group member's Mythic Plus keystone level directly on the M+ tab, so 
 ### Keystone Reroll Reminder
 
 After a non-practice Mythic Plus completion, QUI compares the completed key level
-with your owned key after a short refresh delay. When the completed level is at
+with your owned key after a short refresh delay, retrying for up to five seconds
+if your key data is not yet available. When the completed level is at
 least your owned level, a large **“Re-roll key?”** reminder appears for 15 seconds.
 Starting or resetting a dungeon, or entering the world, clears an old reminder.
 No prompt appears without a valid owned key. This reminder is separate from
-keystone insertion and requires no additional setting.
+keystone insertion. Toggle **Keystone Reroll Reminder** under **Quality of Life →
+Automation**; it is enabled by default.
 
 ### Dungeon Teleport
 
