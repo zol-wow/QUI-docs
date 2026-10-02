@@ -52,6 +52,7 @@ QUI can handle as much or as little of your UI as you want. Some players come fo
 | [Alts](alts) | Account-wide character, equipment, currency, reputation, weekly, and item lookup |
 | [Skyriding](skyriding) | Cleaner Skyriding feedback |
 | [XP Tracker](xp-tracker) | Leveling or casual progression visibility |
+| [Underlight Angler Helper](underlight-angler-helper) | Unlocking the Legion fishing artifact and buying its traits |
 
 ### Layout and Convenience
 
