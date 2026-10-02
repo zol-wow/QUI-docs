@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta7
+## Current Release: 5.3.2-beta8
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
@@ -18,15 +18,21 @@ This beta adds optional resurrection automation and appearance-buff removal,
 improves damage-meter text readability, fixes cooldown, panel, action-bar,
 and chat behavior, and prevents duplicate gold totals. It also adds damage-meter
 chat sharing and a keystone reroll reminder, while deferring consumable-check
-layout work until combat ends.
+layout work until combat ends. The latest beta adds the Underlight Angler Helper
+and an option to disable the keystone reminder.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta7
+## What's New in 5.3.2-beta8
 
 ### Added
 
+- **Underlight Angler Helper** adds an unlock checklist, a restored artifact
+  trait tree with purchase confirmations, and fishing tips for alts. Open it
+  with `/angler` or `/quiangler`; configure it under **Module Addons**.
+- **Keystone Reroll Reminder** can be enabled or disabled under **Quality of Life
+  → Automation** and defaults to enabled.
 - **Share damage-meter results** from the window header's **Share Results** menu
   to Party, Raid or Whisper. Select **Rows → Top 3 / Top 5 / Top 10 / All**;
   five data rows plus the heading is the default, and All is capped at 40 rows.
@@ -48,6 +54,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Keystone reroll reminders retry unavailable owned-key data for up to five
+  seconds** after completion instead of stopping after the first check.
 - **Consumable-check layout waits until combat ends**, including ready checks,
   avoiding protected UI work during combat.
 - **Gold tooltips no longer double-count characters whose realm name changed
