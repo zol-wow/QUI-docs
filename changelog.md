@@ -8,25 +8,55 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha9
+## Current Release: 5.5.0-ptr-alpha10
 
 {: .warning }
 **Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental; full feature parity and live gameplay validation are still pending.
 
-QUI 5.5.0-ptr-alpha9 restores normal account-wide storage on Forever,
-removing alpha8's character-local workaround. Retail keeps account-wide storage.
-The reported Forever persistence issue remains unresolved. Earlier Forever
-features and cumulative PTR and stable improvements remain included below.
+QUI 5.5.0-ptr-alpha10 includes the 5.3.2 beta updates through beta9, current
+Forever build 70205 compatibility, and native-window skinning fixes. Both clients
+retain account-wide storage. The reported Forever persistence issue remains
+unresolved; alpha8's character-local data is not automatically migrated back.
+Earlier Forever features and cumulative PTR and stable improvements remain
+included below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## Unreleased Beta Integration
+## What's New in 5.5.0-ptr-alpha10
 
-The Alpha branch also includes the following updates from the 5.3.2 beta
-line through beta9. These changes do not publish a new Alpha release.
+### Forever Native Compatibility and Skinning
 
-### Added
+- **Forever build 70205 uses QUI's shared secure controls again**, including
+  owned action buttons, paging, flyouts, press-and-hold, group headers, hover
+  keyboard/wheel clickcasting, chat visibility, and protected panel movement
+  and scaling. This follows Blizzard's repaired secure-environment load order.
+  GSE integration remains unavailable, and Quick Salvage remains outside combat.
+  Native Cooldown Manager preview textures now stay under Blizzard's ownership.
+- **The current Forever character sidebar supports all four tabs**: stats,
+  equipment, titles, and pet. Character and Inspect skins follow native mode
+  tabs and acquired stat rows; switching away from the character equipment
+  page removes QUI overlays and restores the native panel bounds.
+- **Existing skins follow the native windows loaded on Forever**, including
+  Group Finder, professions, Collections, and currency/statistics panels.
+  Flight Map skinning also covers the native taxi window, and Guild Registrar
+  skinning covers the guild charter window. New **Legacy System** and **Pet
+  Stable** skins are optional and default to Off; native selection, rewards,
+  dragging, and purchase controls retain Blizzard's behavior.
+- **Loot updates retain the open window's position and make every slot
+  reachable**, preserving modified-click and master-loot context. Roll timers
+  follow native remaining time, including queued and restored rolls; cancelling
+  all rolls clears their queue. Encounter power bars handle maximum-power
+  changes, while vehicle health/mana visibility, buff timers, and pitch controls
+  stay native. Vehicle geometry changes wait until combat ends.
+- **Selective skin exports and imports retain optional panel choices**, and
+  settings search includes both client variants while showing controls for
+  your client. Forever omits the Keystone skin control because its client does
+  not load that native window. These are source and headless-test fixes;
+  native rendering, combat behavior, and full gameplay parity still need live
+  verification. See the [Forever support strategy](blizzard/forever-support-strategy).
+
+### Included Beta Additions
 
 - **Keystone reroll reminder duration** can be set to **15, 30, or 60 seconds**
   under **Quality of Life → Automation**. The default remains 15 seconds;
@@ -51,7 +81,7 @@ line through beta9. These changes do not publish a new Alpha release.
   Removal waits until combat and aura restrictions end, and fishing outfits
   stay active while casting. Equipped transmog and class forms are unchanged.
 
-### Fixed
+### Included Beta Fixes
 
 - **Shift-drag anchoring in Layout Mode aligns frame edges flush**, with left,
   center, or right alignment above and below a target, and top, center, or bottom
@@ -178,7 +208,10 @@ backup to preserve that data.
 - **New profile exports identify their client**, and imports reject a different
   tagged client before applying settings. Older untagged exports remain accepted.
 
-### Forever Alpha Limits
+### Alpha9 Limits (Historical)
+
+Alpha10 restores the secure controls listed above; the following describes
+alpha9. Persistence, gameplay datasets, and live-verification limits remain.
 
 - **GSE integration remains unavailable.** Hover keyboard and mouse-wheel
   clickcasting are also unavailable; saved bindings are retained.
