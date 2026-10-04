@@ -35,10 +35,12 @@ the existing Layout export category.
 - Let Blizzard's AuraContainer select buffs and control aura-slot visibility.
   Aura-driven artwork must have no addon scripts in its subtree.
 - Register raid, party and focus aura sounds through the native aura-sound API,
-  with independent switches. These sounds cannot follow the PI cooldown gate;
-  explain this next to their setting. Retry sound setup between pulls, separately
-  from the stricter aura-artwork setup. Native aura audio accepts recorded files,
-  so custom TTS phrases apply to player cooldown reminders.
+  with independent switches. Remove them when PI is cast or unavailable, and
+  require confirmed PI readiness before registering them again. Combat and
+  encounter restrictions can delay re-registration; explain this next to their
+  setting. Retry sound setup between pulls, separately from the stricter
+  aura-artwork setup. Native aura audio accepts recorded files, so custom TTS
+  phrases apply to player cooldown reminders.
 - Ignore whisper payloads. Any qualifying whisper selects from the configured
   list; it does not identify the sender. Clear requests after casting, combat,
   roster or profile changes. Advance rotation only on the player's PI cast.
