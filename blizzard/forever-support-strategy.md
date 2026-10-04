@@ -1,6 +1,10 @@
 # QUI Retail and WoW Forever support strategy
 
-Initial research date: 2026-09-17. Feature-port follow-up: 2026-09-18; live gameplay verification pending.
+Initial research date: 2026-09-17. Feature-port follow-up: 2026-09-18.
+
+Dated research receipts preserve the evidence available at each audit. Historical
+acceptance plans and implementation state are not current release requirements.
+
 QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
@@ -37,8 +41,7 @@ files, 12 profile fixtures, both strict client taint analyses and all 19 lint
 targets. Original-source regressions fail for compiler classification, Camelot
 flyout selection, GSE exclusion, preview texture ownership, sidebar routing and
 title chrome. The owned-button test executes paging and press-and-hold snippets
-for both Retail and Forever. Live casting, combat bindings, hover clickcasting
-and protected placement still require the consolidated client check. Log:
+for both Retail and Forever. Log:
 `/tmp/qui-forever-70205-fixes-gates-final-20261004.log`.
 
 ## October 4 skinning topology and lifecycle audit
@@ -118,15 +121,7 @@ The final independent review's container-loot argument collision was corrected
 and covered before this run. Log:
 `/tmp/qui-forever-skinning-final-gates-20261004.log`.
 
-This audit does not change corpus pins, publish an archive or establish
-live-client acceptance.
-
-Live acceptance remains a consolidated pass: enable the affected optional skins,
-reload, visit Group Finder/professions/Collections/Legacy; switch all Character and
-Inspect modes; open taxi/stable/charter; exercise loot link/master-loot/scroll/roll
-behavior; and check vehicle/alternate-power controls including combat recovery.
-Headless source checks do not establish pixel alignment, secure execution in the
-native client or full Forever gameplay parity.
+This source audit did not change corpus pins or publish an archive.
 
 ## September 18 feature ports (historical)
 
@@ -226,7 +221,7 @@ Drew reported `IconDataProvider.lua:144` with `BaseIconFilenames=nil` when enter
 
 `cdm_editmode_policy.lua` now installs an exact-build workaround on native cooldown viewer items, including already-active and newly acquired frames. Only their edit-mode fallback texture uses a lazy extras-only provider and wraps its index through `GetNumIcons()` (which always includes the question-mark entry). Native real spell/item/aura textures retain precedence, and native edit-mode indices/durations stay intact. No global provider method, private cache or native spell data is replaced. All nine gates passed (exit 0), including 981 unit files, 12 profile fixtures and both strict client taint analyses; log `/tmp/qui-forever-editmode-icons-final.log`. Live Edit Mode retest is pending; changes remain uncommitted.
 
-## Micro-menu, bag bar, Info Bar and datatext support
+## September 17 micro-menu, bag bar, Info Bar and datatext support (historical)
 
 Implemented 2026-09-17 after Drew authorized the takeover and related Info Bar/datatext audit. Native initialization now includes `microbar` and `bags`, reusing the existing Retail builders with ordinary containers and built-in visibility drivers on build 69893. QUI controls position, columns, size, spacing, clickthrough and fades; original native buttons retain their click/drag/tooltip behavior. Refresh, combat recovery, context yield/reclaim and Edit Mode position saving include both bars.
 
@@ -241,6 +236,11 @@ Info Bar's menu substitutes Legacy for Achievements on Forever and uses the nati
 Forever's loaded `Blizzard_PlayerSpells/Camelot/ClassTalents/Blizzard_ClassTalentsFrame.lua` activates Primary/Secondary talent groups with `C_SpecializationInfo.SetActiveSpecGroup`; API namespace presence does not make Retail specialization/loadout switching appropriate. The Info Bar spec switcher and Player Spec datatext follow unlocked native groups and active-group refresh events. Retail retains its specialization/loadout behavior. Other audited data providers and LDB hosting require no additional source-proven adaptation in this step.
 
 Headless regressions exercise actual Camelot micro initialization, bag manager inventory, native Group Finder/Talents/Legacy dispatch, keyring on/off, Help fallback, dual-spec unlock/activation, combat guards, utility visibility, artwork, layout and deferred recovery. Validation: `JOBS=12 bash tools/test.sh` passed all nine gates (exit 0), including **980 unit test files**, 12 profile fixtures, both strict client taint analyses, lint/compile and generated data checks. Log: `/tmp/qui-forever-utility-infobar-final.log`. Changes remain uncommitted. Live acceptance remains required: utility click/drag/tooltip behavior, fades, profile reload and combat/context transitions cannot be established completely by headless checks.
+
+## September 17 research and rollout plan (historical)
+
+The remaining sections retain the original research, implementation plans, and
+validation state from September 17. They do not describe current release blockers.
 
 ## 1. Verified sources and what they establish
 

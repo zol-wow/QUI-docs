@@ -14,7 +14,7 @@ A modular World of Warcraft UI suite for Midnight 12.1.5 PTR and WoW Forever 1.6
 {: .label .label-purple }
 
 {: .warning }
-**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1 (interfaces 120105 and 16001).** Forever support is experimental, with bank, group-frame, and swing-timer support. Account-wide storage is restored; the reported Forever persistence issue remains unresolved. See the [release notes](changelog) for limits.
+**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1 (interfaces 120105 and 16001).** Forever support is experimental, with bank, group-frame, and swing-timer support. See the [release notes](changelog) for changes and client-specific features.
 
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Features](features/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }

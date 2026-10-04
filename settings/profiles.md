@@ -29,10 +29,8 @@ QUI uses the AceDB-3.0 library for profile storage. All profile-level settings a
 
 Each character can independently select which profile to use. By default, all characters share the `"Default"` profile. Switching profiles on one character does not affect other characters unless they share the same profile.
 
-Forever alpha9 restores account-wide profiles after alpha8's character-local
-workaround. Alpha8's character-local profiles are not automatically migrated
-back; see the upgrade guidance below. The reported Forever persistence issue
-remains unresolved.
+Forever alpha9 and later use account-wide profiles. Alpha8's character-local
+profiles are not automatically migrated back; see the upgrade guidance below.
 
 ### Reset All Movers
 
@@ -68,12 +66,11 @@ On **Retail and Forever**, both use account-wide storage at
 remains enabled.
 
 Forever alpha8 used character-local storage at
-`WTF/Account/<account>/<realm>/<character>/SavedVariables/QUI.lua`. Alpha9 does
+`WTF/Account/<account>/<realm>/<character>/SavedVariables/QUI.lua`. Alpha9 and later do
 **not automatically migrate that data back**. Before upgrading, export any
 profile settings you want to keep and back up your `WTF` folder. You can import
 a same-client profile export afterward, but it does not include tracked data
-in `QUI_StorageDB`; keep the full backup to preserve that data. Restoring the
-account-wide declaration does not fix the reported Forever persistence issue.
+in `QUI_StorageDB`; keep the full backup to preserve that data.
 
 These are written to disk by the WoW client on logout, reload, or `/reload`. Manual editing of SavedVariables files is not recommended -- use the in-game profile import/export system instead.
 
