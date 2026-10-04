@@ -41,6 +41,93 @@ for both Retail and Forever. Live casting, combat bindings, hover clickcasting
 and protected placement still require the consolidated client check. Log:
 `/tmp/qui-forever-70205-fixes-gates-final-20261004.log`.
 
+## October 4 skinning topology and lifecycle audit
+
+Target: the vendored **Forever 1.60.1.70205 / e3ecc27b** corpus, with the
+vendored Retail **12.1.5.70077** corpus as the regression baseline. The audit
+traced all 30 runtime files under `modules/skinning/{frames,gameplay,system,notifications}`,
+the shared `SkinBase` implementation in `core/uikit.lua`, character/inspect
+enhancements, settings and selective profile exports. Graphify supplied navigation;
+findings were checked directly against native TOC routing, XML and Lua. Raw
+generated API tables supply API contracts; the taint index is not an availability
+inventory.
+
+The important topology difference is the loaded **Camelot** UI. A Retail frame
+global or namespace existing in the source tree does not establish that the
+visible Forever window uses it. The following source-proven gaps are fixed
+in this audit; publication is a separate step.
+
+| Native surface | Source contract and previous gap | Current behavior |
+|---|---|---|
+| Group Finder, professions and Collections | `Blizzard_GroupFinder.toc` explicitly excludes Camelot; `Blizzard_GroupFinder_VanillaStyle.toc` includes it. Its root is `LFGParentFrame`, with Listing/Browse/Who pages. Camelot `Blizzard_ProfessionsFrame.xml` exposes `BookPage`, `ProfessionsOverviewTab` and `rightProfessionTabs`, without Retail's TabSystem/OrdersPage/SpecPage. Collections selection uses `TabContainer.Tabs`. Existing skins only handled Retail roots/tab discovery. | Existing skin toggles cover the loaded native roots, side tabs, lists, search/filter controls and embedded profession book. Collections uses the native tab array with the prior numbered-global fallback. Theme refresh follows these same objects. |
+| Character and Inspect | Camelot `CharacterFrameConstants.lua` lists six pages: PaperDoll, Reputation, Token, PVPRank, Skills and Statistics. Character/Inspect `ModeTabs.Tabs` are Frames using `OnMouseUp` and `SetChecked`; old numbered bottom tabs remain hidden. Currency details live at `TokenFrame.DetailFrame`; active inspect talents live on `InspectPaperDollFrame`. Native player/pet stats use pooled ScrollBox headers and resistance rows, bypassing the old stat writer. | Native mode tabs and detail/list text use shared skin primitives. Switching to any non-PaperDoll page removes QUI enhancement overlays and restores native scale/shell bounds. Late Statistics/Currency loads and acquired rows receive styling. Inspect talents resolves its actual parent. Player/pet stats, equipment chrome and exposed ranged/ammo slots follow the loaded structures. Native tab callbacks, item data, stat values, semantic colors and currency-transfer controls remain owned by Blizzard. |
+| Legacy, stable, taxi and guild charter | `Blizzard_LegacySystem.toc` and `Blizzard_StableUI.toc` explicitly include Camelot. Neither root had skin coverage. Shared `TaxiFrame.xml` is the native flight path window; only `FlightMapFrame` was handled. Mainline `PetitionFrame.xml` is loaded by UIPanels_Game beside the guild registrar. | Forever gets optional `skinLegacySystem` and `skinStable` controls, initially off. Legacy page/talent/reward acquisition receives font-only treatment, with native reward/node art retained. Stable shell/purchase controls are themed while pet slot lock colors, dragging, selection, model scene and controller handling stay native. Existing Flight Map/Guild Registrar settings also cover TaxiFrame/PetitionFrame. |
+| Loot and encounter/vehicle controls | Loaded native LootFrame handles changed slots and native modified-click/master-loot context; native group loot uses engine remaining-time queries and Forever can restore active rolls after reload. The replacement omitted events/context and capped loot at ten slots. Native alternate power updates on `UNIT_MAXPOWER` and owns additional buff timers. OverrideActionBar controls health/power visibility and vehicle pitch controls. | Loot refresh preserves the open window's position, all slots remain reachable, and native click context is retained. Mass cancellation clears active/queued rolls; countdowns follow native remaining time, including queued and restored rolls. Alternate-power updates include maximum changes and native timer presentation. Vehicle health/mana visibility remains native; pitch controls stay visible beside the compact bar, with geometry changes deferred in combat. |
+| Settings, profiles and search | Forever excludes `Blizzard_ChallengesUI` through its `standard,mists` TOC rule. The settings still offered its Keystone skin. The selective skin category also omitted 26 existing optional panel toggles. Generated search only harvested the ordinary client settings pass. | Forever omits the Keystone skin control. New and existing optional panel choices survive selective skin exports/imports. Search harvests both client variants and filters client-specific controls when applying the cache. Locale regeneration preserves every retained translation by English key. |
+
+Native evidence is in `tests/clients/forever/framexml/Interface/AddOns/`:
+
+- `Blizzard_GroupFinder_VanillaStyle/{Blizzard_GroupFinder_VanillaStyle.toc,Mainline/*}`;
+  `Blizzard_Professions/Camelot/Blizzard_ProfessionsFrame.{xml,lua}`;
+  `Blizzard_Collections/{Shared/Blizzard_Collections.xml,Camelot/Blizzard_CollectionsOverrides.lua}`.
+- `Blizzard_UIPanels_Game/Camelot/{CharacterFrame.lua,CharacterFrame.xml,CharacterFrameConstants.lua,PaperDollFrame.xml,PVPRankFrame.xml}`;
+  `Blizzard_InspectUI/Camelot/{InspectFrame.xml,InspectPaperDollFrame.xml}`;
+  `Blizzard_Statistics/Camelot/StatisticsFrame.{lua,xml}` and
+  `Blizzard_TokenUI/Camelot/Blizzard_TokenUI.{lua,xml}`.
+- `Blizzard_LegacySystem/Blizzard_LegacySystem.{lua,xml}`;
+  `Blizzard_StableUI/Camelot/Blizzard_StableUI.{lua,xml}`;
+  `Blizzard_UIPanels_Game/{Shared/TaxiFrame.xml,Mainline/PetitionFrame.xml}`.
+- `Blizzard_UIPanels_Game/{Mainline/LootFrame.lua,Mainline/GroupLootFrame.lua}`;
+  `Blizzard_UnitFrame/Mainline/UnitPowerBarAlt.lua`;
+  `Blizzard_OverrideActionBar/OverrideActionBar.lua` and generated
+  `LootDocumentation.lua` / unit event documentation.
+- `Blizzard_SharedXML/Mainline/SharedUIPanelTemplates.{lua,xml}` establishes
+  side-tab icon/mask, mouse-release and checked-state ownership.
+
+The remaining reviewed skins had no further demonstrated topology/API defect:
+auction house, crafting orders, bank/merchant/gossip/quest/trainer, achievement,
+weekly rewards, mail, reputation/status tracking, world map, Delves companion,
+PvP results, game menu, ordinary/static/context popups, tooltips, alerts, ready
+checks, objective tracker and native swing timers. This is source review of their
+owned surfaces, not a claim that every Blizzard window in the corpus is skinned.
+Blizzard still owns panels outside QUI's selectable skins.
+
+Load rules must remain specific: Delves companion permits Camelot, while its
+difficulty picker permits only `standard`; ChallengesUI permits `standard,mists`.
+These excluded surfaces are not missing Forever frames. Conversely, lack of an
+explicit exclusion for AuctionHouse/CraftingOrders/WeeklyRewards establishes
+source loading eligibility, not access to that gameplay system on a character.
+Housing/Initiative alert source is similarly insufficient gameplay evidence.
+
+Regression checks exercise the actual native side-tab, profession selection,
+Legacy page routing, character mode switch, resistance/category initialization,
+taxi opening, stable slot updates and vehicle visibility routines. Original-source
+substitutions and independent mutations must fail for the specific visible gap.
+The new settings check covers both client menus and selective profile round trips;
+search checks client filtering and the real generated routes. The 12 profile
+fixtures contain only the two new optional default keys.
+
+Final verification: **all nine `JOBS=8 bash tools/test.sh` gates passed**, including
+**1,016 unit test files**, 12 profile fixtures, both strict client taint analyses,
+Lua 5.1 compilation, all 19 lint targets, tooling/API freshness and generated
+search/locale checks. Original settings, profile IO, native panel sources and
+search generator/filter fail the intended regressions; independent loot mutations
+also catch container-loot event payloads, retained cursor/scroll position, large
+loot lists, modified/master-loot clicks, engine timing, cancellation and restore.
+The final independent review's container-loot argument collision was corrected
+and covered before this run. Log:
+`/tmp/qui-forever-skinning-final-gates-20261004.log`.
+
+This audit does not change corpus pins, publish an archive or establish
+live-client acceptance.
+
+Live acceptance remains a consolidated pass: enable the affected optional skins,
+reload, visit Group Finder/professions/Collections/Legacy; switch all Character and
+Inspect modes; open taxi/stable/charter; exercise loot link/master-loot/scroll/roll
+behavior; and check vehicle/alternate-power controls including combat recovery.
+Headless source checks do not establish pixel alignment, secure execution in the
+native client or full Forever gameplay parity.
+
 ## September 18 feature ports (historical)
 
 This section supersedes the initial fallback policy below. The shared compiler
