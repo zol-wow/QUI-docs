@@ -10,13 +10,12 @@ nav_order: 4
 Profiles are how QUI remembers your setup. If you understand this page, you can experiment much more freely without worrying about losing your preferred layout.
 
 {: .warning }
-**Alpha9 restores account-wide storage on Forever.** Alpha8's character-local
-profiles and tracked data are **not automatically migrated back**. Before
+**Upgrading from alpha8 on Forever:** alpha9 and later use account-wide storage.
+Alpha8's character-local profiles and tracked data are **not automatically migrated back**. Before
 updating, export any profile settings you want to keep and back up your `WTF`
 folder. Import your same-client profile export afterward if needed. Profile
 exports do not include tracked data in `QUI_StorageDB`; the full backup
-preserves that data. Retail continues to use account-wide storage. The reported
-Forever persistence issue remains unresolved.
+preserves that data. Retail continues to use account-wide storage.
 
 ## The Simple Version
 

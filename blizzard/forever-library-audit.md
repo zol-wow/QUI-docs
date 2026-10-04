@@ -3,7 +3,8 @@
 Audited 2026-09-18 from `/big-data/Github/QUI_Alpha`. Upstream source was fetched
 directly; revisions below identify the inspected snapshots. No library update
 found in this audit supplies a dedicated Forever defensive-spell dataset.
-Existing local compatibility fixes remain intact.
+Existing local compatibility fixes remain intact. The validation section records
+the evidence available on September 18, not current release requirements.
 
 ## Every vendored library
 
@@ -87,6 +88,6 @@ from another addon's global dataset, manual entries, source derivation, and
 preserved Retail routing. Existing defensive secret-value and Forever library
 initialization regressions pass. Focused Lua lint reports no warnings.
 
-Live acceptance: open Reminders' defensive picker on Forever, confirm displayed
-abilities and their effects, add one to the optional priority list, then test
-its ready/unready state and callout. No in-client verification is claimed here.
+At the September 18 audit, the planned live check was to open Reminders'
+defensive picker, confirm displayed abilities and effects, add a priority, and
+exercise its ready/unready state and callout. This records the audit-time plan.

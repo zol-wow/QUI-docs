@@ -59,5 +59,4 @@ automatically migrated back**. Before updating, export any profile settings you
 want to keep and back up your `WTF` folder. You can import the same-client
 profile export afterward; it does not include tracked data in `QUI_StorageDB`,
 so keep the full backup. Retail continues to use normal account-wide storage.
-The reported Forever persistence issue remains unresolved. See
-[Profiles](profiles) for details.
+See [Profiles](profiles) for details.

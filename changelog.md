@@ -11,14 +11,12 @@ This page summarizes the user-facing changes since the last mainline release. Fo
 ## Current Release: 5.5.0-ptr-alpha10
 
 {: .warning }
-**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental; full feature parity and live gameplay validation are still pending.
+**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental.
 
 QUI 5.5.0-ptr-alpha10 includes the 5.3.2 beta updates through beta9, current
-Forever build 70205 compatibility, and native-window skinning fixes. Both clients
-retain account-wide storage. The reported Forever persistence issue remains
-unresolved; alpha8's character-local data is not automatically migrated back.
-Earlier Forever features and cumulative PTR and stable improvements remain
-included below.
+Forever build 70205 compatibility, and native-window skinning fixes. Earlier
+Forever features and cumulative PTR and stable improvements remain included
+below.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
@@ -52,9 +50,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 - **Selective skin exports and imports retain optional panel choices**, and
   settings search includes both client variants while showing controls for
   your client. Forever omits the Keystone skin control because its client does
-  not load that native window. These are source and headless-test fixes;
-  native rendering, combat behavior, and full gameplay parity still need live
-  verification. See the [Forever support strategy](blizzard/forever-support-strategy).
+  not load that native window. See the
+  [Forever support strategy](blizzard/forever-support-strategy).
 
 ### Included Beta Additions
 
@@ -131,6 +128,10 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   styles keep their original fills.
 
 ## What's New in 5.5.0-ptr-alpha9
+
+Historical release notes from September 18, 2026. The storage and verification
+caveats below describe that release at the time; they are not current Alpha10
+limits. The alpha8 upgrade guidance still applies.
 
 ### Account-Wide Storage Restored
 
@@ -211,7 +212,7 @@ backup to preserve that data.
 ### Alpha9 Limits (Historical)
 
 Alpha10 restores the secure controls listed above; the following describes
-alpha9. Persistence, gameplay datasets, and live-verification limits remain.
+alpha9 as released on September 18, 2026.
 
 - **GSE integration remains unavailable.** Hover keyboard and mouse-wheel
   clickcasting are also unavailable; saved bindings are retained.
