@@ -15,9 +15,11 @@ It is a port of the standalone Underlight Angler UI addon by CoreMeeko2, brought
 
 The module ships enabled. Turn it off or on under `/qui` > **Module Addons** > **Underlight Angler Helper**.
 
-Open the window with `/angler` or `/quiangler`. While the Underlight Angler artifact is open at the Luminous Pearl in Dalaran, an **Underlight Angler Tree** button also appears on Blizzard's artifact window.
+Open the Underlight Angler artifact at the Luminous Pearl in Dalaran and the helper appears in place of Blizzard's artifact window, on the **Artifact Tree** tab. Closing the helper closes the artifact window with it.
 
-If the standalone Underlight Angler UI addon is also enabled, it keeps `/angler` and its own artifact-window button; use `/quiangler` for the QUI window.
+Anywhere else, `/angler` or `/quiangler` opens the helper as a free-standing window on the **Checklist** tab.
+
+If the standalone Underlight Angler UI addon is also enabled, it keeps `/angler` and its own overlay on the artifact window; use `/quiangler` for the QUI window.
 
 ## Checklist
 
