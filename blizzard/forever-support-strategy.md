@@ -5,7 +5,43 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
 
-## September 18 feature ports
+## October 4 current corpus compatibility
+
+The current Forever corpus is **1.60.1.70205**, pinned to
+[`e3ecc27b`](https://github.com/Gethe/wow-ui-source/tree/e3ecc27b64d30fdc735a3f6579b866858f9f9df1).
+Drew's installed client tracks the corpus. This section supersedes the historical
+compiler and preview workarounds described below.
+
+Build 70009 repaired the restricted-environment load order by replacing the
+filtered dependency with an unconditional optional dependency. QUI now enables
+its shared secure action-bar, header, hover-clickcasting, chat and mover paths on
+Forever. Owned flyouts explicitly include Forever, whose build 70170 introduced
+`WOW_PROJECT_CAMELOT = 18`. GSE remains excluded independently of compiler policy;
+Quick Salvage retains the native out-of-combat action template.
+
+Build 70170 also changed native CDM previews to `GetIconByWrappedIndex`. QUI no
+longer replaces those preview methods. Native spell/category textures, pooled
+items and macro-icon cache release retain Blizzard's behavior. The current
+character sidebar uses stats 1, equipment 2, titles 3 and pet 4; all four tabs
+receive QUI styling and the existing title/equipment popouts follow those roles.
+
+Native backpack free-space text now uses `FreeSlots`. QUI's bag layout never
+offered the skinnable action-button count controls, so its native text and
+`displayFreeBagSlots` setting remain owned by Blizzard. Bank, micro/bag membership,
+specialization, resource and profile adaptations remain in place. The generated
+API changes preserve secret-value handling and add texture/input restrictions;
+they do not justify removing those protections.
+
+Validation: all nine `JOBS=12 bash tools/test.sh` gates pass, including 1,006 unit
+files, 12 profile fixtures, both strict client taint analyses and all 19 lint
+targets. Original-source regressions fail for compiler classification, Camelot
+flyout selection, GSE exclusion, preview texture ownership, sidebar routing and
+title chrome. The owned-button test executes paging and press-and-hold snippets
+for both Retail and Forever. Live casting, combat bindings, hover clickcasting
+and protected placement still require the consolidated client check. Log:
+`/tmp/qui-forever-70205-fixes-gates-final-20261004.log`.
+
+## September 18 feature ports (historical)
 
 This section supersedes the initial fallback policy below. The shared compiler
 guard now applies to the Forever client family, not an allowlist of build numbers.
