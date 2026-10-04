@@ -22,7 +22,7 @@ For most players, the easiest path is an addon manager.
 
 ## Manual Install
 
-1. Download **5.5.0-ptr-alpha9** from one of these sources:
+1. Download **5.5.0-ptr-alpha10** from one of these sources:
    - [GitHub Releases](https://github.com/zol-wow/QUI/releases)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.
@@ -53,7 +53,7 @@ Compatible integrations are detected automatically when they are present, but QU
 Before installing an alpha build, back up your `WTF` folder. QUI takes automatic profile backups for some schema migrations, but a full `WTF` backup is still the safest rollback path.
 
 {: .warning }
-**Upgrading from alpha8 on Forever:** alpha9 restores account-wide storage for
+**Upgrading from alpha8 on Forever:** alpha9 and later retain account-wide storage for
 QUI profiles and tracked data. Alpha8's character-local data is **not
 automatically migrated back**. Before updating, export any profile settings you
 want to keep and back up your `WTF` folder. You can import the same-client
