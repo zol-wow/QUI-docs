@@ -21,6 +21,85 @@ features and cumulative PTR and stable improvements remain included below.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
+## Unreleased Beta Integration
+
+The Alpha branch also includes the following updates from the 5.3.2 beta
+line through beta9. These changes do not publish a new Alpha release.
+
+### Added
+
+- **Keystone reroll reminder duration** can be set to **15, 30, or 60 seconds**
+  under **Quality of Life → Automation**. The default remains 15 seconds;
+  changes apply to the next reminder and are included in profile exports.
+- **Underlight Angler Helper** adds an unlock checklist, a restored artifact
+  trait tree with purchase confirmations, and fishing tips for alts. Open it
+  with `/angler` or `/quiangler`; configure it under **Module Addons**.
+- **Keystone Reroll Reminder** can be enabled or disabled under **Quality of Life
+  → Automation** and defaults to enabled.
+- **Share damage-meter results** from the window header's **Share Results** menu
+  to Party, Raid or Whisper. Select **Rows → Top 3 / Top 5 / Top 10 / All**;
+  five data rows plus the heading is the default, and All is capped at 40 rows.
+  The choice is saved per window. Instance groups use instance chat, and outgoing
+  reports use the shared chat-throttling queue.
+- **Keystone reroll reminder** displays a large “Re-roll key?” prompt after a
+  non-practice dungeon completion when the completed key level is at least your
+  refreshed owned key level. The prompt expires after the configured duration,
+  which defaults to 15 seconds.
+- **Optional appearance-buff removal** under Quality of Life → Automation lets
+  you choose which supported transformations and profession outfits to remove.
+  The feature defaults to Off.
+  Removal waits until combat and aura restrictions end, and fishing outfits
+  stay active while casting. Equipped transmog and class forms are unchanged.
+
+### Fixed
+
+- **Shift-drag anchoring in Layout Mode aligns frame edges flush**, with left,
+  center, or right alignment above and below a target, and top, center, or bottom
+  alignment beside it. Moving and nudging anchored frames preserve alignment
+  without rounding drift, and detached frames stay detached when changes are saved.
+- **Aura Display outlines and previews match vertical growth and wrapping**,
+  including icon spacing, row spacing, and edge alignment. Right-clicking an
+  individual display or group in Layout Mode opens its Position controls,
+  including **Anchor To** and offsets.
+- **Action-bar buttons update while dragging size and spacing settings**,
+  keeping the preview consistent with the actual button layout.
+- **Category bag views honor the selected sort key and reverse order** and
+  refresh when sort settings, item details, or stack counts change. Completing
+  a sort also refreshes the bag view.
+- **Keystone reroll reminders retry unavailable owned-key data for up to five
+  seconds** after completion instead of stopping after the first check.
+- **Consumable-check layout waits until combat ends**, including ready checks,
+  avoiding protected UI work during combat.
+- **Gold tooltips no longer double-count characters whose realm name changed
+  punctuation or spacing**, such as Kelthuzad and Kel'Thuzad. Removing a
+  character also clears matching legacy entries so they stay removed.
+- **Action-bar range indicators avoid duplicate full-bar scans** on clients with
+  native range events. Range tint remains active when usability coloring is off,
+  and configured hidden buttons are tracked before they become visible.
+- **Chat skips channel notices that have no valid destination**, matching native
+  chat routing while preserving invitations and system errors.
+- **Guild addon communication respects speaking permissions**, avoiding automatic
+  guild messages when you cannot speak in guild chat. Group communication remains
+  available.
+- **Opening Talents avoids a panel-initialization error** when movable-panel
+  setup is disabled or deferred.
+- **Resurrection automation accepts eligible raid offers reliably**, including
+  offers without a visible popup. Out of Combat mode checks the resurrector's
+  combat state, accepts unidentified offerers, and preserves the Shift override
+  and recovery exclusions.
+- **Cooldown Manager reuses released icons**, preventing abandoned frames from
+  accumulating during repeated layout changes. Hiding the Blizzard player
+  castbar also preserves the geometry needed by Edit Mode.
+- **Movable Blizzard panels stay in front when selected**, including during
+  merchant updates. Party keystones follow the instance window, the lust timer
+  stays below other panels, and extra ability buttons retain safe layout ownership.
+- **Battle.net friend invite menus hide disabled entries for other games**,
+  keeping the available invite choices easier to find.
+- **Damage Meter text is easier to read without font outlines.** Bright fills
+  automatically darken behind light text while preserving their hue and opacity,
+  and unoutlined window text gets a black shadow. Dark-text and outlined bar
+  styles keep their original fills.
+
 ## What's New in 5.5.0-ptr-alpha9
 
 ### Account-Wide Storage Restored

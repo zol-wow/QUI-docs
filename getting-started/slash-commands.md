@@ -57,6 +57,12 @@ These commands work when the Bags module is enabled.
 |---------|-------------|
 | `/quidmreset` | Reset the current damage meter session. |
 
+## Underlight Angler Helper Commands
+
+| Command | Description |
+|---------|-------------|
+| `/angler` or `/quiangler` | Toggle the Underlight Angler helper window. |
+
 ## CDM Debug Commands
 
 These are available after `/qui debug` reloads the load-on-demand debug tools.
