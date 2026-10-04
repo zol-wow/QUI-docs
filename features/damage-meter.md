@@ -39,6 +39,22 @@ Right-click the header to open a context menu:
 
 Meter Type and `Current` / `Overall` choices persist across reloads.
 
+### Share results to chat
+
+Right-click the window header, then choose **Share Results**. Under **Rows**, select
+**Top 3**, **Top 5**, **Top 10** or **All**, then choose **Party**, **Raid** or
+**Whisper**. The default is five data rows plus a heading; All keeps a safety cap
+of 40 data rows. The row choice is saved separately for each window.
+
+The report uses that window's selected metric and combat segment, number format,
+and secondary-value setting. Short reports send only the rows available. Whisper
+asks for `Name-Realm` and snapshots the results before the recipient is entered.
+Party and Raid require an appropriate group; queued dungeon/LFR groups use instance
+chat when no matching home group exists. Messages share the bundled throttling
+queue. Empty or restricted data produces an unavailable message rather than a
+partial report.
+
+
 Click any **row** to open a reusable five-pane detail workspace for spells, targets, attackers, and death recaps. Resize the workspace and its panes to suit your layout; their sizes are saved. Target rows drill down to their spells. Row-hover details remain independent and interactive.
 
 Spell names and healing rows remain available during combat. When restricted values prevent combining healing and absorbs, QUI retains the native healing view.

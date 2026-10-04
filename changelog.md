@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta6
+## Current Release: 5.3.2-beta9
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
@@ -16,15 +16,36 @@ This page summarizes the user-facing changes since the last mainline release. Fo
 The 5.3.2 beta line starts from stable 5.3.1.
 This beta adds optional resurrection automation and appearance-buff removal,
 improves damage-meter text readability, fixes cooldown, panel, action-bar,
-and chat behavior, and prevents duplicate gold totals.
+and chat behavior, and prevents duplicate gold totals. It also adds damage-meter
+chat sharing and a keystone reroll reminder, while deferring consumable-check
+layout work until combat ends. Recent betas add the Underlight Angler Helper
+and configurable keystone reminders. The latest beta improves Layout Mode
+anchoring, Aura Display previews, live action-bar updates, and category bag sorting.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta6
+## What's New in 5.3.2-beta9
 
 ### Added
 
+- **Keystone reroll reminder duration** can be set to **15, 30, or 60 seconds**
+  under **Quality of Life → Automation**. The default remains 15 seconds;
+  changes apply to the next reminder and are included in profile exports.
+- **Underlight Angler Helper** adds an unlock checklist, a restored artifact
+  trait tree with purchase confirmations, and fishing tips for alts. Open it
+  with `/angler` or `/quiangler`; configure it under **Module Addons**.
+- **Keystone Reroll Reminder** can be enabled or disabled under **Quality of Life
+  → Automation** and defaults to enabled.
+- **Share damage-meter results** from the window header's **Share Results** menu
+  to Party, Raid or Whisper. Select **Rows → Top 3 / Top 5 / Top 10 / All**;
+  five data rows plus the heading is the default, and All is capped at 40 rows.
+  The choice is saved per window. Instance groups use instance chat, and outgoing
+  reports use the shared chat-throttling queue.
+- **Keystone reroll reminder** displays a large “Re-roll key?” prompt after a
+  non-practice dungeon completion when the completed key level is at least your
+  refreshed owned key level. The prompt expires after the configured duration,
+  which defaults to 15 seconds.
 - **Optional appearance-buff removal** under Quality of Life → Automation lets
   you choose which supported transformations and profession outfits to remove.
   The feature defaults to Off.
@@ -38,6 +59,23 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Shift-drag anchoring in Layout Mode aligns frame edges flush**, with left,
+  center, or right alignment above and below a target, and top, center, or bottom
+  alignment beside it. Moving and nudging anchored frames preserve alignment
+  without rounding drift, and detached frames stay detached when changes are saved.
+- **Aura Display outlines and previews match vertical growth and wrapping**,
+  including icon spacing, row spacing, and edge alignment. Right-clicking an
+  individual display or group in Layout Mode opens its Position controls,
+  including **Anchor To** and offsets.
+- **Action-bar buttons update while dragging size and spacing settings**,
+  keeping the preview consistent with the actual button layout.
+- **Category bag views honor the selected sort key and reverse order** and
+  refresh when sort settings, item details, or stack counts change. Completing
+  a sort also refreshes the bag view.
+- **Keystone reroll reminders retry unavailable owned-key data for up to five
+  seconds** after completion instead of stopping after the first check.
+- **Consumable-check layout waits until combat ends**, including ready checks,
+  avoiding protected UI work during combat.
 - **Gold tooltips no longer double-count characters whose realm name changed
   punctuation or spacing**, such as Kelthuzad and Kel'Thuzad. Removing a
   character also clears matching legacy entries so they stay removed.
