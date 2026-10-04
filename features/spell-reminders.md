@@ -94,9 +94,11 @@ tracking. An expired cooldown estimate cannot enable them.
 WoW allows removing native aura sounds during combat but blocks registering
 them again until combat and encounter restrictions lift. If PI becomes ready
 mid-fight, these sounds remain silent until those restrictions lift. They can
-resume between Mythic+ pulls while buff details remain hidden. Sound and
-recipient changes follow the same restrictions. The combat-only filter does
-not affect native tracked-buff sounds.
+resume between Mythic+ pulls while buff details remain hidden. Disabled sounds
+and ineligible recipients are removed immediately, including during combat.
+Registering their replacements waits for the same restrictions to lift. Focus
+sounds require a friendly player other than yourself, just like visual tracking.
+The combat-only filter does not affect native tracked-buff sounds.
 
 For a spoken PI-ready reminder, open **Sounds**, enable **Speak When Ready**,
 enter **Ready Announcement**, and select **Voice**. **Test Voice** previews the
