@@ -55,6 +55,9 @@ Raid and dungeon recipient icons, sounds and whisper requests are optional.
 Highlight styles include pixel, proc, border, fill and a countdown bar.
 Recipient icons use fixed positions during combat, so inactive recipients can
 leave gaps. Their size and font follow the reminder's Appearance settings.
+The first position is reserved for a friendly focus outside your group and is
+labeled **Focus**. It follows focus changes during combat without moving the
+group icons or changing its label.
 
 Frame discovery covers QUI, Blizzard, ElvUI, Grid2, Danders, Ellesmere, Buzzard,
 VuhDo and Mich raid frames. Changes to protected displays wait until WoW allows
