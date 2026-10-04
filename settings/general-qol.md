@@ -86,11 +86,21 @@ Convenience features that automate common tasks.
 | `autoCombatLogRaid` | boolean | `false` | Auto start/stop combat logging in raids |
 | `autoDeleteConfirm` | boolean | `true` | Auto-fill the DELETE confirmation text when deleting items |
 
+### Auto Remove Appearance Changes
+
+In **QoL → Automation**, enable **Auto Remove Appearance Changes**, then choose individual effects under **Profession Outfits**, **Holiday Costumes**, **Toy Transformations**, and **Consumables & Items**. The master toggle defaults to off. All 26 listed effects are preselected except Atomically Recalibrator and Atomically Regoblinator.
+
+Selected appearance buffs are canceled automatically when possible. Combat and restricted aura access delay removal until those restrictions end. Fishing outfits remain during the fishing channel. Ordinary equipment transmog and class forms are unaffected.
+
+Noggenfogger removes its skeleton and shrinking buffs, including the skeleton's underwater breathing effect; Slow Fall is preserved. Only the listed effects are covered. Settings are stored in `general.autoRemoveAppearanceChanges` and included in QoL profile exports.
+
 ### Auto Accept Resurrection
 
 In **QoL → Automation**, each location has its own **Off / Out of Combat / Always** dropdown. All four default to **Off**.
 
-**Out of Combat** requires clear encounter, group, and resurrector combat checks; uncertain offers stay manual. **Always** also accepts battle resurrections during combat. Hold **Shift** when an offer arrives to keep that offer manual. Offers with resurrection sickness or a recovery delay always stay manual.
+**Out of Combat** accepts offers unless the identified resurrector is in combat. Other raid or party members' combat state does not block acceptance, and offers are still accepted when the resurrector cannot be identified. **Always** also accepts offers from resurrectors in combat. Neither mode requires the resurrector to be alive or online.
+
+Eligible offers are accepted immediately when they arrive. Hold **Shift** when an offer arrives to keep that offer manual. Offers with resurrection sickness or a recovery delay always stay manual.
 
 This feature handles incoming resurrection offers only. Self-resurrection, battleground spirit-healer queues, delves, and scenarios remain manual or Blizzard-controlled.
 
