@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta9
+## Current Release: 5.3.2-beta10
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
@@ -19,16 +19,30 @@ improves damage-meter text readability, fixes cooldown, panel, action-bar,
 and chat behavior, and prevents duplicate gold totals. It also adds damage-meter
 chat sharing and a keystone reroll reminder, while deferring consumable-check
 layout work until combat ends. Recent betas add the Underlight Angler Helper
-and configurable keystone reminders. The latest beta improves Layout Mode
-anchoring, Aura Display previews, live action-bar updates, and category bag sorting.
+and configurable keystone reminders, plus improvements to Layout Mode anchoring,
+Aura Display previews, live action-bar updates, and category bag sorting. The
+latest beta adds Spell Reminders and Power Infusion coordination, recipe learning
+tooltips and tint, the Angler artifact overlay, and a group-frame login fix.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta9
+## What's New in 5.3.2-beta10
 
 ### Added
 
+- **Spell Reminders** for Power Infusion, Innervate, and custom spells provide
+  cooldown prompts, sounds, spoken alerts, and load conditions. Enable them
+  under **Reminders → Spell Reminders**. Power Infusion adds offensive-buff
+  tracking, group-frame highlights, focus alerts, and optional whisper-triggered
+  priority or rotation lists; configured lists choose the recipient.
+- **Recipe tooltips** show characters under **Can learn** and **Already known**,
+  using each character's last checked result. Known or unlearnable recipes
+  receive red tint in bags and storage when **Mark Unusable Items** is enabled.
+  It defaults on for new profiles and the Starter Profile; existing settings
+  are preserved.
+- **Opening the Underlight Angler artifact** now shows the helper directly over
+  the artifact window, on its tree tab.
 - **Keystone reroll reminder duration** can be set to **15, 30, or 60 seconds**
   under **Quality of Life → Automation**. The default remains 15 seconds;
   changes apply to the next reminder and are included in profile exports.
@@ -59,6 +73,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Group frames appear reliably after a fresh login**, without requiring
+  `/reload` to initialize them.
 - **Shift-drag anchoring in Layout Mode aligns frame edges flush**, with left,
   center, or right alignment above and below a target, and top, center, or bottom
   alignment beside it. Moving and nudging anchored frames preserve alignment
