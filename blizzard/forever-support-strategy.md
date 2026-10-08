@@ -11,10 +11,12 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 ## October 4 current corpus compatibility
 
-The current Forever corpus is **1.60.1.70205**, pinned to
-[`e3ecc27b`](https://github.com/Gethe/wow-ui-source/tree/e3ecc27b64d30fdc735a3f6579b866858f9f9df1).
-Drew's installed client tracks the corpus. This section supersedes the historical
-compiler and preview workarounds described below.
+The current Forever corpus is **1.60.1.70245**, pinned to
+[`15666a6e`](https://github.com/Gethe/wow-ui-source/tree/15666a6e67938a1ab5caf041406464251db111ca).
+The October 7 refresh changes only build metadata: API documentation and FrameXML
+are byte-identical to the October 4 build 70205 snapshot. Installed-client build
+70245 has not been reverified. This section supersedes the historical compiler
+and preview workarounds described below.
 
 Build 70009 repaired the restricted-environment load order by replacing the
 filtered dependency with an unconditional optional dependency. QUI now enables
