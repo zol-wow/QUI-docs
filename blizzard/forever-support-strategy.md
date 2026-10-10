@@ -9,14 +9,15 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
 
-## October 4 current corpus compatibility
+## October 10 current corpus compatibility
 
-The current Forever corpus is **1.60.1.70245**, pinned to
-[`15666a6e`](https://github.com/Gethe/wow-ui-source/tree/15666a6e67938a1ab5caf041406464251db111ca).
-The October 7 refresh changes only build metadata: API documentation and FrameXML
-are byte-identical to the October 4 build 70205 snapshot. Installed-client build
-70245 has not been reverified. This section supersedes the historical compiler
-and preview workarounds described below.
+The current Forever corpus is **1.60.1.70338**, pinned to
+[`94376449`](https://github.com/Gethe/wow-ui-source/tree/943764493e6b16d63ded3ab304150d1f05e58b57).
+The October 10 refresh includes 640 generated API documentation files and 4,437
+FrameXML Interface files. Compared with build 70245, 13 generated documentation
+files changed; the paired FrameXML mirror includes the same pinned source.
+Installed-client build 70338 has not been reverified. This section supersedes
+the historical compiler and preview workarounds described below.
 
 Build 70009 repaired the restricted-environment load order by replacing the
 filtered dependency with an unconditional optional dependency. QUI now enables
@@ -38,11 +39,21 @@ specialization, resource and profile adaptations remain in place. The generated
 API changes preserve secret-value handling and add texture/input restrictions;
 they do not justify removing those protections.
 
-Validation: all nine `JOBS=12 bash tools/test.sh` gates pass, including 1,006 unit
-files, 12 profile fixtures, both strict client taint analyses and all 19 lint
-targets. Original-source regressions fail for compiler classification, Camelot
-flyout selection, GSE exclusion, preview texture ownership, sidebar routing and
-title chrome. The owned-button test executes paging and press-and-hold snippets
+October 10 corpus refresh validation: all nine
+`JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh` gates passed, including 1,233
+unit files, 12 profile fixtures, both strict client taint analyses and 20 lint
+targets. Both mirrors match the pinned upstream bytes; generated outputs remain
+stable after the gates. Legacy achievement override and Inspect tab fixtures now
+follow the updated native sources. No runtime changes were needed. Log:
+`/tmp/qui-beta-forever-70338-mgbtp_qo/clean-gates.log`. In-game rendering remains
+unverified for build 70338.
+
+Historical October 4 validation: all nine `JOBS=12 bash tools/test.sh` gates
+passed, including 1,006 unit files, 12 profile fixtures, both strict client taint
+analyses and all 19 lint targets. Original-source regressions fail for compiler
+classification, Camelot flyout selection, GSE exclusion, preview texture
+ownership, sidebar routing and title chrome. The owned-button test executes
+paging and press-and-hold snippets
 for both Retail and Forever. Log:
 `/tmp/qui-forever-70205-fixes-gates-final-20261004.log`.
 
