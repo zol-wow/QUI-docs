@@ -9,6 +9,14 @@ nav_order: 4
 
 Profiles are how QUI remembers your setup. If you understand this page, you can experiment much more freely without worrying about losing your preferred layout.
 
+{: .warning }
+**Upgrading from alpha8 on Forever:** alpha9 and later use account-wide storage.
+Alpha8's character-local profiles and tracked data are **not automatically migrated back**. Before
+updating, export any profile settings you want to keep and back up your `WTF`
+folder. Import your same-client profile export afterward if needed. Profile
+exports do not include tracked data in `QUI_StorageDB`; the full backup
+preserves that data. Retail continues to use account-wide storage.
+
 ## The Simple Version
 
 - Use **one shared profile** if you want multiple characters to look the same.
@@ -18,7 +26,7 @@ Profiles are how QUI remembers your setup. If you understand this page, you can 
 Manage your profiles in `/qui` under **General > Profiles**.
 
 {: .note }
-Module Addons are not the same thing as profiles. Enabling or disabling a `QUI_*` feature addon is account-wide, while most styling, layout, and behavior choices remain profile-based.
+Module Addons are not the same thing as profiles. Enabling or disabling a `QUI_*` feature addon controls whether it loads, while most styling, layout, and behavior choices remain profile-based.
 
 New profiles are seeded from QUI's curated defaults automatically, so a fresh profile starts from a sensible setup rather than an empty one. Existing profiles are never touched. (Profiles older than schema v31, from before 3.5.11, are backed up and reseeded from the starter preset at login.)
 
@@ -59,7 +67,7 @@ You do not always need to replace your whole setup. QUI can import only specific
 - **Layout / Positions** -- Update frame positions without changing visual settings.
 - **Module-specific** -- Update only the area you care about.
 
-Partial imports cover profile data. They do not install missing module folders or override the account-wide Module Addons enable state.
+Partial imports cover profile data. They do not install missing module folders or override the Module Addons enable state.
 
 This is especially useful when you like someone else's style but want to keep your own frame placement.
 

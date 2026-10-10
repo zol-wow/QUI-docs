@@ -29,6 +29,9 @@ QUI uses the AceDB-3.0 library for profile storage. All profile-level settings a
 
 Each character can independently select which profile to use. By default, all characters share the `"Default"` profile. Switching profiles on one character does not affect other characters unless they share the same profile.
 
+Forever alpha9 and later use account-wide profiles. Alpha8's character-local
+profiles are not automatically migrated back; see the upgrade guidance below.
+
 ### Reset All Movers
 
 The **Reset All Movers** button resets all QUI frame positions to their default locations. This affects only frame anchoring/positioning data, not other profile settings. Use this when frame positions become misaligned or after importing a profile from another resolution.
@@ -55,8 +58,19 @@ QUI persists data across sessions using two WoW SavedVariables entries, declared
 
 | Variable | Type | Description |
 |---|---|---|
-| `QUI_DB` | table | Primary SavedVariables store managed by AceDB. Contains all profile, character, and global settings. |
-| `QUIDB` | table | Secondary SavedVariables store for auxiliary data. |
+| `QUIDB` | table | Primary SavedVariables store managed by AceDB. Contains profile, character, and global settings. |
+| `QUI_StorageDB` | table | Account-wide storage for tracked character and inventory data. |
+
+On **Retail and Forever**, both use account-wide storage at
+`WTF/Account/<account>/SavedVariables/QUI.lua`. Early SavedVariables loading
+remains enabled.
+
+Forever alpha8 used character-local storage at
+`WTF/Account/<account>/<realm>/<character>/SavedVariables/QUI.lua`. Alpha9 and later do
+**not automatically migrate that data back**. Before upgrading, export any
+profile settings you want to keep and back up your `WTF` folder. You can import
+a same-client profile export afterward, but it does not include tracked data
+in `QUI_StorageDB`; keep the full backup to preserve that data.
 
 These are written to disk by the WoW client on logout, reload, or `/reload`. Manual editing of SavedVariables files is not recommended -- use the in-game profile import/export system instead.
 
