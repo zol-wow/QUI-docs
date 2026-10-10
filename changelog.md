@@ -21,6 +21,37 @@ below.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
+## Unreleased Alpha Integration
+
+The Alpha branch now includes the missing updates through 5.3.2-beta11.
+The latest published Alpha release remains 5.5.0-ptr-alpha10.
+
+### Added
+
+- **Encounter Debuffs** is a new Aura Display selection that hides player- and
+  pet-applied debuffs and common noise. Existing displays keep their current
+  selection until changed.
+- **Spell Reminders** for Power Infusion, Innervate, and custom spells provide
+  cooldown prompts, sounds, spoken alerts, and load conditions. Enable them
+  under **Reminders → Spell Reminders**. Power Infusion adds offensive-buff
+  tracking, group-frame highlights, focus alerts, and optional whisper-triggered
+  priority or rotation lists; configured lists choose the recipient.
+- **Recipe tooltips** show characters under **Can learn** and **Already known**,
+  using each character's last checked result. Known or unlearnable recipes
+  receive red tint in bags and storage when **Mark Unusable Items** is enabled.
+  It defaults on for new profiles and the Starter Profile; existing settings
+  are preserved.
+- **Opening the Underlight Angler artifact** now shows the helper directly over
+  the artifact window, on its tree tab. The overlay hides the Checklist tab;
+  `/quiangler` opens the standalone helper on its Checklist tab.
+
+### Fixed
+
+- **Guild and Communities chat messages and input follow the global font**,
+  including when the window loads after login.
+- **Group frames appear reliably after a fresh login**, without requiring
+  `/reload` to initialize them.
+
 ## What's New in 5.5.0-ptr-alpha10
 
 ### Forever Native Compatibility and Skinning
