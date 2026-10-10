@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.3.2-beta10
+## Current Release: 5.3.2-beta11
 
 {: .warning }
 **WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
@@ -21,16 +21,22 @@ chat sharing and a keystone reroll reminder, while deferring consumable-check
 layout work until combat ends. Recent betas add the Underlight Angler Helper
 and configurable keystone reminders, plus improvements to Layout Mode anchoring,
 Aura Display previews, live action-bar updates, and category bag sorting. The
-latest beta adds Spell Reminders and Power Infusion coordination, recipe learning
-tooltips and tint, the Angler artifact overlay, and a group-frame login fix.
+beta line also adds Spell Reminders and Power Infusion coordination, recipe
+learning tooltips and tint, the Angler artifact overlay, and a group-frame login
+fix. The latest beta adds Encounter Debuffs filtering, hides the Checklist tab
+in the Angler artifact overlay, and applies the global font to Guild and
+Communities chat messages and input.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.3.2-beta10
+## What's New in 5.3.2-beta11
 
 ### Added
 
+- **Encounter Debuffs** is a new Aura Display selection that hides player- and
+  pet-applied debuffs and common noise. Existing displays keep their current
+  selection until changed.
 - **Spell Reminders** for Power Infusion, Innervate, and custom spells provide
   cooldown prompts, sounds, spoken alerts, and load conditions. Enable them
   under **Reminders → Spell Reminders**. Power Infusion adds offensive-buff
@@ -42,7 +48,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
   It defaults on for new profiles and the Starter Profile; existing settings
   are preserved.
 - **Opening the Underlight Angler artifact** now shows the helper directly over
-  the artifact window, on its tree tab.
+  the artifact window, on its tree tab. The overlay hides the Checklist tab;
+  `/quiangler` opens the standalone helper on its Checklist tab.
 - **Keystone reroll reminder duration** can be set to **15, 30, or 60 seconds**
   under **Quality of Life → Automation**. The default remains 15 seconds;
   changes apply to the next reminder and are included in profile exports.
@@ -73,6 +80,8 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ### Fixed
 
+- **Guild and Communities chat messages and input follow the global font**,
+  including when the window loads after login.
 - **Group frames appear reliably after a fresh login**, without requiring
   `/reload` to initialize them.
 - **Shift-drag anchoring in Layout Mode aligns frame edges flush**, with left,
