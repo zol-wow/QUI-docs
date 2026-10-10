@@ -13,8 +13,6 @@ This page summarizes the user-facing changes since the last mainline release. Fo
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
 Forever 1.60.1.** One archive supports interfaces 120100, 120105, and 16001.
-This version is prepared on the Beta branch; the latest published Beta remains
-5.3.2-beta11 until 5.5.0-beta1 is released.
 
 This promotion includes the complete Alpha branch alongside all Beta11
 features and fixes. The Alpha release history below records the cumulative
@@ -49,6 +47,21 @@ Back up your `WTF` folder before updating. Manual installs must copy every
   Profile retains its defaults. Spell Reminders retry initialization after restricted
   aura data becomes available. The promotion also retains Beta11's Encounter
   Debuffs, recipe-learning tooltips, Angler overlay, and chat-font fixes.
+
+### Fixed
+
+- **Character and Inspect skins follow native panel geometry.** Forever's
+  character model and collapsing sidebar retain native layout and selection;
+  Inspect tabs stay attached to the visible window, with readable headers and
+  preserved model controls. Dressing Room artwork fits the resized preview.
+- **Tooltips retain their native content layout**, including standalone reward
+  and widget tooltips. Pet Journal ability tooltips receive QUI window styling.
+- **Native panels, controls, and reused rows receive consistent rounded
+  styling**, including mail, professions, Auctions, Collections, Group Finder,
+  social windows, and vehicle aiming controls. Suggested Content paging arrows
+  now show the correct direction.
+- **Visible experience and reputation bars receive native hover input** when
+  the other bar is hidden.
 
 ## What's New in 5.3.2-beta11
 
