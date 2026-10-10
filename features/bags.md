@@ -49,6 +49,12 @@ At a guild bank, QUI opens a styled guild vault window. The **All** tab shows al
 
 With the auction house open, right-clicking an auctionable item in QUI Bags stages it in the sell panel. Items that cannot be sold there dim while the sell panel is open.
 
+## Recipe Learning
+
+**Mark Unusable Items** under Bags appearance red-tints recipes your current character already knows or cannot learn. It is enabled by default for new profiles; existing profiles retain their saved setting. The same check covers bags, character bank, Warband bank, and cached storage views.
+
+Hover a recipe or pattern to see characters grouped by **Can learn** and **Already known**. Characters who cannot learn the recipe or have no checked result are omitted. Results are saved from each character's last live check; they do not infer eligibility from another character's profession rank. Log into an alt and open the bank containing the recipes to populate that alt's results. Recipes in that character's bags are checked automatically. Recipe information remains visible when tooltip item counts are disabled.
+
 ## Slash Commands
 
 | Command | Description |

@@ -28,6 +28,7 @@ QUI can handle as much or as little of your UI as you want. Some players come fo
 | [Unit Frames](unit-frames) | Cleaner player, target, focus, pet, and boss information |
 | [Group Frames](group-frames) | Healers, supports, and anyone who wants stronger party or raid visibility |
 | [Custom Trackers](custom-trackers) | Extra utility bars for niche spells, items, or encounter tools |
+| [Spell Reminders](spell-reminders) | Spell cooldown prompts, spoken alerts, and Power Infusion tracking and requests |
 | [HUD Visibility](hud-visibility) | Keeping the HUD clean outside combat without losing information when it matters |
 | [Damage Meter](damage-meter) | Native damage meter windows with QUI styling and Layout Mode placement |
 
