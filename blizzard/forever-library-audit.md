@@ -1,5 +1,29 @@
 # Forever library audit
 
+## October 10 library upgrades
+
+QUI now incorporates the four upstream updates found in the October 10 audit.
+QUI fork revisions are one above the inspected upstream revision where local
+fixes must win LibStub selection over an already-loaded upstream copy.
+
+| Library | Upstream incorporated | QUI revision | Integration |
+|---|---|---:|---|
+| AceDB-3.0 | [Ace3 `40f4cc1`, minor 39](https://github.com/WoWUIDev/Ace3/tree/40f4cc1356ae7fcc0cf71fc0a19dc7d50d6ae6c2), alpha | 40 | Regional unmodified names/surnames; legacy physical-realm, ruleset and display-name character keys migrate without replacing current data. Character settings, namespace mappings and profile selection survive; existing long profile names remain valid. |
+| LibDualSpec-1.0 | [v1.35.0 / `71dcd66`](https://github.com/AdiAddons/LibDualSpec-1.0/tree/71dcd660a91dd2c7eea87276f8feddd7bcb7bf65), released | 36 | Forever Primary/Secondary groups and unlock detection; Retail specialization bounds and current APIs. QUI profile-name guards remain; Profiles shows group mappings on Forever. |
+| LibRangeCheck-3.0 | [`95a6313`, minor 38](https://github.com/WeakAuras/LibRangeCheck-3.0/tree/95a6313a44f615738d216bd79cf132dc6f243284), untagged | 39 | Forever Era catalogs and CVAR registration; direct C_Item APIs. QUI secret-capability and pet-identity guards remain. |
+| LibSharedMedia-3.0 | [v12.1.0](https://www.wowace.com/projects/libsharedmedia-3-0/files/8691989), released | 12000002 | Rejects unknown file assets. Actual QUI registrations and shipped files are covered across five locales; both pinned clients expose IsKnownFile. |
+
+The other 13 loaded libraries are current against the inspected upstream sources.
+The declared tooling dependency `glob` matches registry release 13.0.6. License-only
+LibDFramework and LibSerialize files remain outside the runtime dependency set.
+
+Regression checks execute the actual libraries and show old-source failures for
+the new identity, client routing, range catalogs/item APIs and asset rejection.
+Native name rendering, dual-spec switching, file recognition and range accuracy
+still require client verification. The September audit below is historical.
+
+## September 18 audit
+
 Audited 2026-09-18 from `/big-data/Github/QUI_Alpha`. Upstream source was fetched
 directly; revisions below identify the inspected snapshots. No library update
 found in this audit supplies a dedicated Forever defensive-spell dataset.
