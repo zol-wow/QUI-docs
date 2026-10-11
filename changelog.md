@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.0-beta1
+## Current Release: 5.5.0-beta2
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -22,10 +22,17 @@ PTR and Forever changes.
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-beta1
+## What's New in 5.5.0-beta2
 
 ### Added and Improved
 
+- **Objective Tracker appearance controls** offer QUI theme, custom-color,
+  transparent, or Blizzard-opacity backgrounds, independent background opacity,
+  and shared or custom border colors. These settings are included in profile
+  exports.
+- **Settings pages build when selected**, with section and search jumps waiting
+  for the layout to settle. Nameplate previews fit their viewport and keep
+  preview controls accessible by scrolling.
 - **Live, PTR, and Forever support share one package.** Forever uses the
   current native secure controls, with QUI bank and group frames, mouse and
   keyboard clickcasting, native swing timers, combo-point and druid-mana bars,
@@ -50,6 +57,20 @@ Back up your `WTF` folder before updating. Manual installs must copy every
 
 ### Fixed
 
+- **Objective Tracker positioning and scenario styling remain consistent.**
+  Native panel updates preserve the configured anchor, and Layout Mode moves
+  the tracker holder with consistent scaled coordinates. Scenario headers,
+  countdowns, and status bars retain QUI styling during native updates; simple
+  stages use tighter spacing while preserving native timers and interactions.
+- **Native controls retain their ownership and combat restrictions.** Character
+  tabs keep native state, and protected Spellbook control sizing waits until
+  combat ends.
+- **Rounded surfaces handle restricted native geometry** without secret-value
+  comparison or arithmetic errors.
+- **Forever bank and native window details receive matching styling.** Bank
+  bag slots use quality borders, unavailable live bank choices are disabled,
+  social invite borders fit their controls, and the Encounter Journal keeps
+  its circular overview portrait.
 - **Character and Inspect skins follow native panel geometry.** Forever's
   character model and collapsing sidebar retain native layout and selection;
   Inspect tabs stay attached to the visible window, with readable headers and

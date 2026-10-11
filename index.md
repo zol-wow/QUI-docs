@@ -10,14 +10,15 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.0-beta1**
+**Current Release: 5.5.0-beta2**
 {: .label .label-purple }
 
 {: .warning }
-**Beta testing across live, PTR, and Forever.** Version 5.5.0-beta1 includes
-the promoted Alpha features, all Beta11 changes, and further native window
-skinning refinements. See the [release notes](changelog) for cumulative changes
-and client-specific limits.
+**Beta testing across live, PTR, and Forever.** Version 5.5.0-beta2 adds Objective
+Tracker appearance controls and fixes settings navigation, previews, and native
+window styling. It includes the promoted Alpha features and all Beta11 changes.
+See the [release notes](changelog) for cumulative changes and client-specific
+limits.
 
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Features](features/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
