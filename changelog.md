@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.0-beta2
+## Current Release: 5.5.0-beta3
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -22,7 +22,7 @@ PTR and Forever changes.
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.0-beta2
+## What's New in 5.5.0-beta3
 
 ### Added and Improved
 
@@ -57,11 +57,17 @@ Back up your `WTF` folder before updating. Manual installs must copy every
 
 ### Fixed
 
+- **World Map navigation and campaign headers preserve native layout state**
+  while retaining QUI styling.
+- **Loot History's countdown fits its track and follows remaining time**, with
+  matching timer borders, scrollbar styling, and a visible resize grip. Setting
+  changes take effect on reload; deferring reload keeps the installed timer
+  layout and artwork consistent.
 - **Objective Tracker positioning and scenario styling remain consistent.**
   Native panel updates preserve the configured anchor, and Layout Mode moves
   the tracker holder with consistent scaled coordinates. Scenario headers,
-  countdowns, and status bars retain QUI styling during native updates; simple
-  stages use tighter spacing while preserving native timers and interactions.
+  countdowns, and status bars retain QUI styling during native updates. Scenario
+  text stages retain native spacing and height.
 - **Native controls retain their ownership and combat restrictions.** Character
   tabs keep native state, and protected Spellbook control sizing waits until
   combat ends.
