@@ -65,12 +65,17 @@ General skinning options that replace Blizzard frame visuals with QUI-styled alt
 
 | Setting | Type | Default | Description |
 |---|---|---|---|
-| `skinObjectiveTracker` | boolean | `false` | Skin the objective tracker |
+| `skinObjectiveTracker` | boolean | `true` | Skin the objective tracker |
 | `objectiveTrackerHeight` | number | `600` | Objective tracker maximum height |
 | `objectiveTrackerModuleFontSize` | number | `12` | Module header font size |
 | `objectiveTrackerTitleFontSize` | number | `10` | Quest title font size |
 | `objectiveTrackerTextFontSize` | number | `10` | Objective text font size |
-| `hideObjectiveTrackerBorder` | boolean | `false` | Hide the tracker border |
+| `hideObjectiveTrackerBorder` | boolean | `true` | Hide the tracker border |
+| `objectiveTrackerBorderColorSource` | string | `"inherit"` | Border color: shared (`"inherit"`), theme (`"theme"`), class (`"class"`), or custom (`"custom"`) |
+| `objectiveTrackerBorderColor` | color | unset | Tracker border color when the source is `"custom"` |
+| `objectiveTrackerBackgroundStyle` | string | `"theme"` | Background: QUI theme (`"theme"`), custom color (`"custom"`), transparent (`"transparent"`), or Blizzard Edit Mode opacity (`"blizzard"`) |
+| `objectiveTrackerBackgroundOpacity` | number | `0.75` | Theme or custom background opacity, independent of Blizzard Edit Mode (range: 0 to 1) |
+| `objectiveTrackerBackgroundColor` | color | `{0.035, 0.035, 0.035, 1}` | Fill color when the background style is `"custom"` |
 | `objectiveTrackerModuleColor` | color | `{1, 0.82, 0, 1}` | Module header color |
 | `objectiveTrackerTitleColor` | color | `{1, 1, 1, 1}` | Quest title color |
 | `objectiveTrackerTextColor` | color | `{0.8, 0.8, 0.8, 1}` | Objective text color |
