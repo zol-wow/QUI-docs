@@ -30,13 +30,14 @@ Most toggles are account-wide because they enable or disable an addon folder, no
 | Skinning | On | QUI visual treatment for supported Blizzard windows and alerts |
 | Quality of Life | On | Automation, dungeon tools, tooltip helpers, combat helpers, and miscellaneous utility |
 | Damage Meter | On | Native QUI damage meter windows |
-| Reminders | Off | Defensive callouts driven by BigWigs, DBM, or the Blizzard encounter timeline |
+| Reminders | Off | Defensive callouts plus spell cooldown reminders and Power Infusion tracking |
+| Underlight Angler Helper | On | Acquisition checklist and trait tree for the Legion fishing artifact |
 | Info Bar | Off | Optional top or bottom datatext bar with micro menu, travel, and spec widgets |
 | Bags | Off | Optional bag, bank, Warband bank, guild bank, search, sorting, and item tools |
 | Alts | Off | Optional account-wide character tracker and item search window |
 
 {: .note }
-Bags, Info Bar, Alts, and QUI Chat are newer beta modules. They are intentionally opt-in so you can keep your existing setup stable while testing them.
+Bags, Info Bar, Alts, and QUI Chat are optional modules. They are intentionally opt-in so you can choose which parts of your existing setup to replace.
 
 ## Reload Rules
 

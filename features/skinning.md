@@ -39,7 +39,10 @@ Custom roll frames for Need/Greed/Disenchant with configurable grow direction (u
 
 ### Loot History
 
-The GroupLootHistoryFrame receives QUI's dark theme treatment for a consistent look when reviewing recent loot.
+Loot History receives QUI's dark theme, with a countdown fitted to its track,
+matching timer borders and scrollbar styling, and a visible resize grip. Setting
+changes take effect on reload. If you defer the reload, the installed timer
+layout and artwork remain consistent.
 
 ### Keystone Insertion
 
