@@ -27,7 +27,7 @@ Good first-login defaults:
 - Leave **Action Bars**, **Cooldown Manager**, **Unit Frames**, **Resource Bars**, **Minimap**, **Datatexts**, **Skinning**, **Quality of Life**, and **Damage Meter** enabled unless you know you do not want them.
 - Enable **Group Frames** if you want QUI party or raid frames.
 - Enable **QUI Chat** only if you want the custom QUI chat display.
-- Enable **Bags**, **Info Bar**, or **Alts** only when you are ready to test those newer beta modules.
+- Enable **Bags**, **Info Bar**, or **Alts** only when you want those optional modules in your setup.
 
 If QUI prompts for a reload after toggling a module, use `/rl`.
 

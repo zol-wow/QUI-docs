@@ -16,7 +16,7 @@ QUI can handle as much or as little of your UI as you want. Some players come fo
 - [**Action Bars**](action-bars) if you want a cleaner bottom HUD.
 - [**Unit Frames**](unit-frames) if you want player and target information to be easier to read.
 - [**Quality of Life**](quality-of-life) if you want the convenience layer that saves clicks every session.
-- [**Module Addons**](../getting-started/module-addons) if you want to enable beta modules like Bags, Info Bar, Alts, Group Frames, or QUI Chat.
+- [**Module Addons**](../getting-started/module-addons) if you want to enable optional modules like Bags, Info Bar, Alts, Group Frames, or QUI Chat.
 
 ## Feature Areas
 
@@ -28,6 +28,7 @@ QUI can handle as much or as little of your UI as you want. Some players come fo
 | [Unit Frames](unit-frames) | Cleaner player, target, focus, pet, and boss information |
 | [Group Frames](group-frames) | Healers, supports, and anyone who wants stronger party or raid visibility |
 | [Custom Trackers](custom-trackers) | Extra utility bars for niche spells, items, or encounter tools |
+| [Spell Reminders](spell-reminders) | Spell cooldown prompts, spoken alerts, and Power Infusion tracking and requests |
 | [HUD Visibility](hud-visibility) | Keeping the HUD clean outside combat without losing information when it matters |
 | [Damage Meter](damage-meter) | Native damage meter windows with QUI styling and Layout Mode placement |
 
@@ -52,6 +53,7 @@ QUI can handle as much or as little of your UI as you want. Some players come fo
 | [Alts](alts) | Account-wide character, equipment, currency, reputation, weekly, and item lookup |
 | [Skyriding](skyriding) | Cleaner Skyriding feedback |
 | [XP Tracker](xp-tracker) | Leveling or casual progression visibility |
+| [Underlight Angler Helper](underlight-angler-helper) | Unlocking the Legion fishing artifact and buying its traits |
 
 ### Layout and Convenience
 
@@ -71,6 +73,6 @@ QUI can handle as much or as little of your UI as you want. Some players come fo
 3. Clean up the bottom of the screen with [Action Bars](action-bars).
 4. Decide whether you want [Unit Frames](unit-frames) only or [Group Frames](group-frames) too.
 5. Finish with [Minimap & Data Panels](minimap-datatext), [Tooltips](tooltips), and [Quality of Life](quality-of-life).
-6. Enable [Bags](bags), [Info Bar](info-bar), [Alts](alts), or [Chat](chat) only when you want those beta modules in your setup.
+6. Enable [Bags](bags), [Info Bar](info-bar), [Alts](alts), or [Chat](chat) only when you want those optional modules in your setup.
 
 Every feature here can be tuned further in the [Settings Reference](../settings/) section once you know which parts of QUI you actually want to keep.

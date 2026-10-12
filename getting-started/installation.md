@@ -7,7 +7,14 @@ nav_order: 1
 
 # Installation
 
-QUI requires **World of Warcraft Midnight (12.1+)**. It will not load on the 12.0.x client.
+QUI 5.5.0 supports **Midnight 12.1 live**, **Midnight 12.1.5 PTR**, and
+experimental **WoW Forever 1.60.1** in one archive (interfaces **120100**,
+**120105**, and **16001**). It will not load on the
+12.0.x client. See the [release notes](../changelog) for Forever feature limits.
+
+{: .note }
+Select **Stable version 5.5.0** for live, PTR, or Forever. The same archive
+supports all three clients; install it into the client folder you will launch.
 
 ## Fastest Option: Addon Manager
 
@@ -15,19 +22,16 @@ For most players, the easiest path is an addon manager.
 
 1. Open the **CurseForge** or **WoWUp** application.
 2. Search for **"QUI Community Edition"**.
-3. Click **Install**.
+3. Select the **Stable** release channel and click **Install**.
 4. The app handles updates automatically.
 
 ## Manual Install
 
-1. Download the latest release from one of these sources:
-   - [GitHub Releases](https://github.com/zol-wow/QUI/releases)
+1. Download **5.5.0** from one of these sources:
+   - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.0)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.
-3. Copy every top-level `QUI*` folder from the zip into your WoW addons directory:
-   ```
-   World of Warcraft\_retail_\Interface\AddOns\
-   ```
+3. Copy every top-level `QUI*` folder from the zip into the target client's `Interface\AddOns\` directory. Use the installation folder for the live, PTR, or Forever client you will launch.
 4. Make sure the folder structure is correct -- `QUI.toc` should be directly inside `Interface\AddOns\QUI\`, `QUI_Options.toc` should be directly inside `Interface\AddOns\QUI_Options\`, and the other `QUI_*` folders should sit beside them.
 
 {: .important }
@@ -49,6 +53,15 @@ QUI is a multi-folder addon suite. If you manually copy only `QUI`, the options 
 
 Compatible integrations are detected automatically when they are present, but QUI does not need extra addons to work.
 
-## Beta Upgrade Safety
+## Upgrade Safety
 
-Before installing a beta build, back up your `WTF` folder. QUI takes automatic profile backups for some schema migrations, but a full `WTF` backup is still the safest rollback path.
+Before updating QUI, back up your `WTF` folder. QUI takes automatic profile backups for some schema migrations, but a full `WTF` backup is still the safest rollback path.
+
+{: .warning }
+**Upgrading from alpha8 on Forever:** later builds retain account-wide storage
+for QUI profiles and tracked data. Alpha8's character-local data is **not
+automatically migrated back**. Before updating, export any profile settings you
+want to keep and back up your `WTF` folder. Import a same-client profile export
+if needed; exports do not include tracked data in `QUI_StorageDB`, so keep the
+full backup. Retail continues to use account-wide storage. See
+[Profiles](profiles) for details.

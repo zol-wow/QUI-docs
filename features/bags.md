@@ -7,7 +7,7 @@ nav_order: 6
 
 # Bags
 
-QUI Bags is an optional beta module that replaces the bag, bank, Warband bank, and guild bank windows with QUI-styled inventory tools.
+QUI Bags is an optional module that replaces the bag, bank, Warband bank, and guild bank windows with QUI-styled inventory tools.
 
 {: .important }
 Bags is off by default. Enable it under `/qui` > **Module Addons** when you want to test it. If you disable it, QUI hands bag windows back to Blizzard while the shared account storage cache keeps collecting data in the background.
@@ -49,6 +49,12 @@ At a guild bank, QUI opens a styled guild vault window. The **All** tab shows al
 
 With the auction house open, right-clicking an auctionable item in QUI Bags stages it in the sell panel. Items that cannot be sold there dim while the sell panel is open.
 
+## Recipe Learning
+
+**Mark Unusable Items** under Bags appearance red-tints recipes your current character already knows or cannot learn. It is enabled by default for new profiles; existing profiles retain their saved setting. The same check covers bags, character bank, Warband bank, and cached storage views.
+
+Hover a recipe or pattern to see characters grouped by **Can learn** and **Already known**. Characters who cannot learn the recipe or have no checked result are omitted. Results are saved from each character's last live check; they do not infer eligibility from another character's profession rank. Log into an alt and open the bank containing the recipes to populate that alt's results. Recipes in that character's bags are checked automatically. Recipe information remains visible when tooltip item counts are disabled.
+
 ## Slash Commands
 
 | Command | Description |
@@ -61,7 +67,7 @@ With the auction house open, right-clicking an auctionable item in QUI Bags stag
 
 ## Good To Know
 
-- Bags is newer beta functionality. Keep normal bag muscle memory handy while testing it.
+- Bags is optional. Disable the module to return to Blizzard's inventory windows.
 - Bag-modifying operations cancel when combat starts.
 - Offline character inventory fills in as characters log in and the shared storage cache learns their current state.
 - Currency visibility and order are shared with the Currencies datatext, minimap panel, and Info Bar.
