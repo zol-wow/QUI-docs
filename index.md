@@ -10,14 +10,13 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.0-beta3**
+**Current Release: 5.5.1-beta1**
 {: .label .label-purple }
 
 {: .warning }
-**Beta testing across live, PTR, and Forever.** Version 5.5.0-beta3 adds Objective
-Tracker appearance controls, preserves native World Map and scenario layout,
-and refines Loot History's countdown and window styling. It includes the promoted
-Alpha features and all Beta11 changes.
+**Beta testing across live, PTR, and Forever.** Version 5.5.1-beta1 fixes a Lua
+error that could interrupt the loot window when transmog markers were enabled.
+It retains the features and fixes from 5.5.0.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
 

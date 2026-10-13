@@ -6,21 +6,27 @@ nav_order: 5
 
 # Changelog
 
-This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
+This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.0-beta3
+## Current Release: 5.5.1-beta1
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
 Forever 1.60.1.** One archive supports interfaces 120100, 120105, and 16001.
 
-This promotion includes the complete Alpha branch alongside all Beta11
-features and fixes. The Alpha release history below records the cumulative
-PTR and Forever changes.
+This beta retains the features and fixes from 5.5.0. Earlier beta and Alpha
+entries below record the cumulative live, PTR, and Forever changes.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.1-beta1
+
+### Fixed
+
+- Fixed a Lua error that could interrupt the loot window when transmog markers
+  were enabled, including for items such as Stinging Nettle.
 
 ## What's New in 5.5.0-beta3
 
