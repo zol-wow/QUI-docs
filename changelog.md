@@ -8,7 +8,18 @@ nav_order: 5
 
 This page summarizes the user-facing changes in each stable release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Current Release: 5.5.0
+## Current Release: 5.5.1
+
+> **Stable release.** One download supports WoW 12.1.0 live Retail,
+> WoW 12.1.5 PTR, and WoW Forever 1.60.1 (interfaces 120100, 120105, and 16001).
+> Forever support remains experimental.
+
+### Fixed
+
+- Fixed a Lua error that could interrupt the loot window when transmog markers
+  were enabled, including for items such as Stinging Nettle.
+
+## v5.5.0
 
 > **Stable release.** One download supports WoW 12.1.0 live Retail,
 > WoW 12.1.5 PTR, and WoW Forever 1.60.1 (interfaces 120100, 120105, and 16001).

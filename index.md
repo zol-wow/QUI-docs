@@ -10,13 +10,13 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.0**
+**Current Release: 5.5.1**
 {: .label .label-purple }
 
 {: .note }
-**Stable 5.5.0 supports live and PTR, with experimental Forever support.**
-It adds Spell Reminders, Underlight Angler Helper, damage-meter chat reports,
-Objective Tracker appearance controls, and refreshed settings and panel styling.
+**Stable 5.5.1 supports live and PTR, with experimental Forever support.**
+It fixes a Lua error that could interrupt the loot window when transmog markers
+were enabled and retains the features and fixes from 5.5.0.
 One archive supports interfaces **120100**, **120105**, and **16001**.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
