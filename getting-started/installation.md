@@ -7,13 +7,13 @@ nav_order: 1
 
 # Installation
 
-QUI 5.5.0 supports **Midnight 12.1 live**, **Midnight 12.1.5 PTR**, and
+QUI 5.5.1 supports **Midnight 12.1 live**, **Midnight 12.1.5 PTR**, and
 experimental **WoW Forever 1.60.1** in one archive (interfaces **120100**,
 **120105**, and **16001**). It will not load on the
 12.0.x client. See the [release notes](../changelog) for Forever feature limits.
 
 {: .note }
-Select **Stable version 5.5.0** for live, PTR, or Forever. The same archive
+Select **Stable version 5.5.1** for live, PTR, or Forever. The same archive
 supports all three clients; install it into the client folder you will launch.
 
 ## Fastest Option: Addon Manager
@@ -27,8 +27,8 @@ For most players, the easiest path is an addon manager.
 
 ## Manual Install
 
-1. Download **5.5.0** from one of these sources:
-   - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.0)
+1. Download **5.5.1** from one of these sources:
+   - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.1)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.
 3. Copy every top-level `QUI*` folder from the zip into the target client's `Interface\AddOns\` directory. Use the installation folder for the live, PTR, or Forever client you will launch.
