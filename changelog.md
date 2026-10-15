@@ -8,18 +8,26 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.1-beta1
+## Current Release: 5.5.2-beta1
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
 Forever 1.60.1.** One archive supports interfaces 120100, 120105, and 16001.
 
-This beta retains the features and fixes from 5.5.0. Earlier beta and Alpha
-entries below record the cumulative live, PTR, and Forever changes.
+The first beta for the planned 5.5.2 release starts from stable 5.5.1.
+This release updates version metadata only; runtime behavior is unchanged from
+5.5.1. Earlier beta and Alpha entries below record the cumulative live, PTR,
+and Forever changes.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.2-beta1
+
+### Beta Line
+
+- Starts the 5.5.2 beta line from the stable 5.5.1 release.
 
 ## What's New in 5.5.1-beta1
 
