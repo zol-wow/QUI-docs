@@ -27,7 +27,7 @@ For most players, the easiest path is an addon manager.
 ## Manual Install
 
 1. Download **5.5.2-beta3** from one of these sources:
-   - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.2-beta3)
+   - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.2-beta4)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.
 3. Copy every top-level `QUI*` folder from the zip into the target client's `Interface\AddOns\` directory. Use the installation folder for the live, PTR, or Forever client you will launch.

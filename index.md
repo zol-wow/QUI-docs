@@ -10,13 +10,14 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.2-beta3**
+**Current Release: 5.5.2-beta4**
 {: .label .label-purple }
 
 {: .warning }
-**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta3 fixes Lua
-errors when rounded surfaces update on Blizzard frames with restricted positioning.
-It retains the Delve Companion tab fix and the features and fixes from 5.5.1.
+**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta4 improves
+ranked raid-buff icons, minimap event access, character track alignment, Stable
+styling, and minimap header hiding on WoW Forever. It retains the rounded-surface
+and Delve Companion fixes and the features and fixes from 5.5.1.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
 

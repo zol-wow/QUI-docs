@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.2-beta3
+## Current Release: 5.5.2-beta4
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -20,6 +20,26 @@ entries below record the cumulative live, PTR, and Forever changes.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.2-beta4
+
+### Fixed
+
+- Missing raid-buff icons now show the current spell rank after spell changes,
+  while retaining saved spell selections and hidden-buff settings.
+- The native external-event minimap shortcut remains visible and clickable when
+  QUI hides the minimap backdrop.
+- Character experience and reputation track backgrounds align with their native
+  fill areas on WoW Forever.
+- Stable windows no longer retain decorative footer, divider, and panel artwork
+  over QUI styling. Native slot states, models, and controls remain intact.
+- **Hide Border (Top)** supports the new WoW Forever minimap header textures and
+  restores native hover and pressed effects when disabled or in Edit Mode.
+
+### Compatibility
+
+- Refreshed Retail and WoW Forever API and interface references. WoW Forever
+  support remains experimental.
 
 ## What's New in 5.5.2-beta3
 
