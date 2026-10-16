@@ -25,13 +25,40 @@ Interface files and 622 generated Lua documents; Forever has 4,489 and 642.
 Retail's generated API documents are unchanged from its previous PTR2 baseline.
 Forever's index now contains 4,077 taint contracts. Five native-source fixtures
 were updated for inset progress-bar fill areas, stable-slot state textures and
-the keybinding-enabled event; no addon runtime changes were needed.
+the keybinding-enabled event. That refresh changed fixtures and corpora only;
+the subsequent integration review identified the runtime corrections below.
 
 Refresh validation passed all nine `JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh`
 gates, including 1,270 unit files, both client strict taint analyses and lint.
 Both clients' generated outputs reproduce byte for byte, and their isolated
 FrameXML graphs were rebuilt. Validation log:
 `/tmp/qui-corpus-refresh-JoJ13r/final-gates.log`.
+
+### October 16 Forever 70425 integration corrections
+
+Missing group buffs now display the highest-known spell rank while keeping the
+canonical spell ID for saved selections and hidden-buff matching. Learning a
+rank rebuilds the catalog and invalidates cached labels and synthetic auras.
+Older catalogs without `displaySpellID` retain the canonical display fallback.
+
+QUI preserves the native external-event minimap shortcut outside its hidden
+decorative parent, retaining Blizzard's availability, effects and click handling.
+Disabled profiles and external HUD ownership restore its native parent and
+anchor; combat defers the change. Hide Border (Top) suppresses the new native
+header textures while retaining zone text, map clicks and native hover/pressed
+state, including restoration in Edit Mode and when the setting is disabled.
+
+Forever character and reputation tracks now anchor to native `FillArea`, with
+the previous frame fallback. Stable skins hide the new footer, subheader and
+divider artwork through the shared persistent texture clamp, preserving model
+artwork, native slot behavior and all six lock/current-state textures.
+
+Focused regressions reproduce each gap with the previous runtime. All nine
+`JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh` gates pass with 1,273 unit files,
+both strict client analyses, 12 profile fixtures and 20 lint targets. Independent
+review found no actionable issues. Validation log:
+`/tmp/qui-forever70425-fixes-8RizkF/final-gates.log`. These source and headless
+checks do not establish native rendering or combat acceptance.
 
 ## October 10 corpus compatibility receipt
 
