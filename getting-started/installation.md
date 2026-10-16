@@ -7,12 +7,12 @@ nav_order: 1
 
 # Installation
 
-QUI 5.5.2-beta3 supports **Midnight 12.1 live**, **Midnight 12.1.5 PTR**, and
+QUI 5.5.2-beta4 supports **Midnight 12.1 live**, **Midnight 12.1.5 PTR**, and
 experimental **WoW Forever 1.60.1** in one archive. It will not load on the
 12.0.x client. See the [release notes](../changelog) for Forever feature limits.
 
 {: .note }
-Select **Beta version 5.5.2-beta3** for live, PTR, or Forever. The same archive
+Select **Beta version 5.5.2-beta4** for live, PTR, or Forever. The same archive
 supports all three clients; install it into the client folder you will launch.
 
 ## Fastest Option: Addon Manager
@@ -26,7 +26,7 @@ For most players, the easiest path is an addon manager.
 
 ## Manual Install
 
-1. Download **5.5.2-beta3** from one of these sources:
+1. Download **5.5.2-beta4** from one of these sources:
    - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.2-beta4)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.
