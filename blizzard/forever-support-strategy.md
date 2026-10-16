@@ -9,9 +9,33 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
 
-## October 10 current corpus compatibility
+## October 16 current corpus snapshots
 
-The current Forever corpus is **1.60.1.70338**, pinned to
+Retail now follows the released **12.1.5.70391** `live` snapshot, pinned to
+[`18c6d677`](https://github.com/Gethe/wow-ui-source/tree/18c6d677b605b312f3d813d498404631fb941977).
+Forever follows **1.60.1.70425** on `forever`, pinned to
+[`b401e033`](https://github.com/Gethe/wow-ui-source/tree/b401e0332adfbf0460d319b06d8ea29279a941f1).
+Both isolated API-documentation and FrameXML mirrors were refreshed on October 16;
+each client's taint index and LuaLS definitions are generated from its own snapshot.
+The September 30 Retail PTR2 snapshot and October 10 Forever snapshot below are
+historical baselines.
+
+The mirrors match the pinned upstream file sets and bytes: Retail has 4,029
+Interface files and 622 generated Lua documents; Forever has 4,489 and 642.
+Retail's generated API documents are unchanged from its previous PTR2 baseline.
+Forever's index now contains 4,077 taint contracts. Five native-source fixtures
+were updated for inset progress-bar fill areas, stable-slot state textures and
+the keybinding-enabled event; no addon runtime changes were needed.
+
+Refresh validation passed all nine `JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh`
+gates, including 1,270 unit files, both client strict taint analyses and lint.
+Both clients' generated outputs reproduce byte for byte, and their isolated
+FrameXML graphs were rebuilt. Validation log:
+`/tmp/qui-corpus-refresh-JoJ13r/final-gates.log`.
+
+## October 10 corpus compatibility receipt
+
+The October 10 Forever corpus was **1.60.1.70338**, pinned to
 [`94376449`](https://github.com/Gethe/wow-ui-source/tree/943764493e6b16d63ded3ab304150d1f05e58b57).
 The October 10 refresh includes 640 generated API documentation files and 4,437
 FrameXML Interface files. Compared with build 70245, 13 generated documentation
