@@ -7,14 +7,19 @@ nav_order: 1
 # QUI Documentation
 {: .fs-9 }
 
-A modular World of Warcraft UI suite for Midnight 12.1.5 PTR and WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
+A modular World of Warcraft UI suite for Midnight 12.1.7 PTR and WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
 **Current Release: 5.5.0-ptr-alpha10**
 {: .label .label-purple }
 
 {: .warning }
-**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1 (interfaces 120105 and 16001).** Forever support is experimental, with bank, group-frame, and swing-timer support. See the [release notes](changelog) for changes and client-specific features.
+**Alpha testing: WoW 12.1.7 PTR and WoW Forever 1.60.1 (interfaces 120107 and 16001).** Forever support is experimental, with bank, group-frame, and swing-timer support. See the [release notes](changelog) for changes and client-specific features.
+
+The Alpha branch includes Beta updates through 5.5.2-beta5, including Spell
+Reminder settings and movement, Layout Mode controls, and Character window tab
+fixes. The latest published Alpha release remains 5.5.0-ptr-alpha10 and predates the
+branch's 12.1.7 PTR corpus refresh.
 
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Features](features/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }

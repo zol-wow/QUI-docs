@@ -7,9 +7,10 @@ nav_order: 1
 
 # Installation
 
-This alpha supports **World of Warcraft Midnight 12.1.5 PTR** and experimental
+The Alpha branch targets **World of Warcraft Midnight 12.1.7 PTR** and experimental
 **WoW Forever 1.60.1**, using the same archive. See the [alpha release notes](../changelog)
-for Forever feature limits.
+for Forever feature limits. The latest published Alpha release is still
+**5.5.0-ptr-alpha10**, which predates the branch's 12.1.7 PTR corpus refresh.
 
 ## Fastest Option: Addon Manager
 

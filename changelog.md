@@ -11,7 +11,7 @@ This page summarizes the user-facing changes since the last mainline release. Fo
 ## Current Release: 5.5.0-ptr-alpha10
 
 {: .warning }
-**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental.
+**Alpha branch targets: WoW 12.1.7 PTR and WoW Forever 1.60.1.** The branch's manifests declare interfaces 120107 and 16001. Forever support is experimental.
 
 QUI 5.5.0-ptr-alpha10 includes the 5.3.2 beta updates through beta9, current
 Forever build 70205 compatibility, and native-window skinning fixes. Earlier
@@ -23,10 +23,14 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ## Unreleased Alpha Integration
 
-The Alpha branch now includes Beta updates through 5.5.2-beta4, including
+The Alpha branch now includes Beta updates through 5.5.2-beta5, including
 native-window styling, options navigation, restricted geometry fixes, and
 Forever 70425 compatibility.
-The latest published Alpha release remains 5.5.0-ptr-alpha10.
+The latest published Alpha release remains 5.5.0-ptr-alpha10 and predates the
+branch's 12.1.7 PTR corpus refresh. Retail API documentation and FrameXML now
+follow PTR build 12.1.7.70424; Forever retains build 1.60.1.70425.
+Mail window styling follows the native page buttons and instance refreshes,
+including newly populated inbox rows and opened-mail attachments.
 
 ### Added
 
@@ -53,6 +57,25 @@ The latest published Alpha release remains 5.5.0-ptr-alpha10.
   including when the window loads after login.
 - **Group frames appear reliably after a fresh login**, without requiring
   `/reload` to initialize them.
+
+## v5.5.2-beta5 - 2026-10-17
+
+### Fixed
+
+- Spell Reminder settings list saved reminders, explain each control, and adapt
+  their tabs and scrolling to the available space.
+- Reminder previews preserve their position through settings updates. Power
+  Infusion recipient previews are included in the drag area, and reminders
+  expose their anchoring controls in Layout Mode.
+- Layout Mode adds settings gears and a chooser for overlapping movers. Its
+  settings panel adapts to its content, keeps controls from overlapping, and
+  refreshes offsets and anchor selections when reopened.
+- Reminder movers follow icon size and enable changes without resetting ongoing
+  placement. Preview artwork stops during combat so normal cooldown displays
+  and saved gameplay visibility take effect.
+- Character window tabs retain the correct sizing and background when reopened.
+  Disabling Character Pane enhancements leaves native tab sizing and controls
+  unchanged.
 
 ## v5.5.2-beta4 - 2026-10-16
 
