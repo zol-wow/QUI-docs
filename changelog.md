@@ -6,25 +6,31 @@ nav_order: 5
 
 # Changelog
 
-This page summarizes the user-facing changes since the last mainline release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/alpha/CHANGELOG.md).
+This page summarizes the user-facing changes since the last mainline release. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.0-ptr-alpha10
+## Current Release: 5.3.2-beta11
 
 {: .warning }
-**Alpha testing: WoW 12.1.5 PTR and WoW Forever 1.60.1.** One archive targets interfaces 120105 and 16001. Forever support is experimental.
+**WoW 12.1 only.** This build targets patch 12.1 (interface 120100) and will not load on the 12.0.x client.
 
-QUI 5.5.0-ptr-alpha10 includes the 5.3.2 beta updates through beta9, current
-Forever build 70205 compatibility, and native-window skinning fixes. Earlier
-Forever features and cumulative PTR and stable improvements remain included
-below.
+The 5.3.2 beta line starts from stable 5.3.1.
+This beta adds optional resurrection automation and appearance-buff removal,
+improves damage-meter text readability, fixes cooldown, panel, action-bar,
+and chat behavior, and prevents duplicate gold totals. It also adds damage-meter
+chat sharing and a keystone reroll reminder, while deferring consumable-check
+layout work until combat ends. Recent betas add the Underlight Angler Helper
+and configurable keystone reminders, plus improvements to Layout Mode anchoring,
+Aura Display previews, live action-bar updates, and category bag sorting. The
+beta line also adds Spell Reminders and Power Infusion coordination, recipe
+learning tooltips and tint, the Angler artifact overlay, and a group-frame login
+fix. The latest beta adds Encounter Debuffs filtering, hides the Checklist tab
+in the Angler artifact overlay, and applies the global font to Guild and
+Communities chat messages and input.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## Unreleased Alpha Integration
-
-The Alpha branch now includes the missing updates through 5.3.2-beta11.
-The latest published Alpha release remains 5.5.0-ptr-alpha10.
+## What's New in 5.3.2-beta11
 
 ### Added
 
@@ -44,48 +50,6 @@ The latest published Alpha release remains 5.5.0-ptr-alpha10.
 - **Opening the Underlight Angler artifact** now shows the helper directly over
   the artifact window, on its tree tab. The overlay hides the Checklist tab;
   `/quiangler` opens the standalone helper on its Checklist tab.
-
-### Fixed
-
-- **Guild and Communities chat messages and input follow the global font**,
-  including when the window loads after login.
-- **Group frames appear reliably after a fresh login**, without requiring
-  `/reload` to initialize them.
-
-## What's New in 5.5.0-ptr-alpha10
-
-### Forever Native Compatibility and Skinning
-
-- **Forever build 70205 uses QUI's shared secure controls again**, including
-  owned action buttons, paging, flyouts, press-and-hold, group headers, hover
-  keyboard/wheel clickcasting, chat visibility, and protected panel movement
-  and scaling. This follows Blizzard's repaired secure-environment load order.
-  GSE integration remains unavailable, and Quick Salvage remains outside combat.
-  Native Cooldown Manager preview textures now stay under Blizzard's ownership.
-- **The current Forever character sidebar supports all four tabs**: stats,
-  equipment, titles, and pet. Character and Inspect skins follow native mode
-  tabs and acquired stat rows; switching away from the character equipment
-  page removes QUI overlays and restores the native panel bounds.
-- **Existing skins follow the native windows loaded on Forever**, including
-  Group Finder, professions, Collections, and currency/statistics panels.
-  Flight Map skinning also covers the native taxi window, and Guild Registrar
-  skinning covers the guild charter window. New **Legacy System** and **Pet
-  Stable** skins are optional and default to Off; native selection, rewards,
-  dragging, and purchase controls retain Blizzard's behavior.
-- **Loot updates retain the open window's position and make every slot
-  reachable**, preserving modified-click and master-loot context. Roll timers
-  follow native remaining time, including queued and restored rolls; cancelling
-  all rolls clears their queue. Encounter power bars handle maximum-power
-  changes, while vehicle health/mana visibility, buff timers, and pitch controls
-  stay native. Vehicle geometry changes wait until combat ends.
-- **Selective skin exports and imports retain optional panel choices**, and
-  settings search includes both client variants while showing controls for
-  your client. Forever omits the Keystone skin control because its client does
-  not load that native window. See the
-  [Forever support strategy](blizzard/forever-support-strategy).
-
-### Included Beta Additions
-
 - **Keystone reroll reminder duration** can be set to **15, 30, or 60 seconds**
   under **Quality of Life → Automation**. The default remains 15 seconds;
   changes apply to the next reminder and are included in profile exports.
@@ -108,9 +72,18 @@ The latest published Alpha release remains 5.5.0-ptr-alpha10.
   The feature defaults to Off.
   Removal waits until combat and aura restrictions end, and fishing outfits
   stay active while casting. Equipped transmog and class forms are unchanged.
+- **Auto Accept Resurrection** under QoL → Automation offers separate settings
+  for dungeons, raids, PvP, and the open world. Each defaults to **Off**, with
+  **Out of Combat** and **Always** options. **Always** also accepts battle
+  resurrections during combat. Hold **Shift** when an offer arrives to keep it
+  manual; offers with resurrection sickness or a recovery delay stay manual.
 
-### Included Beta Fixes
+### Fixed
 
+- **Guild and Communities chat messages and input follow the global font**,
+  including when the window loads after login.
+- **Group frames appear reliably after a fresh login**, without requiring
+  `/reload` to initialize them.
 - **Shift-drag anchoring in Layout Mode aligns frame edges flush**, with left,
   center, or right alignment above and below a target, and top, center, or bottom
   alignment beside it. Moving and nudging anchored frames preserve alignment
@@ -158,131 +131,11 @@ The latest published Alpha release remains 5.5.0-ptr-alpha10.
   and unoutlined window text gets a black shadow. Dark-text and outlined bar
   styles keep their original fills.
 
-## What's New in 5.5.0-ptr-alpha9
+### Beta Line
 
-Historical release notes from September 18, 2026. The storage and verification
-caveats below describe that release at the time; they are not current Alpha10
-limits. The alpha8 upgrade guidance still applies.
+- Beta1 started the 5.3.2 beta line from the stable 5.3.1 release.
 
-### Account-Wide Storage Restored
-
-- **Forever and Retail now both use account-wide `QUIDB` and `QUI_StorageDB`.**
-  Alpha8's Forever-only character-local workaround has been removed because it
-  did not establish a reliable fix. Early SavedVariables loading is retained.
-- **The reported Forever persistence issue remains unresolved.** Restoring the
-  original storage declaration does not establish that settings will persist.
-
-{: .warning }
-**Before updating from alpha8 on Forever, export any profile settings you want
-to keep and back up your `WTF` folder.** Alpha8's character-local data is **not
-automatically migrated back** to account-wide storage. After updating, import
-your same-client profile export to restore those settings if needed. Profile
-exports do not include tracked data in `QUI_StorageDB`; keep the full `WTF`
-backup to preserve that data.
-
-### Included from Alpha8
-
-- **Native swing timers now have QUI controls** under Gameplay → Swing Timers.
-  Configure main-hand, off-hand, and ranged bars independently, including size,
-  texture, text, and visibility. Layout Mode previews all three bars and lets
-  you move and resize them while Blizzard continues to handle weapon timing.
-- **QUI's bank and group frames now have Forever support.** The custom bank
-  uses native bag equipment and purchase controls, with paging in the All view.
-  Party, raid, and spotlight frames use native group-header controls; mouse
-  buttons and modifier clickcasting are available.
-- **Quick Salvage works outside combat**, and Blizzard Frame Mover can position
-  registered, open native panels while preserving Blizzard's clamping.
-- **Resource bars support rogue and energy-form druid combo points**, plus mana
-  in other non-mana druid forms. Defensive suggestions use known spells from
-  upstream class metadata; manual spell IDs remain available.
-- **Character stats follow Forever's native categories, values, and tooltips**,
-  including corrected resistance labels. The stats panel fits its native
-  viewport, refreshes after stat changes, and follows the correct sidebar tabs.
-
-### Included from Alpha7
-
-- **Auto Accept Resurrection** under QoL → Automation offers separate settings
-  for dungeons, raids, PvP, and the open world. Each defaults to **Off**, with
-  **Out of Combat** and **Always** options. **Always** also accepts battle
-  resurrections during combat. Hold **Shift** when an offer arrives to keep it
-  manual; offers with resurrection sickness or a recovery delay stay manual.
-- **Damage Meter automatically darkens bright bars behind light text when an
-  outline is disabled**, improving readability for colors such as priest white
-  and rogue yellow. No-outline text also receives a shadow. This applies to
-  the main meter, spell and target breakdowns, and death recaps.
-- **Forever profile identity migration preserves character selections and
-  Cooldown Manager ownership within the loaded database.** This is separate
-  from the storage declaration change above, which does not migrate alpha8's
-  character-local data.
-  Invalid profile names are rejected before creation,
-  selection, or spec assignment; invalid saved spec mappings are skipped
-  without deleting their data.
-- **Forever Reload buttons and confirmations use the client's supported
-  reload action**, including the settings sidebar and post-combat prompt.
-- **Forever character tabs and reputation bars avoid the reported layout and
-  styling errors.** Native main-bar dividers stay hidden, the Info Bar Legacy
-  button opens its panel, and item-quality colors use the supported API.
-- **Secure-execution and Cooldown Manager workarounds now apply across Forever
-  builds**, retaining native action-button and group-control behavior and
-  avoiding missing-icon errors in Edit Mode previews.
-
-### Included from Alpha6
-
-- **The same alpha archive now supports WoW Forever 1.60.1 and Midnight
-  12.1.5 PTR.** Type `/qui client` to check the detected client and build.
-- **Forever keeps Blizzard's action buttons** while
-  avoiding its reported secure-execution failure. QUI styles and positions
-  native action bars, waits for settings registration, and
-  prevents native layout changes from creating circular anchors.
-- **Collections tabs open and switch without the reported script-hook error**,
-  keeping their icons and selected-tab highlight. Chat hyperlink handling
-  also avoids constructing an incomplete native chat frame.
-- **New profile exports identify their client**, and imports reject a different
-  tagged client before applying settings. Older untagged exports remain accepted.
-
-### Alpha9 Limits (Historical)
-
-Alpha10 restores the secure controls listed above; the following describes
-alpha9 as released on September 18, 2026.
-
-- **GSE integration remains unavailable.** Hover keyboard and mouse-wheel
-  clickcasting are also unavailable; saved bindings are retained.
-- **Protected-frame movement is limited to registered, open native panels.**
-  Arbitrary protected popups and protected scaling remain unsupported. Native
-  action-bar controls remain subject to Blizzard's Edit Mode limits.
-- **Defensive suggestions are not a complete Forever dataset.** Known-spell
-  filtering does not verify every effect, and other resource mappings still
-  need client-specific verification.
-- **Forever persistence remains unresolved.** Both clients use account-wide
-  storage again, but alpha8's character-local data is not automatically migrated.
-- Headless checks cover both clients. Combat behavior, native skins, spell/spec
-  defaults, and other gameplay-specific features still need live verification.
-  See the [Forever support strategy](https://github.com/zol-wow/QUI-docs/blob/alpha/blizzard/forever-support-strategy.md).
-
-### Included PTR Features and Fixes
-
-- **Stable 5.3.1 fixes are now included**, covering native buff placement,
-  centered buff rows, target and focus aura refreshes, chat realm names,
-  new raid-member sizes, upgraded bag item levels, and imported macro names.
-- **Pandemic glows follow the configured icon size when WoW restricts
-  frame dimensions**, including after resizing, while retaining the chosen
-  glow style, color, and offsets.
-- **The custom Info Bar Shop button is restored**, preserving existing settings
-  and its established opening and closing behavior.
-- **PTR aura controls add optional caster labels, pandemic pulses, and entry
-  flashes.** Search uses native Unicode case folding.
-- **Possession abilities stay visible and keep your usual keys**, including
-  after fade timers expire. Raid markers remain visible with restricted values.
-- **Encounter-gated Aura Displays prepare before combat**, and individual
-  previews restore group packing when closed. Imports validate legacy duration
-  settings, and aura sound settings reconcile without render-time changes.
-- **Damage Meter keeps the selected death recap across refreshes**, and boss
-  castbars coalesce deferred retries and cancel them when the cast ends.
-- **Cooldown Manager explains when Blizzard's native viewers are disabled.**
-  Microbar ownership recovers after Blizzard releases it.
-
-## Integrated from Stable 5.3.1
-
+## What's New in 5.3.1
 
 ### Added
 
@@ -371,7 +224,11 @@ alpha9 as released on September 18, 2026.
   resizing.** Follower positions refresh as targets change, protected followers
   reconcile after combat, and absolute anchors account for frame scale.
 
-## Included Features and Improvements
+### Beta Line
+
+- Carries forward the v5.3 runtime after synchronizing beta with main.
+
+## What's New in 5.3-beta15
 
 ### Alt Tracking
 
@@ -398,6 +255,11 @@ alpha9 as released on September 18, 2026.
 
 ### Aura Displays
 
+- **Encounter-gated Aura Display groups activate during combat**, and individual
+  editing previews stay visible when their group uses dynamic packing.
+- **Aura Display imports reject malformed legacy duration and color settings**
+  before they can cause rendering errors.
+- **Aura Display visibility and sound processing do less repeated work during combat.**
 - **Aura Displays have templates, guided setup, and custom creation.** Browse
   spells with clearer same-name variants, choose a display style, and configure
   its unit, position, and load conditions.
@@ -424,6 +286,8 @@ alpha9 as released on September 18, 2026.
 
 ### Damage Meter
 
+- **Death recaps retain the selected death**, including when the same player
+  dies multiple times and when the detail view refreshes.
 - **Spell names and healing rows remain visible during combat.** When
   restricted values prevent combining healing and absorbs, the native healing
   view remains available.
@@ -437,6 +301,9 @@ alpha9 as released on September 18, 2026.
 
 ### Interface
 
+- **The custom Info Bar Shop button is restored with its beta13 behavior.**
+  It opens and closes Blizzard's shop and remains disabled during combat.
+- **The MicroMenu finishes initializing after a temporary owner releases it.**
 - **Rotate Minimap is available in minimap settings** and follows Blizzard's
   native rotation setting, including changes made outside QUI.
 - **Action-bar suppression preserves Blizzard's secure button state**, and
@@ -491,6 +358,8 @@ alpha9 as released on September 18, 2026.
 - **Unit-frame castbars no longer trigger blocked resize errors during combat.**
 - **Unit-frame castbars defer restricted layout changes** and retry their
   positioning without attaching to protected targets.
+- **Boss castbars keep one cancellable retry while Blizzard restricts updates**,
+  avoiding repeated retry chains during combat.
 - **The Group Death Alert can name the killing blow**, optionally include the
   attacker, color the player name by class, limit alerts to instances, and use
   a configurable on-screen duration.
@@ -508,6 +377,8 @@ alpha9 as released on September 18, 2026.
 - **Cooldown Manager leaves Blizzard's native viewer setting under Blizzard's
   control.** Replaced native buff bars hide during early loading and restore
   correctly when suppression is disabled.
+- **Cooldown Manager shows setup instructions when Blizzard's native viewers
+  are disabled**, without changing Blizzard's settings.
 
 ## What's New in 5.2.3
 
@@ -583,8 +454,9 @@ alpha9 as released on September 18, 2026.
 - **Micro Menu ownership stays with Blizzard during temporary UI transitions**,
   including Override Action Bars and Pet Battles, then completes a deferred
   cold-start build after Blizzard releases it.
-- **The custom Info Bar Micro Menu includes the Shop button**, preserving its
-  existing visibility setting and store toggle behavior.
+- **The custom Info Bar Micro Menu no longer duplicates Blizzard's Shop
+  button.** The native Micro Menu remains the supported path for opening the
+  Shop.
 
 ## What's New in 5.2.2
 
@@ -646,7 +518,7 @@ The broader 5.2 feature set remains available below.
 
 ## Upgrade Notes
 
-- Install 5.2 over the existing QUI folders; saved variables remain in `QUIDB` and `QUI_StorageDB`.
+- Install this release over the existing QUI folders; saved variables remain in `QUIDB` and `QUI_StorageDB`.
 - Manual installs must copy every top-level `QUI*` folder from the release zip, not only the `QUI` folder.
 - If a feature does not open, check `/qui` > **Module Addons** before troubleshooting its settings.
 - Some account-cache data, especially offline inventory and equipment, repopulates as each character logs in.
