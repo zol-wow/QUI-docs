@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.2-beta4
+## Current Release: 5.5.2-beta5
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -20,6 +20,25 @@ entries below record the cumulative live, PTR, and Forever changes.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.2-beta5
+
+### Fixed
+
+- Spell Reminder settings list saved reminders, explain each control, and adapt
+  their tabs and scrolling to the available space.
+- Reminder previews preserve their position through settings updates. Power
+  Infusion recipient previews are included in the drag area, and reminders
+  expose their anchoring controls in Layout Mode.
+- Layout Mode adds settings gears and a chooser for overlapping movers. Its
+  settings panel adapts to its content, keeps controls from overlapping, and
+  refreshes offsets and anchor selections when reopened.
+- Reminder movers follow icon size and enable changes without resetting ongoing
+  placement. Preview artwork stops during combat so normal cooldown displays
+  and saved gameplay visibility take effect.
+- Character window tabs retain the correct sizing and background when reopened.
+  Disabling Character Pane enhancements leaves native tab sizing and controls
+  unchanged.
 
 ## What's New in 5.5.2-beta4
 
