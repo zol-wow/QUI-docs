@@ -9,7 +9,34 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
 
-## October 16 current corpus snapshots
+## October 17 Alpha corpus snapshots
+
+Alpha targets **Retail 12.1.7 PTR** and experimental **WoW Forever 1.60.1**
+(interfaces **120107** and **16001**). Beta updates through 5.5.2-beta5 were
+merged before refreshing Retail's paired API-documentation and FrameXML mirrors.
+
+Retail pins **12.1.7.70424** on `ptr` at
+[`b87363e0`](https://github.com/Gethe/wow-ui-source/tree/b87363e0770c2f15b1e2f154de8ad3b0cf3ea90a):
+4,573 Interface files and 646 generated Lua documents. The generated taint index
+contains 4,089 contracts; Retail LuaLS definitions use the same snapshot.
+Forever retains **1.60.1.70425** at
+[`b401e033`](https://github.com/Gethe/wow-ui-source/tree/b401e0332adfbf0460d319b06d8ea29279a941f1),
+including its isolated API index and LuaLS definitions.
+
+Native-source fixtures now follow 12.1.7 paths, widget fields and trainer display
+indices. Mail styling follows child page buttons and instance refresh methods,
+while retaining older hooks. Focused regressions failed with each missing Mail
+adaptation before passing with the fix.
+
+All nine local gates pass, including 1,280 unit files, both clients' strict taint
+analyses and lint. Both mirrors match pinned upstream bytes, and all Retail
+generated files reproduce byte for byte. The isolated Retail FrameXML graph was
+rebuilt. These checks do not establish native rendering or combat acceptance.
+
+The published Alpha release remains 5.5.0-ptr-alpha10; this branch refresh does
+not publish a new archive. The October 16 Retail snapshot below is historical.
+
+## October 16 corpus refresh receipt
 
 Retail now follows the released **12.1.5.70391** `live` snapshot, pinned to
 [`18c6d677`](https://github.com/Gethe/wow-ui-source/tree/18c6d677b605b312f3d813d498404631fb941977).
