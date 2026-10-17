@@ -10,15 +10,15 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.2-beta5**
+**Current Release: 5.5.2-beta6**
 {: .label .label-purple }
 
 {: .warning }
-**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta5 improves
-Spell Reminder settings, preview dragging, Power Infusion recipient positioning,
-and Layout Mode controls. It also fixes Character window tab sizing and leaves
-native tabs unchanged when Character Pane enhancements are disabled. It retains
-the features and fixes from earlier 5.5.2 betas and 5.5.1.
+**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta6 adds
+permanent glove-enchant detection, fixes navigation scrolling after resizing,
+and keeps World Map quest text and Objective Tracker collapse buttons readable
+after native updates. It retains the features and fixes from earlier 5.5.2
+betas and 5.5.1.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
 
