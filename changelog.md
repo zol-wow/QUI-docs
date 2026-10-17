@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.2-beta5
+## Current Release: 5.5.2-beta6
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -20,6 +20,20 @@ entries below record the cumulative live, PTR, and Forever changes.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.2-beta6
+
+### Fixed
+
+- Character and Inspect windows now recognize permanent glove enchants and show
+  the missing-enchant marker when gloves have no enchant applied.
+- Options navigation keeps its full scrolling area when the window is resized,
+  including when layout updates briefly report a zero-height content area.
+- World Map quest and campaign headers retain readable title and progress text
+  after native updates, with campaign backgrounds below the text and spacing
+  beneath the next objective.
+- Objective Tracker collapse buttons keep their QUI plus/minus glyphs without
+  native artwork reappearing behind them.
 
 ## What's New in 5.5.2-beta5
 
