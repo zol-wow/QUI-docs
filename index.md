@@ -16,9 +16,9 @@ A modular World of Warcraft UI suite for Midnight 12.1.7 PTR and WoW Forever 1.6
 {: .warning }
 **Alpha testing: WoW 12.1.7 PTR and WoW Forever 1.60.1 (interfaces 120107 and 16001).** Forever support is experimental, with bank, group-frame, and swing-timer support. See the [release notes](changelog) for changes and client-specific features.
 
-The Alpha branch includes Beta updates through 5.5.2-beta5, including Spell
-Reminder settings and movement, Layout Mode controls, and Character window tab
-fixes. The latest published Alpha release remains 5.5.0-ptr-alpha10 and predates the
+The Alpha branch includes Beta updates through 5.5.2-beta9, including Objective
+Tracker text and height fixes, responsive settings, native paging arrows, glove
+enchants, and World Map header styling. The latest published Alpha release remains 5.5.0-ptr-alpha10 and predates the
 branch's 12.1.7 PTR corpus refresh.
 
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
