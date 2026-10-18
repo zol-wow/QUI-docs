@@ -10,14 +10,14 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.2-beta9**
+**Current Release: 5.5.2-beta10**
 {: .label .label-purple }
 
 {: .warning }
-**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta9 fixes overlapping
-Objective Tracker quest and recipe text and brief overflow flashes when the
-tracker refreshes. It retains the features and fixes from earlier 5.5.2 betas
-and 5.5.1.
+**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta10 prevents Codex
+choice panels from growing taller each time they reopen and leaves Objective
+Tracker text sizing to Blizzard's layout updates. It retains the features and
+fixes from earlier 5.5.2 betas and 5.5.1.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
 
