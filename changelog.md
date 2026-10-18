@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.2-beta10
+## Current Release: 5.5.2-beta11
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -20,6 +20,29 @@ entries below record the cumulative live, PTR, and Forever changes.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.2-beta11
+
+### Changed
+
+- Settings pages with three or more available sections now show direct section
+  links in the left navigation. Smaller pages remain simple destinations, and
+  links update with the selected unit, reminder, or data provider. Group Frames
+  and Spell Reminders use this shared navigation.
+- Startup avoids repeated action bar and aura setup. Hidden Blizzard panels
+  defer skinning until they are shown.
+
+### Fixed
+
+- Saved chat history loads before new messages, preserving message order.
+- Info Bar micro menu buttons route combat clicks through Blizzard's secure
+  buttons. On Retail, Spellbook and Talents use Blizzard's remembered tab.
+- Raid subgroup headers stay available for players who join during combat,
+  while empty groups keep their labels hidden.
+- Reputation scans restore collapsed headers correctly, including headers
+  that share a faction ID.
+- Font styling no longer recursively reapplies itself through native font
+  object updates.
 
 ## What's New in 5.5.2-beta10
 
