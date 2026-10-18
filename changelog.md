@@ -23,7 +23,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ## Unreleased Alpha Integration
 
-The Alpha branch now includes Beta updates through 5.5.2-beta5, including
+The Alpha branch now includes Beta updates through 5.5.2-beta9, including
 native-window styling, options navigation, restricted geometry fixes, and
 Forever 70425 compatibility.
 The latest published Alpha release remains 5.5.0-ptr-alpha10 and predates the
@@ -57,6 +57,48 @@ including newly populated inbox rows and opened-mail attachments.
   including when the window loads after login.
 - **Group frames appear reliably after a fresh login**, without requiring
   `/reload` to initialize them.
+
+## v5.5.2-beta9
+
+### Fixed
+
+- Objective Tracker quest and profession recipe text now uses the correct layout
+  height, preventing wrapped text and font changes from overlapping nearby items.
+- Objective Tracker restores Max Height immediately during refreshes, including
+  unrestricted combat updates, preventing extra objectives from briefly flashing
+  before they are hidden.
+
+## v5.5.2-beta8
+
+### Fixed
+
+- Expanded group aura settings retain their height so the Targeted Spells and
+  Dispel sections below them no longer overlap the editor.
+- Objective Tracker **Max Height** can expand beyond Blizzard's saved height,
+  providing more room for tracked quests and recipes.
+
+## v5.5.2-beta7
+
+### Fixed
+
+- Settings pages no longer flash or fade when switching modules or subpages.
+  Navigation flyouts retain their entrance animation.
+- Paging arrows use native images so fonts without triangle symbols no longer
+  display missing-character boxes, including on vendor page buttons.
+
+## v5.5.2-beta6
+
+### Fixed
+
+- Character and Inspect windows now recognize permanent glove enchants and show
+  the missing-enchant marker when gloves have no enchant applied.
+- Options navigation keeps its full scrolling area when the window is resized,
+  including when layout updates briefly report a zero-height content area.
+- World Map quest and campaign headers retain readable title and progress text
+  after native updates, with campaign backgrounds below the text and spacing
+  beneath the next objective.
+- Objective Tracker collapse buttons keep their QUI plus/minus glyphs without
+  native artwork reappearing behind them.
 
 ## v5.5.2-beta5 - 2026-10-17
 
