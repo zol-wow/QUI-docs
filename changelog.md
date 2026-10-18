@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.2-beta8
+## Current Release: 5.5.2-beta9
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -20,6 +20,16 @@ entries below record the cumulative live, PTR, and Forever changes.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.2-beta9
+
+### Fixed
+
+- Objective Tracker quest and profession recipe text now uses the correct layout
+  height, preventing wrapped text and font changes from overlapping nearby items.
+- Objective Tracker restores Max Height immediately during refreshes, including
+  unrestricted combat updates, preventing extra objectives from briefly flashing
+  before they are hidden.
 
 ## What's New in 5.5.2-beta8
 
