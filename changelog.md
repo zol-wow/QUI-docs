@@ -23,7 +23,7 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ## Unreleased Alpha Integration
 
-The Alpha branch now includes Beta updates through 5.5.2-beta9, including
+The Alpha branch now includes Beta updates through 5.5.2-beta10, including
 native-window styling, options navigation, restricted geometry fixes, and
 Forever 70425 compatibility.
 The latest published Alpha release remains 5.5.0-ptr-alpha10 and predates the
@@ -57,6 +57,15 @@ including newly populated inbox rows and opened-mail attachments.
   including when the window loads after login.
 - **Group frames appear reliably after a fresh login**, without requiring
   `/reload` to initialize them.
+
+## v5.5.2-beta10
+
+### Fixed
+
+- Codex choice panels no longer grow taller each time they reopen.
+- Objective Tracker appearance refreshes no longer schedule a shared Blizzard
+  tracker update. Font changes that affect text size now wait for the next
+  native layout update, preserving the measured spacing between objectives.
 
 ## v5.5.2-beta9
 
