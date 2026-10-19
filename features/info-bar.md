@@ -80,3 +80,12 @@ The Info Bar uses the same Currencies list as datatext panels, the minimap panel
 - Widget lists come from the Datatexts module.
 - Plugin-style data feeds appear in the same widget picker when available.
 - The Info Bar is meant for repeated scanning, not combat-critical alerts; keep your main combat HUD near the center of the screen.
+
+## Micro Menu Clicks
+
+Micro menu icons use Blizzard's native secure buttons in combat. Spellbook and
+Talents also use native clicks outside combat to avoid secret-value cooldown
+errors. On Retail, both icons open Blizzard's remembered or suggested Player
+Spells tab, so their labels do not guarantee a specific tab. Forever retains
+separate native Spellbook and Talent buttons. Native access restrictions still
+apply.

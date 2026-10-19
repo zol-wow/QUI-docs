@@ -100,3 +100,9 @@ If you are unsure whether to track something as an icon or a bar, start with ico
 
 {: .note }
 The countdown number size slider is always available (2-24px). There is no longer a separate "Custom Duration Size" toggle to enable first. The countdown is drawn engine-side, so the size you pick still applies even when combat-protected values are in play.
+
+## Hidden Icons and Clicks
+
+Under supported mounted and out-of-combat visibility settings, hidden Essential
+and Utility buttons no longer intercept clicks. If combat makes the HUD visible,
+it appears before clicks are enabled.

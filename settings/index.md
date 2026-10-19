@@ -17,10 +17,17 @@ _The current `/qui` window uses a left-hand feature sidebar, breadcrumbs across 
 ![Actual QUI Appearance page]({{ '/assets/images/qui-appearance-ui-scale.png' | relative_url }})
 _The Appearance tile is where theme, panel scale, fonts, skinning, and other shared presentation controls live._
 
+## Section Links
+
+Pages with three or more available sections show direct links in the left
+navigation. Links follow the selected unit, reminder, or data provider and jump
+to that section's heading. Smaller pages remain simple destinations. Group
+Frames and Spell Reminders use the same navigation.
+
 ## Most-Visited Tiles
 
 - **General** for profiles, import/export, integrations, and click-cast bindings
-- **Module Addons** for enabling or disabling whole QUI feature addons
+- **General → Feature Toggles** for enabling or disabling whole QUI feature addons
 - **Unit Frames** and **Group Frames** for combat frame setup
 - **Action Bars** and **Cooldown Manager** for your main combat HUD
 - **Minimap & Datatext** and **Info Bar** for utility widgets
@@ -28,29 +35,21 @@ _The Appearance tile is where theme, panel scale, fonts, skinning, and other sha
 - **Bags** and **Alts** for optional inventory and account-wide tracking
 - **Quality of Life** for session helpers and automation
 
-## Main Feature Tiles
+## Main Navigation Groups
 
-The main sidebar in `/qui` currently contains these top-level tiles:
+The sidebar groups related features together:
 
-| # | Tile | Description |
-|---|-----|-------------|
-| 1 | **Welcome** | First-time setup wizard and version info |
-| 2 | **Module Addons** | Enable or disable QUI feature addon folders |
-| 3 | **General** | Profiles, import/export, integrations, and click-cast setup |
-| 4 | **Unit Frames** | Player, target, focus, pet, boss, and aura presentation |
-| 5 | **Group Frames** | Party and raid frame configuration with preview and layout tools |
-| 6 | **Action Bars** | Global action bar behavior, buff/debuff styling, and per-bar overrides |
-| 7 | **Cooldown Manager** | CDM containers, tracked spells, appearance, effects, and keybind overlays |
-| 8 | **Resource Bars** | Class resources and related combat bars |
-| 9 | **Minimap & Datatext** | Minimap controls plus datatext panel settings |
-| 10 | **Info Bar** | Optional top/bottom datatext bar, widget zones, micro menu, travel, and spec tools |
-| 11 | **Bags** | Optional bag, bank, Warband bank, guild bank, search, sorting, and currency bar |
-| 12 | **Alts** | Optional account-wide roster, equipment, currencies, reputations, weeklies, and item search |
-| 13 | **Appearance** | UI scale, fonts, skinning, autohide, HUD visibility, frame levels, Blizzard mover, damage meter |
-| 14 | **Chat & Tooltips** | Chat styling, optional QUI Chat, tooltip behavior, and related readability settings |
-| 15 | **Gameplay** | XP tracker, keystones, skyriding, combat helpers, raid buffs, and more |
-| 16 | **Quality of Life** | FPS preset, automation, popups, salvage, consumables, panel, and reload behavior |
-| 17 | **Help** | Built-in help content and quick reference |
+| Group | Features |
+|-------|----------|
+| **Setup** | Welcome, General, Help |
+| **Frames & Bars** | Unit Frames, Group Frames, Nameplates, Action Bars |
+| **Abilities & Auras** | Cooldown Manager, Resource Bars, Auras |
+| **Interface** | Appearance, Minimap & Datatext, Info Bar, Chat & Tooltips, Bags, Alts |
+| **Gameplay & Utilities** | Gameplay, Reminders, Quality of Life |
+
+Find **Damage Meter** under **Gameplay**. Enable optional addon modules under
+**General → Feature Toggles**. The [Module Addons guide](../getting-started/module-addons)
+explains which modules are opt-in.
 
 ## General Tile Pages
 
@@ -59,9 +58,12 @@ The **General** tile is where the cross-feature setup pages now live:
 | Page | Use it for |
 |------|------------|
 | **Profiles** | Creating, copying, deleting, and auto-switching profiles |
+| **Pinned Globals** | Quick access to pinned settings |
+| **Feature Toggles** | Enabling and disabling feature addons |
 | **Import / Export** | Bundled presets and shareable setup strings |
-| **Integrations** | Integration and anchoring setup for compatible tools |
+| **Third-party** | Integration and anchoring setup for compatible tools |
 | **Click-Cast** | Mouse-binding setup for unit and group frame interactions |
+| **Options Window** | Options panel and reload behavior |
 
 ## Common Page Tabs
 
