@@ -10,13 +10,13 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.2-beta11**
+**Current Release: 5.5.2-beta12**
 {: .label .label-purple }
 
 {: .warning }
-**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta11 adds direct
-section links across settings, reduces repeated startup work, and fixes chat
-history ordering, combat micro menu routing, and raid group availability.
+**Beta testing across live, PTR, and Forever.** Version 5.5.2-beta12 adds independent cleanse-glow
+controls for group frames, improves hidden Cooldown Manager click handling,
+and refines Inspect, Trade, alert, and Achievement styling.
 It retains the features and fixes from earlier 5.5.2 betas and 5.5.1.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.

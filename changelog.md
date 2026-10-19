@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.2-beta11
+## Current Release: 5.5.2-beta12
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -20,6 +20,24 @@ entries below record the cumulative live, PTR, and Forever changes.
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.2-beta12
+
+### Improved
+
+- Group-frame Cleanse-Ready Glow has its own debuff scope, custom or per-type
+  colors, opacity, and static, pulse, or moving-highlight animations. Settings
+  previews reflect these choices independently of the dispel border.
+
+### Fixed
+
+- Hidden essential and utility Cooldown Manager buttons no longer intercept
+  clicks under supported mounted and out-of-combat visibility settings. When
+  combat makes the HUD visible, it appears before clicks are enabled.
+- Inspect models have more camera clearance. Trade item rows and acceptance
+  highlights align correctly, with duplicate decorative borders removed.
+- Rated-loot, money, and collection alerts retain QUI styling through native
+  animations. Achievement hover highlights use QUI styling.
 
 ## What's New in 5.5.2-beta11
 
