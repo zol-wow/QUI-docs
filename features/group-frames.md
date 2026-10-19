@@ -84,7 +84,14 @@ Targeted Spells show enemy nameplate cast icons on the group member being target
 
 Use **Add Missing Raid Buff** in the Auras element list when you want group frames to show missing Arcane Intellect, Power Word: Fortitude, Battle Shout, Mark of the Wild, Skyfury, or Blessing of the Bronze. Leave **Auto-Detect My Buff** enabled to show only the raid buff your current class can provide, or turn it off to choose individual buffs manually.
 
+Missing-buff icons follow your current spell rank when spells change without
+changing saved selections or hidden-buff choices.
+
 ### Dispel & Defensive Indicators
+
+**Cleanse-Ready Glow** has its own debuff scope, custom or per-type colors,
+opacity, and static, pulse, or moving-highlight animations. Its settings and
+preview are independent of the dispel border, so you can tune each separately.
 
 Dispel and defensive indicators clear as soon as the aura ends, so they will not stay lit on a frame after the effect is gone. Bottom-anchored defensive indicators sit clear of the power bar instead of overlapping it.
 

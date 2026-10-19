@@ -7,11 +7,62 @@ acceptance plans and implementation state are not current release requirements.
 
 QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
-**Stable QUI 5.5.0 uses one codebase, two isolated client corpora, and one archive for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental Forever 1.60.1 (interfaces 120100, 120105, and 16001). Client-specific changes remain limited to documented API, bank, library, resource, and profile differences.**
+**Stable QUI 5.5.2 uses one codebase, two isolated client corpora, and one archive for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental Forever 1.60.1 (interfaces 120100, 120105, and 16001). Client-specific changes remain limited to documented API, bank, library, resource, and profile differences.**
 
-## October 10 current corpus compatibility
+## October 16 current corpus snapshots
 
-The current Forever corpus is **1.60.1.70338**, pinned to
+Retail now follows the released **12.1.5.70391** `live` snapshot, pinned to
+[`18c6d677`](https://github.com/Gethe/wow-ui-source/tree/18c6d677b605b312f3d813d498404631fb941977).
+Forever follows **1.60.1.70425** on `forever`, pinned to
+[`b401e033`](https://github.com/Gethe/wow-ui-source/tree/b401e0332adfbf0460d319b06d8ea29279a941f1).
+Both isolated API-documentation and FrameXML mirrors were refreshed on October 16;
+each client's taint index and LuaLS definitions are generated from its own snapshot.
+The September 30 Retail PTR2 snapshot and October 10 Forever snapshot below are
+historical baselines.
+
+The mirrors match the pinned upstream file sets and bytes: Retail has 4,029
+Interface files and 622 generated Lua documents; Forever has 4,489 and 642.
+Retail's generated API documents are unchanged from its previous PTR2 baseline.
+Forever's index now contains 4,077 taint contracts. Five native-source fixtures
+were updated for inset progress-bar fill areas, stable-slot state textures and
+the keybinding-enabled event. That refresh changed fixtures and corpora only;
+the subsequent integration review identified the runtime corrections below.
+
+Refresh validation passed all nine `JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh`
+gates, including 1,270 unit files, both client strict taint analyses and lint.
+Both clients' generated outputs reproduce byte for byte, and their isolated
+FrameXML graphs were rebuilt. Validation log:
+`/tmp/qui-corpus-refresh-JoJ13r/final-gates.log`.
+
+### October 16 Forever 70425 integration corrections
+
+Missing group buffs now display the highest-known spell rank while keeping the
+canonical spell ID for saved selections and hidden-buff matching. Learning a
+rank rebuilds the catalog and invalidates cached labels and synthetic auras.
+Older catalogs without `displaySpellID` retain the canonical display fallback.
+
+QUI preserves the native external-event minimap shortcut outside its hidden
+decorative parent, retaining Blizzard's availability, effects and click handling.
+Disabled profiles and external HUD ownership restore its native parent and
+anchor; combat defers the change. Hide Border (Top) suppresses the new native
+header textures while retaining zone text, map clicks and native hover/pressed
+state, including restoration in Edit Mode and when the setting is disabled.
+
+Forever character and reputation tracks now anchor to native `FillArea`, with
+the previous frame fallback. Stable skins hide the new footer, subheader and
+divider artwork through the shared persistent texture clamp, preserving model
+artwork, native slot behavior and all six lock/current-state textures.
+
+Focused regressions reproduce each gap with the previous runtime. All nine
+`JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh` gates pass with 1,273 unit files,
+both strict client analyses, 12 profile fixtures and 20 lint targets. Independent
+review found no actionable issues. Validation log:
+`/tmp/qui-forever70425-fixes-8RizkF/final-gates.log`. These source and headless
+checks do not establish native rendering or combat acceptance.
+
+## October 10 corpus compatibility receipt
+
+The October 10 Forever corpus was **1.60.1.70338**, pinned to
 [`94376449`](https://github.com/Gethe/wow-ui-source/tree/943764493e6b16d63ded3ab304150d1f05e58b57).
 The October 10 refresh includes 640 generated API documentation files and 4,437
 FrameXML Interface files. Compared with build 70245, 13 generated documentation
