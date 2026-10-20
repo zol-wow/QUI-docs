@@ -23,14 +23,87 @@ Back up your `WTF` folder before updating. Manual installs must copy every `QUI*
 
 ## Unreleased Alpha Integration
 
-The Alpha branch now includes Beta updates through 5.5.2-beta10, including
-native-window styling, options navigation, restricted geometry fixes, and
-Forever 70425 compatibility.
+The Alpha branch now includes Beta updates through 5.5.3-beta1, including
+mover anchor spacing and settings navigation, group-frame cleanse glow controls,
+cooldown refreshes, Blizzard window styling, and Forever swing timer and
+movement-stat improvements. Earlier Beta fixes and Forever 70425 compatibility
+remain included.
 The latest published Alpha release remains 5.5.0-ptr-alpha10 and predates the
 branch's 12.1.7 PTR corpus refresh. Retail API documentation and FrameXML now
 follow PTR build 12.1.7.70424; Forever retains build 1.60.1.70425.
 Mail window styling follows the native page buttons and instance refreshes,
 including newly populated inbox rows and opened-mail attachments.
+
+## What's New in 5.5.3-beta1
+
+### Improved
+
+- Layout Mode preserves saved anchor spacing across linked movers when their
+  dimensions change. **Open settings** selects the matching section and tab,
+  scrolls them into view, and reveals the active navigation entry.
+- Swing timer mover drawers focus on position and size. Gameplay and appearance
+  controls remain in **Gameplay > Swing Timers**. On Forever, previews preserve
+  native timer state; set Blizzard Edit Mode visibility to **Always** to let QUI
+  control gameplay visibility.
+- Blizzard windows, alerts, loot, tooltips, and the settings color picker have
+  refined styling. Status tracking bars use shared border-color controls, with
+  those choices included in profile exports.
+
+### Fixed
+
+- Cooldown Manager refreshes ability assignments after specialization changes.
+  Its setup warning waits for settings to load and clears when the native
+  cooldown viewer is enabled.
+- Bag and bank item buttons that cannot be created during combat appear after
+  combat ends. Group frames clear auras for disconnected players.
+- Theme color changes preserve the selected settings tab and scroll position.
+- The equipment durability indicator retains its saved QUI anchor through
+  native positioning updates.
+- On Forever, Character Pane movement speed and its tooltip reuse Blizzard's
+  values without restricted speed calculations.
+
+## What's New in 5.5.2-beta12
+
+### Improved
+
+- Group-frame Cleanse-Ready Glow has its own debuff scope, custom or per-type
+  colors, opacity, and static, pulse, or moving-highlight animations. Settings
+  previews reflect these choices independently of the dispel border.
+
+### Fixed
+
+- Hidden essential and utility Cooldown Manager buttons no longer intercept
+  clicks under supported mounted and out-of-combat visibility settings. When
+  combat makes the HUD visible, it appears before clicks are enabled.
+- Inspect models have more camera clearance. Trade item rows and acceptance
+  highlights align correctly, with duplicate decorative borders removed.
+- Rated-loot, money, and collection alerts retain QUI styling through native
+  animations. Achievement hover highlights use QUI styling.
+
+## What's New in 5.5.2-beta11
+
+### Changed
+
+- Settings pages with three or more available sections now show direct section
+  links in the left navigation. Smaller pages remain simple destinations, and
+  links update with the selected unit, reminder, or data provider. Group Frames
+  and Spell Reminders use this shared navigation.
+- Startup avoids repeated action bar and aura setup. Hidden Blizzard panels
+  defer skinning until they are shown.
+
+### Fixed
+
+- Saved chat history loads before new messages, preserving message order.
+- Info Bar micro menu buttons route combat clicks through Blizzard's secure
+  buttons. On Retail, Spellbook and Talents use Blizzard's remembered tab.
+- Raid subgroup headers stay available for players who join during combat,
+  while empty groups keep their labels hidden.
+- Reputation scans restore collapsed headers correctly, including headers
+  that share a faction ID.
+- Font styling no longer recursively reapplies itself through native font
+  object updates.
+
+## Earlier Cumulative Alpha Integration
 
 ### Added
 
