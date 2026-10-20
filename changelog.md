@@ -8,18 +8,46 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.2-beta12
+## Current Release: 5.5.3-beta1
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
 Forever 1.60.1.** One archive supports interfaces 120100, 120105, and 16001.
 
-This beta retains the features and fixes from 5.5.1. Earlier beta and Alpha
+This beta retains the features and fixes from 5.5.2. Earlier beta and Alpha
 entries below record the cumulative live, PTR, and Forever changes.
 
 {: .important }
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
+
+## What's New in 5.5.3-beta1
+
+### Improved
+
+- Layout Mode preserves saved anchor spacing across linked movers when their
+  dimensions change. **Open settings** selects the matching section and tab,
+  scrolls them into view, and reveals the active navigation entry.
+- Swing timer mover drawers focus on position and size. Gameplay and appearance
+  controls remain in **Gameplay > Swing Timers**. On Forever, previews preserve
+  native timer state; set Blizzard Edit Mode visibility to **Always** to let QUI
+  control gameplay visibility.
+- Blizzard windows, alerts, loot, tooltips, and the settings color picker have
+  refined styling. Status tracking bars use shared border-color controls, with
+  those choices included in profile exports.
+
+### Fixed
+
+- Cooldown Manager refreshes ability assignments after specialization changes.
+  Its setup warning waits for settings to load and clears when the native
+  cooldown viewer is enabled.
+- Bag and bank item buttons that cannot be created during combat appear after
+  combat ends. Group frames clear auras for disconnected players.
+- Theme color changes preserve the selected settings tab and scroll position.
+- The equipment durability indicator retains its saved QUI anchor through
+  native positioning updates.
+- On Forever, Character Pane movement speed and its tooltip reuse Blizzard's
+  values without restricted speed calculations.
 
 ## What's New in 5.5.2-beta12
 
