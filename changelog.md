@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.3-beta1
+## Current Release: 5.5.3-beta2
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -21,7 +21,7 @@ entries below record the cumulative live, PTR, and Forever changes.
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.3-beta1
+## What's New in 5.5.3-beta2
 
 ### Improved
 
@@ -38,6 +38,14 @@ Back up your `WTF` folder before updating. Manual installs must copy every
 
 ### Fixed
 
+- Objective Tracker retains its QUI Layout Mode placement when entering or
+  leaving delves and other scenarios, with tracker skinning enabled or disabled.
+  Blizzard layout resets and dragging no longer replace that placement;
+  protected changes recover after combat.
+- Info Bar Spellbook and Talents shortcuts use their separate native buttons
+  when the client provides them, preserving the shared Player Spells fallback
+  on other clients.
+- Group-frame Cleanse-Ready Glow animations respect their configured opacity.
 - Cooldown Manager refreshes ability assignments after specialization changes.
   Its setup warning waits for settings to load and clears when the native
   cooldown viewer is enabled.

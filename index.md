@@ -10,14 +10,15 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.3-beta1**
+**Current Release: 5.5.3-beta2**
 {: .label .label-purple }
 
 {: .warning }
-**Beta testing across live, PTR, and Forever.** Version 5.5.3-beta1 preserves
-anchor spacing when movers resize and opens their matching settings sections.
-It also improves cooldown refreshes, Blizzard window styling, and Forever
-swing timers and movement stats, retaining the features and fixes from 5.5.2.
+**Beta testing across live, PTR, and Forever.** Version 5.5.3-beta2 preserves
+Objective Tracker placement through scenario changes and Blizzard layout resets,
+including when tracker skinning is disabled. It also fixes Info Bar Spellbook
+and Talents shortcuts on clients with separate native buttons and preserves
+Cleanse-Ready Glow opacity, retaining the earlier beta features and fixes.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
 
