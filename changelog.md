@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.3-beta2
+## Current Release: 5.5.3-beta3
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -21,10 +21,13 @@ entries below record the cumulative live, PTR, and Forever changes.
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.3-beta2
+## What's New in 5.5.3-beta3
 
 ### Improved
 
+- Settings navigation uses compact nested groups and restores each module's
+  sidebar scroll position. Search and navigation include additional Sound Mute,
+  Blizzard Mover, Import/Export, and Chat controls.
 - Layout Mode preserves saved anchor spacing across linked movers when their
   dimensions change. **Open settings** selects the matching section and tab,
   scrolls them into view, and reveals the active navigation entry.
@@ -38,6 +41,16 @@ Back up your `WTF` folder before updating. Manual installs must copy every
 
 ### Fixed
 
+- Castbars follow their configured anchors after combat reloads, layout
+  changes, movement, and resizing. Saved frame placement is preserved during
+  startup.
+- Both consumable settings pages honor character-specific selections.
+- Spell Reminder management controls open on the main page, and editors retain
+  their layout when revisited. Temporary settings controls avoid repeated
+  profile scans.
+- Bags prepare native item buttons outside combat and reuse them during combat.
+  When a native button is unavailable, cached item cells remain visible until
+  the button can be created after combat.
 - Objective Tracker retains its QUI Layout Mode placement when entering or
   leaving delves and other scenarios, with tracker skinning enabled or disabled.
   Blizzard layout resets and dragging no longer replace that placement;
