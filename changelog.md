@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.3-beta3
+## Current Release: 5.5.3-beta4
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -21,10 +21,15 @@ entries below record the cumulative live, PTR, and Forever changes.
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.3-beta3
+## What's New in 5.5.3-beta4
 
 ### Improved
 
+- Settings search includes more Action Bar, Minimap, Info Bar, and composite
+  controls. Results keep the matching settings page and selected unit, type,
+  or reminder context.
+- Spell Reminder navigation lists individual reminders and their settings,
+  with a dedicated **Add Reminder** entry and a **Global Font** choice.
 - Settings navigation uses compact nested groups and restores each module's
   sidebar scroll position. Search and navigation include additional Sound Mute,
   Blizzard Mover, Import/Export, and Chat controls.
@@ -41,6 +46,12 @@ Back up your `WTF` folder before updating. Manual installs must copy every
 
 ### Fixed
 
+- Settings cards, text fields, search descriptions, and aura editors adapt
+  to narrower windows without overlapping nearby controls.
+- Revisiting cached settings pages preserves editor state instead of rebuilding
+  unchanged sections. Search and sidebar navigation share the same selection.
+- Opening settings or search controls preserves inherited values until edited,
+  rather than saving them as local overrides.
 - Castbars follow their configured anchors after combat reloads, layout
   changes, movement, and resizing. Saved frame placement is preserved during
   startup.
