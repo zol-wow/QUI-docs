@@ -9,7 +9,26 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
 
-## October 16 current corpus snapshots
+## October 27 current corpus snapshots
+
+Retail follows **12.1.5.70575** on `live`, pinned to
+[`15881d52`](https://github.com/Gethe/wow-ui-source/tree/15881d522c44cd106d3d8660106ec9f9d2f44167).
+Forever follows **1.60.1.70532** on `forever`, pinned to
+[`ca8368f2`](https://github.com/Gethe/wow-ui-source/tree/ca8368f2f2380cbe696854f7f2646387c278a61b).
+Both isolated mirrors were refreshed on October 27. Generated API documents
+are byte-identical to the October 16 snapshots: 622 Retail and 642 Forever
+Lua files. FrameXML changes two Retail files and 18 Forever files, with no
+additions or removals; total Interface file counts remain 4,029 and 4,489.
+Each client's taint index and LuaLS definitions are regenerated from its own
+snapshot. The PlayerChoice regression now runs against both clients: Retail
+clears stale rows natively, while Forever still needs QUI's existing cleanup.
+The swing-timer regression verifies Forever's new behavior: active swings stay
+bright, then native timer expiry applies out-of-range dimming to QUI's chrome.
+All nine `JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh` gates passed, including
+both clients' derived-file freshness checks. Both isolated FrameXML graphs were
+rebuilt. Native rendering and gameplay have not been verified for this refresh.
+
+## October 16 corpus refresh receipt
 
 Retail now follows the released **12.1.5.70391** `live` snapshot, pinned to
 [`18c6d677`](https://github.com/Gethe/wow-ui-source/tree/18c6d677b605b312f3d813d498404631fb941977).
