@@ -8,6 +8,33 @@ nav_order: 5
 
 This page summarizes the user-facing changes in each stable release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
+## Unreleased — beta integration
+
+The main development branch includes improvements from 5.5.3-beta1 through
+5.5.3-beta5. The current stable download remains 5.5.2.
+
+### Improved
+
+- Settings search covers more controls and opens their matching page, section,
+  and selected unit or display. Navigation uses compact groups and individual
+  Spell Reminder entries; cached pages retain editor state.
+- Settings cards, pickers, and editors adapt to narrower windows. Opening
+  inherited settings preserves shared values until edited.
+- Blizzard windows, alerts, loot, tooltips, and status bars have refined styling.
+
+### Fixed
+
+- Layout Mode preserves linked mover spacing. Castbars and Objective Tracker
+  placement survive combat reloads and native layout changes.
+- Raid Buff reminders reappear after combat. Consumable settings honor
+  character-specific choices, and bag contents remain visible during combat.
+- Retail and Forever profile imports accept each other's full, selected, and
+  nameplate exports while retaining payload validation.
+- Cooldown Manager setup notices wait for saved settings, native shortcuts use
+  separate Spellbook and Talent buttons when available, and group-frame glow
+  animations preserve opacity. Forever movement stats and swing timer styling
+  preserve native values and behavior.
+
 ## Current Release: 5.5.2
 
 > **Stable release.** One download supports Midnight 12.1 live, Midnight
