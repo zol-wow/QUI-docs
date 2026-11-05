@@ -10,14 +10,16 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.2**
+**Current Release: 5.5.3**
 {: .label .label-purple }
 
 {: .note }
-**Stable 5.5.2 supports live and PTR, with experimental Forever support.**
-It brings direct settings section links, independent group-frame cleanse glows,
-and improvements to Spell Reminder placement, combat clicks, Objective Tracker
-layout, and Blizzard window styling. It retains the features and fixes from 5.5.1.
+**Stable 5.5.3 supports live and PTR, with experimental Forever support.**
+It brings broader settings search, compact navigation, responsive editors, and
+improvements to Layout Mode, combat reloads, Raid Buff reminders, and native
+window styling. Retail and Forever profile imports accept each other's exports
+without automatically converting spell or specialization data. It retains the
+features and fixes from 5.5.2.
 One archive supports interfaces **120100**, **120105**, and **16001**.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.

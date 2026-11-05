@@ -8,10 +8,14 @@ nav_order: 5
 
 This page summarizes the user-facing changes in each stable release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Unreleased — beta integration
+## Current Release: 5.5.3
 
-The main development branch includes improvements from 5.5.3-beta1 through
-5.5.3-beta5. The current stable download remains 5.5.2.
+> **Stable release.** One download supports Midnight 12.1 live, Midnight
+> 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
+> 120105, and 16001).
+
+QUI 5.5.3 brings the improvements from 5.5.3-beta1 through 5.5.3-beta5 to the
+stable channel. It retains the features and fixes from 5.5.2.
 
 ### Improved
 
@@ -29,13 +33,14 @@ The main development branch includes improvements from 5.5.3-beta1 through
 - Raid Buff reminders reappear after combat. Consumable settings honor
   character-specific choices, and bag contents remain visible during combat.
 - Retail and Forever profile imports accept each other's full, selected, and
-  nameplate exports while retaining payload validation.
+  nameplate exports while retaining payload validation. Spell and specialization
+  data are not automatically converted between clients.
 - Cooldown Manager setup notices wait for saved settings, native shortcuts use
   separate Spellbook and Talent buttons when available, and group-frame glow
   animations preserve opacity. Forever movement stats and swing timer styling
   preserve native values and behavior.
 
-## Current Release: 5.5.2
+## v5.5.2
 
 > **Stable release.** One download supports Midnight 12.1 live, Midnight
 > 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
