@@ -9,7 +9,26 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Stable QUI 5.5.2 uses one codebase, two isolated client corpora, and one archive for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental Forever 1.60.1 (interfaces 120100, 120105, and 16001). Client-specific changes remain limited to documented API, bank, library, resource, and profile differences.**
 
-## October 16 current corpus snapshots
+## October 27 current corpus snapshots
+
+Retail follows **12.1.5.70575** on `live`, pinned to
+[`15881d52`](https://github.com/Gethe/wow-ui-source/tree/15881d522c44cd106d3d8660106ec9f9d2f44167).
+Forever follows **1.60.1.70532** on `forever`, pinned to
+[`ca8368f2`](https://github.com/Gethe/wow-ui-source/tree/ca8368f2f2380cbe696854f7f2646387c278a61b).
+Both isolated mirrors were refreshed on October 27. Generated API documents
+are byte-identical to the October 16 snapshots: 622 Retail and 642 Forever
+Lua files. FrameXML changes two Retail files and 18 Forever files, with no
+additions or removals; total Interface file counts remain 4,029 and 4,489.
+Each client's taint index and LuaLS definitions are regenerated from its own
+snapshot. The PlayerChoice regression now runs against both clients: Retail
+clears stale rows natively, while Forever still needs QUI's existing cleanup.
+The swing-timer regression verifies Forever's new behavior: active swings stay
+bright, then native timer expiry applies out-of-range dimming to QUI's chrome.
+All nine `JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh` gates passed, including
+both clients' derived-file freshness checks. Both isolated FrameXML graphs were
+rebuilt. Native rendering and gameplay have not been verified for this refresh.
+
+## October 16 corpus refresh receipt
 
 Retail now follows the released **12.1.5.70391** `live` snapshot, pinned to
 [`18c6d677`](https://github.com/Gethe/wow-ui-source/tree/18c6d677b605b312f3d813d498404631fb941977).
@@ -235,7 +254,7 @@ pending.
 | Corpus and checks | Pinned Forever FrameXML and API docs live under `tests/clients/forever/`, with separate taint index and LuaLS definitions. Extractors fail on bad documents. Local gates and CI check both corpora without altering Retail's derived data. |
 | Shared runtime | Modern cooldown and unit/resource percentage paths use API capabilities. Specialization callers prefer `C_SpecializationInfo` APIs. RangeCheck preserves secret-safe GUID/pet handling on Forever. Unsupported bundled LibOpenRaid initialization is disabled there. |
 | Bank and resources | Bank scans and sorting derive tab ranges from the client's enums. Forever retains Blizzard's bank UI and bag-equipping controls. Primary resource follows `UnitPowerType`; Retail-specific secondary resource bars are disabled on Forever pending verified mappings. |
-| Profiles | New full/selected/nameplate exports carry client metadata; imports reject a different tagged client before applying settings. Metadata is not stored as profile settings. Existing untagged exports remain accepted for compatibility, so their client origin cannot be enforced. |
+| Profiles | Full/selected/nameplate exports carry informational client metadata; imports accept profiles from either Retail or Forever, including existing untagged exports. Metadata is not stored as profile settings. Payload validation still applies. |
 
 Validation: `JOBS=12 bash tools/test.sh` passed all nine gates, including 971 unit test files, 12 profile fixtures, both strict taint analyses, deterministic regeneration for both clients, and TOC parser checks. Focused regressions exercise real library initialization, modern API routing, both bank enum topologies, specialization without deprecated globals, and cross-client full/nameplate imports. The release packaging and metadata-generation blocks were exercised in temporary staging without upload. No commit, push or release has been performed. Drew subsequently supplied the first live boot log, described below.
 
@@ -352,7 +371,7 @@ The initial implementation recognizes the verified `1.60.x` build-string family;
 
 Use targeted client data or adapters only for proven differences: bank slots, spec/spell configuration, native-frame skins. Avoid global fake Blizzard APIs and catch-all `pcall` wrappers. Retain secret/taint contracts even where out-of-combat values look ordinary.
 
-Keep profile presentation settings reusable, with client-appropriate starter defaults. Independently installed clients already have separate SavedVariables locations; no database rewrite is needed merely to support two clients. New exports carry `_quiClient`; a tagged cross-client import is rejected. Existing untagged Retail imports remain compatible. A future presentation-only cross-client import needs explicit filtering of incompatible spell/spec/layout sections; the current change does not implement that conversion.
+Keep profile presentation settings reusable, with client-appropriate starter defaults. Independently installed clients already have separate SavedVariables locations; no database rewrite is needed merely to support two clients. New exports carry informational `_quiClient` metadata. Full, selected, and nameplate imports accept profiles from either Retail or Forever, including existing untagged exports, subject to the existing payload validation. Imports do not automatically convert spell or specialization data between clients.
 
 The authorized Alpha implementation uses one archive declaring both interfaces, with the same suite set and narrow runtime guards. `tools/toc_game_versions.py` parses the comma-separated TOC interfaces, validates suite consistency and emits game-version names for the publisher. Actual platform upload and both-client installation remain release acceptance checks. Separate archives remain an option only if live evidence requires different load lists.
 
