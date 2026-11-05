@@ -7,7 +7,7 @@ acceptance plans and implementation state are not current release requirements.
 
 QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
-**Stable QUI 5.5.2 uses one codebase, two isolated client corpora, and one archive for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental Forever 1.60.1 (interfaces 120100, 120105, and 16001). Client-specific changes remain limited to documented API, bank, library, resource, and profile differences.**
+**Stable QUI 5.5.3 uses one codebase, two isolated client corpora, and one archive for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental Forever 1.60.1 (interfaces 120100, 120105, and 16001). Client-specific changes remain limited to documented API, bank, library, resource, and profile differences.**
 
 ## October 27 current corpus snapshots
 

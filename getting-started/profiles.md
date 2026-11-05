@@ -62,11 +62,10 @@ Profiles can be imported and exported as shareable strings. This is the easiest 
 2. To **export**, select the data you want to export and copy the generated string.
 3. To **import**, paste a profile string into the import field and click Import.
 
-In 5.5.3-beta5 and the current main development branch, full, selected, and
-nameplate profiles can be imported between Retail and Forever. Client metadata
-is informational; payload validation still applies. Imports do not automatically
-convert spell or specialization data between clients. This change awaits the
-next stable release; stable 5.5.2 rejects tagged cross-client imports.
+In stable 5.5.3, full, selected, and nameplate profiles can be imported between
+Retail and Forever. Client metadata is informational; payload validation still
+applies. Imports do not automatically convert spell or specialization data
+between clients.
 
 ## Partial Imports
 
