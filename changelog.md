@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the current beta and recent user-facing changes. For every beta entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.3-beta4
+## Current Release: 5.5.3-beta5
 
 {: .warning }
 **Beta testing: Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW
@@ -21,7 +21,7 @@ entries below record the cumulative live, PTR, and Forever changes.
 Back up your `WTF` folder before updating. Manual installs must copy every
 `QUI*` folder from the release zip into `Interface\AddOns\`.
 
-## What's New in 5.5.3-beta4
+## What's New in 5.5.3-beta5
 
 ### Improved
 
@@ -45,6 +45,12 @@ Back up your `WTF` folder before updating. Manual installs must copy every
   those choices included in profile exports.
 
 ### Fixed
+
+- Raid Buff reminders reappear after combat when a tracked buff is missing,
+  including when the buff expires after combat.
+- Profiles exported in Retail can be imported in Forever and vice versa,
+  including selected settings and nameplate profiles. Existing import
+  validation remains in place.
 
 - Settings cards, text fields, search descriptions, and aura editors adapt
   to narrower windows without overlapping nearby controls.
