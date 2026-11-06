@@ -8,6 +8,23 @@ nav_order: 5
 
 This page summarizes the user-facing changes in each stable release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
+## Unreleased
+
+These changes are merged into main and will be included in a future stable release.
+
+### Fixed
+
+- Damage Meter handles restricted native icons safely and preserves Mythic+
+  meter choices when importing profiles.
+- Deleting every Damage Meter window stays saved after reload. Recreated
+  windows start with fresh anchors.
+- Rebuilding settings pages no longer retains resize callbacks from old widgets.
+- Cooldown Manager avoids indexing incomplete category ordering data.
+- Forever's Cooldown Manager composer shows labels and representative icons for
+  additional consumable categories, slot icons for empty or uncached trinkets,
+  and a question mark when a picker icon is unavailable.
+
+
 ## Current Release: 5.5.3
 
 > **Stable release.** One download supports Midnight 12.1 live, Midnight
