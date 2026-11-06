@@ -9,7 +9,61 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 **Alpha now uses one QUI codebase, two isolated client corpora, and one archive declaring both Retail and Forever. Client-specific changes are limited to documented API, bank, library, resource, and profile differences.**
 
-## October 27 current corpus snapshots
+## November 5 current corpus snapshots
+
+Retail follows **12.1.5.70783** on `live`, pinned to
+[`297d7aaa`](https://github.com/Gethe/wow-ui-source/tree/297d7aaaa736f346b3e036f38ee088eaf7f8c07f).
+Forever follows **1.60.1.70790** on `forever`, pinned to
+[`eac30af5`](https://github.com/Gethe/wow-ui-source/tree/eac30af597e5aaa43a60f6675ef5fdcea100375f).
+Both isolated mirrors were refreshed on November 5 and match their pinned
+upstream file sets and bytes. Retail has 4,029 Interface files and 622 generated
+API Lua documents; Forever has 4,497 and 642. Relative to October 27, Retail
+changes 10 Interface files, including four generated API documents. Forever
+changes 166 Interface files, including 16 generated API documents, and adds
+eight files. Neither client removes files.
+
+Both clients add optional Battle.net title sub-icons and mark `UNIT_COMBAT`'s
+amount payload secret. Roleset filtering is now explicitly blocked for tainted
+callers during combat lockdown. Forever additionally splits the experience
+preset setter into pre-login and post-login functions, renames the Modern preset
+to Enhanced, adds highest-spell-rank and pending pet-move APIs, and tightens
+loss-of-control and crowd-control spell contracts. Its damage-meter source and
+target `specIconID` fields change from NeverSecret to SecretValue; native icon
+refresh now checks secrecy before comparing cached textures.
+
+Each client's taint index and LuaLS definitions were regenerated from its own
+snapshot and reproduce byte for byte. These source updates do not establish
+native rendering or gameplay compatibility.
+
+Follow-up compatibility fixes pass secret spec icons directly to texture setters
+and exclude them from GUID cache keys and spec-based breakout matching. Both
+comparison operands are guarded; readable GUID/local-player matching, readable
+icons, class fallbacks, and ambiguous-spec handling retain their existing behavior.
+Instrumented regressions exercise actual rendering, caching, and breakout code
+with secret icons, including numeric-type emulation for the cache and matching
+paths. The tests fail against the original unguarded code.
+
+Both clients' new `UNIT_COMBAT` secret amount payload is mapped to OnEvent
+parameter six with unconditional secrecy. Analyzer regressions use both current
+client indexes and the repository config: amount arithmetic is flagged, adjacent
+payload fields remain readable, and aura restriction checks cannot declassify
+the amount. QUI currently has no runtime handler for this event.
+
+The Forever reputation fixture now supplies the fill texture's `SetShown`
+method and verifies that native zero progress hides the fill. The refreshed
+native mixin uses this behavior to avoid rendering a full atlas at zero width.
+Both isolated FrameXML graphs were rebuilt. The root Graphify update retained
+the existing graph after its shrink guard rejected a smaller replacement.
+Corpus-refresh validation passed all nine `JOBS=12 LUA=/usr/bin/lua5.1 bash tools/test.sh`
+gates, including 1,354 unit files and 12 profile fixtures. Log:
+`/tmp/qui-corpus-refresh-20261105-final-gates.log`.
+Follow-up compatibility validation also passed all nine gates, now including
+1,356 unit files and 12 profile fixtures, without the UNIT_COMBAT coverage
+warning. Independent review found no issues and detected all 11 deliberately
+broken guards, texture pass-throughs, and payload mappings. Log:
+`/tmp/qui-compat-fixes-20261105-gates.log`. Native gameplay remains unverified.
+
+## October 27 corpus refresh receipt
 
 Retail follows **12.1.5.70575** on `live`, pinned to
 [`15881d52`](https://github.com/Gethe/wow-ui-source/tree/15881d522c44cd106d3d8660106ec9f9d2f44167).
