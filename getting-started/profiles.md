@@ -47,6 +47,9 @@ To set this up:
 3. Assign a profile to each of your specializations.
 4. When you change specs, QUI will automatically load the associated profile.
 
+On Forever, the assignments use the client's **Primary** and **Secondary** talent
+groups rather than Retail specializations.
+
 ## Import and Export
 
 Profiles can be imported and exported as shareable strings. This is the easiest way to:
@@ -58,6 +61,11 @@ Profiles can be imported and exported as shareable strings. This is the easiest 
 1. Open `/qui` and go to **General > Import / Export**.
 2. To **export**, select the data you want to export and copy the generated string.
 3. To **import**, paste a profile string into the import field and click Import.
+
+In stable 5.5.3, full, selected, and nameplate profiles can be imported between
+Retail and Forever. Client metadata is informational; payload validation still
+applies. Imports do not automatically convert spell or specialization data
+between clients.
 
 ## Partial Imports
 

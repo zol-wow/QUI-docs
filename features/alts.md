@@ -7,7 +7,7 @@ nav_order: 8
 
 # Alts
 
-QUI Alts is an optional beta module for account-wide character tracking. It builds on QUI's shared storage cache and gives you one window for roster, gear, professions, reputations, weeklies, currencies, and item search.
+QUI Alts is an optional module for account-wide character tracking. It builds on QUI's shared storage cache and gives you one window for roster, gear, professions, reputations, weeklies, currencies, and item search.
 
 {: .important }
 Alts is off by default. Enable it under `/qui` > **Module Addons**, then open it with `/alts` or `/quialts`.
@@ -48,5 +48,5 @@ The Alts datatext can show total account gold or tracked alt count. It works on 
 ## Good To Know
 
 - Deleting a character from the roster removes that character from the cache.
-- Equipment data fills from live character scans, so a character may show partial data until it has logged in on the current beta cache.
+- Equipment data fills from live character scans, so a character may show partial data until it has logged in on the current storage cache.
 - The Search tab depends on cached storage data; live bank and guild-bank data becomes richer after you open those storage windows at least once.

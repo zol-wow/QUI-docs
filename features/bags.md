@@ -7,7 +7,7 @@ nav_order: 6
 
 # Bags
 
-QUI Bags is an optional beta module that replaces the bag, bank, Warband bank, and guild bank windows with QUI-styled inventory tools.
+QUI Bags is an optional module that replaces the bag, bank, Warband bank, and guild bank windows with QUI-styled inventory tools.
 
 {: .important }
 Bags is off by default. Enable it under `/qui` > **Module Addons** when you want to test it. If you disable it, QUI hands bag windows back to Blizzard while the shared account storage cache keeps collecting data in the background.
@@ -67,7 +67,7 @@ Hover a recipe or pattern to see characters grouped by **Can learn** and **Alrea
 
 ## Good To Know
 
-- Bags is newer beta functionality. Keep normal bag muscle memory handy while testing it.
+- Bags is optional. Disable the module to return to Blizzard's inventory windows.
 - Bag-modifying operations cancel when combat starts.
 - Offline character inventory fills in as characters log in and the shared storage cache learns their current state.
 - Currency visibility and order are shared with the Currencies datatext, minimap panel, and Info Bar.

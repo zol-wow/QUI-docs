@@ -7,7 +7,7 @@ nav_order: 11
 
 # Info Bar
 
-The Info Bar is an optional beta module that adds a full-width bar at the top or bottom of the screen. It hosts datatext widgets, micro menu buttons, travel tools, spec switching, and plugin-style data feeds in one predictable strip.
+The Info Bar is an optional module that adds a full-width bar at the top or bottom of the screen. It hosts datatext widgets, micro menu buttons, travel tools, spec switching, and plugin-style data feeds in one predictable strip.
 
 {: .important }
 Info Bar is off by default. Enable it under `/qui` > **Module Addons**. It depends on the Datatexts module; if Datatexts is disabled, widget lists will be empty.
@@ -80,3 +80,11 @@ The Info Bar uses the same Currencies list as datatext panels, the minimap panel
 - Widget lists come from the Datatexts module.
 - Plugin-style data feeds appear in the same widget picker when available.
 - The Info Bar is meant for repeated scanning, not combat-critical alerts; keep your main combat HUD near the center of the screen.
+
+## Micro Menu Clicks
+
+Micro menu icons use Blizzard's native secure buttons in combat. Spellbook and
+Talents also use native clicks outside combat to avoid secret-value cooldown
+errors. In stable 5.5.3, Spellbook and Talents use their separate native buttons
+when available. Clients using the shared Player Spells fallback still open
+Blizzard's remembered or suggested tab. Native access restrictions still apply.

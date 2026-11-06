@@ -7,12 +7,13 @@ nav_order: 1
 
 # Installation
 
-QUI 5.5.2-beta10 supports **Midnight 12.1 live**, **Midnight 12.1.5 PTR**, and
-experimental **WoW Forever 1.60.1** in one archive. It will not load on the
+QUI 5.5.3 supports **Midnight 12.1 live**, **Midnight 12.1.5 PTR**, and
+experimental **WoW Forever 1.60.1** in one archive (interfaces **120100**,
+**120105**, and **16001**). It will not load on the
 12.0.x client. See the [release notes](../changelog) for Forever feature limits.
 
 {: .note }
-Select **Beta version 5.5.2-beta10** for live, PTR, or Forever. The same archive
+Select **Stable version 5.5.3** for live, PTR, or Forever. The same archive
 supports all three clients; install it into the client folder you will launch.
 
 ## Fastest Option: Addon Manager
@@ -21,13 +22,13 @@ For most players, the easiest path is an addon manager.
 
 1. Open the **CurseForge** or **WoWUp** application.
 2. Search for **"QUI Community Edition"**.
-3. Select the **Beta** release channel and click **Install**.
+3. Select the **Stable** release channel and click **Install**.
 4. The app handles updates automatically.
 
 ## Manual Install
 
-1. Download **5.5.2-beta10** from one of these sources:
-   - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.2-beta10)
+1. Download **5.5.3** from one of these sources:
+   - [GitHub Release](https://github.com/zol-wow/QUI/releases/tag/v5.5.3)
    - [CurseForge](https://www.curseforge.com/wow/addons/qui-community-edition)
 2. Extract the downloaded zip file.
 3. Copy every top-level `QUI*` folder from the zip into the target client's `Interface\AddOns\` directory. Use the installation folder for the live, PTR, or Forever client you will launch.
@@ -52,9 +53,9 @@ QUI is a multi-folder addon suite. If you manually copy only `QUI`, the options 
 
 Compatible integrations are detected automatically when they are present, but QUI does not need extra addons to work.
 
-## Beta Upgrade Safety
+## Upgrade Safety
 
-Before installing a beta build, back up your `WTF` folder. QUI takes automatic profile backups for some schema migrations, but a full `WTF` backup is still the safest rollback path.
+Before updating QUI, back up your `WTF` folder. QUI takes automatic profile backups for some schema migrations, but a full `WTF` backup is still the safest rollback path.
 
 {: .warning }
 **Upgrading from alpha8 on Forever:** later builds retain account-wide storage
