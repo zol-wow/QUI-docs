@@ -85,6 +85,6 @@ The Info Bar uses the same Currencies list as datatext panels, the minimap panel
 
 Micro menu icons use Blizzard's native secure buttons in combat. Spellbook and
 Talents also use native clicks outside combat to avoid secret-value cooldown
-errors. In stable 5.5.3, Spellbook and Talents use their separate native buttons
+errors. Since stable 5.5.3, Spellbook and Talents use their separate native buttons
 when available. Clients using the shared Player Spells fallback still open
 Blizzard's remembered or suggested tab. Native access restrictions still apply.

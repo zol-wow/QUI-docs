@@ -8,9 +8,14 @@ nav_order: 5
 
 This page summarizes the user-facing changes in each stable release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
 
-## Unreleased
+## Current Release: 5.5.4
 
-These changes are merged into main and will be included in a future stable release.
+> **Stable release.** One download supports Midnight 12.1 live, Midnight
+> 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
+> 120105, and 16001).
+
+QUI 5.5.4 brings the fixes from 5.5.4-beta1 to the stable channel. It retains
+the features and fixes from 5.5.3.
 
 ### Fixed
 
@@ -24,8 +29,7 @@ These changes are merged into main and will be included in a future stable relea
   additional consumable categories, slot icons for empty or uncached trinkets,
   and a question mark when a picker icon is unavailable.
 
-
-## Current Release: 5.5.3
+## v5.5.3
 
 > **Stable release.** One download supports Midnight 12.1 live, Midnight
 > 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
