@@ -99,9 +99,10 @@ Window background, header text, row name, row value, and border. All accept any 
 Lists every spawned window with type/session info. Each row has **Hide** and **Delete** controls:
 
 - **Hide** -- hides the window frame (state preserved across reload; type/session/position not lost). Useful for stashing a window without deleting it.
-- **Delete** -- removes the window permanently; the windowID is never reused.
+- **Delete** -- removes the window. Deleting every window stays saved after reload.
 
-"+ Add Window" creates a new window (capped at 5).
+"+ Add Window" creates a new window (capped at 5) with fresh screen anchors,
+including when replacing a deleted window.
 
 ### Per-window overrides
 
