@@ -23,6 +23,13 @@ One archive supports interfaces **120100**, **120105**, and **16001**.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
 
+{: .note }
+**Unreleased:** Changes available in 5.5.4-beta3 add Forever last-name controls,
+castbar label fallbacks, shared background controls, bag window color overrides,
+optional level difficulty colors, and unit-frame text anchors above the power
+bar. These changes are not included in stable 5.5.4; see the
+[Unreleased notes](changelog#unreleased).
+
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Features](features/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View on GitHub](https://github.com/zol-wow/QUI){: .btn .fs-5 .mb-4 .mb-md-0 }
