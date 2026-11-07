@@ -6,9 +6,18 @@ nav_order: 5
 
 # Changelog
 
-This page summarizes the user-facing changes in each stable release. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/main/CHANGELOG.md).
+This page summarizes the user-facing changes in the current beta and previous stable releases. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.5
+## Current Release: 5.5.6-beta1
+
+> **Beta release.** One download supports Midnight 12.1 live, Midnight
+> 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
+> 120105, and 16001).
+
+QUI 5.5.6-beta1 starts the next beta cycle from stable 5.5.5. It retains all
+features and fixes listed below, with no new runtime behavior in this release.
+
+## v5.5.5
 
 > **Stable release.** One download supports Midnight 12.1 live, Midnight
 > 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
