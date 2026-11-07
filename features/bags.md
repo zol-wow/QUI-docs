@@ -41,9 +41,6 @@ Bags is off by default. Enable it under `/qui` > **Module Addons** when you want
 
 ## Window Colors
 
-{: .note }
-Unreleased for stable; available in 5.5.4-beta3. These controls are not included in stable 5.5.4.
-
 Open **Bags → General → Window Colors** to choose a border source (global, theme accent, class, or custom), hide borders, or override the background color and opacity. Enable **Override Global Background** before choosing a custom fill; **Hide Background** removes that fill.
 
 The same settings are available under **Appearance → Border Coloring** and **Appearance → Background Coloring**. They apply to bag, bank, guild-bank, and Search Everywhere windows. Item-quality colors remain separate.

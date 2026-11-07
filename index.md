@@ -10,25 +10,18 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.4**
+**Current Release: 5.5.5**
 {: .label .label-purple }
 
 {: .note }
-**Stable 5.5.4 supports live and PTR, with experimental Forever support.**
-It builds on 5.5.3 with Damage Meter icon safety, saved window deletion,
-profile import fixes, more reliable settings rebuilds, and additional Forever
-Cooldown Manager category and trinket icons. It retains the features and fixes
-from 5.5.3.
+**Stable 5.5.5 supports live and PTR, with experimental Forever support.**
+It adds Forever last-name controls, castbar label fallbacks, shared background
+controls, bag window color overrides, optional level difficulty colors, and
+unit-frame text anchors above the power bar. It retains the features and fixes
+from 5.5.4.
 One archive supports interfaces **120100**, **120105**, and **16001**.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
-
-{: .note }
-**Unreleased:** Changes available in 5.5.4-beta3 add Forever last-name controls,
-castbar label fallbacks, shared background controls, bag window color overrides,
-optional level difficulty colors, and unit-frame text anchors above the power
-bar. These changes are not included in stable 5.5.4; see the
-[Unreleased notes](changelog#unreleased).
 
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Features](features/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
