@@ -8,7 +8,7 @@ nav_order: 5
 
 This page summarizes the user-facing changes in the current beta and previous stable releases. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.4-beta2
+## Current Release: 5.5.4-beta3
 
 > **Beta release.** One download supports Midnight 12.1 live, Midnight
 > 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
@@ -18,6 +18,15 @@ This beta builds on stable 5.5.3 with the following improvements and fixes.
 
 ### Improved
 
+- **Appearance > Background Coloring** brings existing background controls
+  together while retaining each feature's settings. Ready checks, alerts, and
+  Forever swing timers also have matching controls on their own settings pages.
+- **Bags > General > Window Colors** adds border and background overrides,
+  including hide options, for bag, bank, guild bank, and search windows.
+- **Level Difficulty Color** is available for player, target, target-of-target,
+  focus, pet, and boss unit frames. It is off by default, preserves your chosen
+  opacity, and falls back to the manual color when difficulty is unavailable.
+  Colors use effective levels, refresh when you level up, and appear in previews.
 - Forever shows first and last names by default on nameplates, individual unit
   frames, and party and raid frames. **Show Last Name** controls let you change
   this per frame or nameplate type; party targets inherit the party setting.
@@ -25,6 +34,12 @@ This beta builds on stable 5.5.3 with the following improvements and fixes.
 
 ### Fixed
 
+- Unit-frame name, level, health, and power text anchor to the health area,
+  keeping bottom-anchored text above the power bar in live frames and settings
+  previews.
+- Selective profile exports retain background settings for status tracking bars,
+  alerts, ready checks, and swing timers in their matching categories.
+- Border Coloring navigation shows its category links on the first visit.
 - Casts and channels use the action name when the game's display label
   is empty, while preserving the game-provided icon.
 - Damage Meter handles restricted native icons safely and preserves Mythic+
