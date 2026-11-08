@@ -36,6 +36,10 @@ now use PTR build **12.1.7.70740**; Forever remains at **1.60.1.70790**.
 Mail window styling retains Alpha's native page buttons and instance refreshes,
 including newly populated inbox rows and opened-mail attachments.
 
+Empty bag slots retain QUI's background after native appearance refreshes.
+The minimap's external-event shortcut stays in QUI's position through PTR event
+and scale updates and returns to Blizzard's layout when QUI releases it.
+
 ## v5.5.6-beta1
 
 > **Beta release.** One download supports Midnight 12.1 live, Midnight
