@@ -63,8 +63,13 @@ _Use the Per-Bar page when one bar needs its own size, spacing, or layout withou
 | Lock buttons | Prevent dragging spells off bars | Enabled |
 | Range indicator | Tint out-of-range red | Enabled |
 | Fast usability | 50ms usability checks | Disabled |
+| Auto-upgrade Spell Ranks | Forever: replace the previous highest rank when a higher rank is learned | Enabled |
 
 ## Good To Know
+
+On Forever, **General > Auto-upgrade Spell Ranks** updates slots using your previous highest known rank when you learn a higher one. Deliberately lower ranks and macros stay as you placed them. Changes wait until you leave combat and your cursor is empty; slots you change while waiting are preserved.
+
+Enabling the setting, logging in, or switching profiles establishes your current ranks without changing existing placements. Upgrades apply to ranks learned afterward. Turn the setting off to manage every rank manually.
 
 {: .note }
 The mouseover fade system pairs well with QUI's Cooldown Manager. With your rotation cooldowns visible via the CDM, you can safely fade your action bars to keep a clean HUD and still know exactly what is available.
