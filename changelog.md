@@ -8,14 +8,37 @@ nav_order: 5
 
 This page summarizes the user-facing changes in the current beta and previous stable releases. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.6-beta1
+## Current Release: 5.5.6-beta2
 
-> **Beta release.** One download supports Midnight 12.1 live, Midnight
-> 12.1.5 PTR, and experimental WoW Forever 1.60.1 (interfaces 120100,
-> 120105, and 16001).
+> **Beta release.** QUI supports WoW Retail and WoW Forever.
 
-QUI 5.5.6-beta1 starts the next beta cycle from stable 5.5.5. It retains all
-features and fixes listed below, with no new runtime behavior in this release.
+QUI 5.5.6-beta2 continues the beta cycle started from stable 5.5.5 in beta1.
+It retains all features and fixes listed below. One archive supports interfaces
+120100, 120105, and 16001.
+
+### Added
+
+- Forever action bars automatically replace the previous highest spell rank
+  when a higher rank is learned. **Auto-upgrade Spell Ranks** is enabled by
+  default; deliberately lower ranks, macros, and items are preserved. Changes
+  wait until you leave combat and your cursor is empty.
+
+### Improved
+
+- The Cooldown Manager spell picker hides lower spell ranks. Existing saved
+  selections keep their assigned IDs.
+- Filled bars use rounded borders on Retail and Forever, including swing
+  timers and thicker border settings.
+
+### Fixed
+
+- Empty bag and bank slots retain QUI styling instead of native background art.
+- The spellbook filter dropdown uses QUI styling, and the expand/collapse
+  control fits within its header.
+- The Forever character panel includes the player's surname.
+- Opening the Reminders Journal no longer attempts to restore invalid tier zero.
+- Quest-interaction cast and channel bars show localized **Opening** instead of
+  the internal **Opening - No Text** label, while preserving descriptive text.
 
 ## v5.5.5
 
