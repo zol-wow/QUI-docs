@@ -16,12 +16,13 @@ A modular World of Warcraft UI suite for Midnight 12.1.7 PTR and WoW Forever 1.6
 {: .warning }
 **Alpha testing: WoW 12.1.7 PTR and WoW Forever 1.60.1 (interfaces 120107 and 16001).** Forever support is experimental, with bank, group-frame, and swing-timer support. See the [release notes](changelog) for changes and client-specific features.
 
-The Alpha branch includes Beta updates through 5.5.3-beta1, including mover
-anchor spacing and settings navigation, group-frame cleanse glow controls,
-cooldown refreshes, Blizzard window styling, and Forever swing timer and
-movement-stat improvements. Earlier Beta fixes remain included. The latest
-published Alpha release remains 5.5.0-ptr-alpha10 and predates the branch's
-12.1.7 PTR corpus refresh.
+The Alpha branch includes Beta updates through 5.5.6-beta1 and stable 5.5.5,
+including shared background controls, bag window color overrides, optional
+level difficulty colors, Forever last-name controls, castbar label fallbacks,
+and unit-frame text anchors above the power bar. Earlier Beta fixes remain
+included. These changes are unreleased on Alpha; the latest published Alpha
+release remains 5.5.0-ptr-alpha10 and predates the branch's 12.1.7 PTR corpus
+refresh.
 
 [Get Started](getting-started/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Explore Features](features/){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -55,7 +56,7 @@ QUI is a multi-folder addon suite. Addon-manager installs handle this automatica
 1. Open the [Getting Started](getting-started/) guide.
 2. Follow the [Installation](getting-started/installation) steps.
 3. Run through the [First Setup](getting-started/first-setup) walkthrough.
-4. Review [Module Addons](getting-started/module-addons) so you know which beta modules are opt-in.
+4. Review [Module Addons](getting-started/module-addons) so you know which modules are opt-in.
 5. Use [Layout Mode](features/frame-layout) to place your HUD where it feels natural.
 6. Browse the [Features](features/) section to decide what you want QUI to handle for you.
 
@@ -71,6 +72,7 @@ QUI is a multi-folder addon suite. Addon-manager installs handle this automatica
 | [**Unit Frames**](features/unit-frames) | Replaces your combat frames with cleaner, more configurable player, target, focus, pet, and boss frames. |
 | [**Group Frames**](features/group-frames) | Adds opt-in party and raid frames built for healing, support, and high-information group play. |
 | [**Custom Trackers**](features/custom-trackers) | Lets you build extra bars for trinkets, utility spells, consumables, or niche encounter tracking. |
+| [**Spell Reminders**](features/spell-reminders) | Adds cooldown prompts, sounds, spoken alerts, and Power Infusion tracking and requests. |
 | [**HUD Visibility**](features/hud-visibility) | Controls when HUD elements appear, fade, or hide so your screen stays clean outside combat. |
 | [**Damage Meter**](features/damage-meter) | Adds QUI-styled native damage meter windows with selectable views and layout controls. |
 
@@ -102,6 +104,7 @@ QUI is a multi-folder addon suite. Addon-manager installs handle this automatica
 |:--------|:------------|
 | [**Character Pane**](features/character-pane) | Adds more gear and stat context to your character and inspect windows. |
 | [**Alts**](features/alts) | Tracks account-wide characters, equipment, currencies, reputations, weeklies, professions, and item locations. |
+| [**Underlight Angler Helper**](features/underlight-angler-helper) | Tracks the fishing artifact unlock and restores its trait tree with purchase confirmations. |
 | [**Blizzard Frame Mover**](features/blizzard-frame-mover) | Lets you drag more default UI pieces without relying entirely on Edit Mode. |
 | [**Quality of Life**](features/quality-of-life) | Bundles helpful automation, reminders, and convenience tools that save clicks every session. |
 | [**Skyriding**](features/skyriding) | Improves Skyriding readability with a clearer vigor and speed display. |
@@ -125,7 +128,7 @@ QUI is a multi-folder addon suite. Addon-manager installs handle this automatica
 If you want a clean result quickly, start with these pages:
 
 - [**First Setup**](getting-started/first-setup) for the 10-minute setup path.
-- [**Module Addons**](getting-started/module-addons) before enabling beta modules like Bags, Info Bar, Alts, or QUI Chat.
+- [**Module Addons**](getting-started/module-addons) before enabling optional modules like Bags, Info Bar, Alts, or QUI Chat.
 - [**Cooldown Manager**](features/cooldown-manager) if you want the signature combat HUD.
 - [**Frame Layout**](features/frame-layout) if you want to move, anchor, or refine your screen.
 - [**Action Bars**](features/action-bars) and [**Minimap & Data Panels**](features/minimap-datatext) for overall polish.
