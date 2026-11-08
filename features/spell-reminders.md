@@ -33,6 +33,18 @@ An encounter-start reminder displays for the configured ready duration, or ten
 seconds when that duration is zero. It announces readiness only when the spell
 is reported ready.
 
+## Placement and Settings
+
+The settings list your saved reminders and adapt the tabs and scrolling to the
+available space. Use sidebar section links to reach controls for the selected
+reminder. Preview placement survives settings updates, including icon-size and
+enable changes. The drag area includes Power Infusion recipient previews.
+
+Layout Mode provides reminder anchoring controls and settings gears. When movers
+overlap, use its chooser to select the one you want. Reminder preview artwork
+stops during combat so normal cooldown displays and saved gameplay visibility
+apply.
+
 ## Power Infusion
 
 The PI preset adds three tabs:

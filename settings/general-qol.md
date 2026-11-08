@@ -44,6 +44,10 @@ Override health bar and background colors with a dark theme.
 
 Control class colors, health bar colors, hostility colors, and text color overrides.
 
+**Appearance → Background Coloring** collects background colors and opacity controls in one page. These edit the same settings as each feature's own page. Individual units, nameplate types, aura bars, and datatext panels retain their own values. The global background picker is also available in **Theme & Colors**; features with **Override Global Background** inherit it until that override is enabled.
+
+**Appearance → Border Coloring** provides the corresponding border controls, including Bags. Bag window overrides are also available under **Bags → General → Window Colors**.
+
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
 | `masterColorNameText` | boolean | `false` | Apply class/reaction color to name text |

@@ -7,11 +7,13 @@ nav_order: 21
 
 # Damage Meter
 
-QUI ships a native damage meter for Midnight 12.1+. It provides QUI-styled meter windows with Layout Mode placement, selectable views, row breakdowns, and per-window appearance controls.
+QUI provides native-backed damage meter windows on Midnight 12.1.7 PTR
+and experimental WoW Forever 1.60.1. Windows support Layout Mode placement,
+selectable views, row breakdowns, and per-window appearance controls.
 
 ## How to Enable
 
-Enabled by default. To disable, open `/qui` and navigate to **Appearance > Damage Meter (Native)** and set Visibility to *Hidden*. Re-enable by switching back to *Always* or *In Combat*.
+Enabled by default. To disable, open `/qui` and navigate to **Gameplay → Damage Meter** and set Visibility to *Hidden*. Re-enable by switching back to *Always* or *In Combat*.
 
 When QUI's meter is enabled, the stock damage meter is hidden. Toggling QUI's meter off restores the stock meter on the next login.
 
@@ -54,14 +56,13 @@ chat when no matching home group exists. Messages share the bundled throttling
 queue. Empty or restricted data produces an unavailable message rather than a
 partial report.
 
-
 Click any **row** to open a reusable five-pane detail workspace for spells, targets, attackers, and death recaps. Resize the workspace and its panes to suit your layout; their sizes are saved. Target rows drill down to their spells. Row-hover details remain independent and interactive.
 
 Spell names and healing rows remain available during combat. When restricted values prevent combining healing and absorbs, QUI retains the native healing view.
 
 **Hover** a row for a fresh spell, target, attacker, or Death recap preview. The default shows up to 15 rows; compact mode shows 8. During combat, rich details remain available for the local player's row and Death recaps, while restricted rows fall back to a summary tooltip. Death details include event timing, HP, healing/damage, and overkill; an unavailable custom recap falls back to Blizzard's native recap on click.
 
-## Settings (`/qui` -> Appearance > Damage Meter (Native))
+## Settings (`/qui` → Gameplay → Damage Meter)
 
 ### Behavior
 
@@ -98,9 +99,10 @@ Window background, header text, row name, row value, and border. All accept any 
 Lists every spawned window with type/session info. Each row has **Hide** and **Delete** controls:
 
 - **Hide** -- hides the window frame (state preserved across reload; type/session/position not lost). Useful for stashing a window without deleting it.
-- **Delete** -- removes the window permanently; the windowID is never reused.
+- **Delete** -- removes the window. Deleting every window stays saved after reload.
 
-"+ Add Window" creates a new window (capped at 5).
+"+ Add Window" creates a new window (capped at 5) with fresh screen anchors,
+including when replacing a deleted window.
 
 ### Per-window overrides
 

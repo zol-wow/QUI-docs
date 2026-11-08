@@ -98,7 +98,7 @@ Group frames replace Blizzard's secure group frame headers, which can only be sw
 
 ## Bags, Info Bar, Or Alts Do Not Open
 
-These modules are opt-in beta features.
+These modules are opt-in features.
 
 1. Open `/qui` > **Module Addons**.
 2. Enable the module you want.

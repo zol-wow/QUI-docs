@@ -13,7 +13,7 @@ QUI offers two chat paths: lightweight styling for Blizzard chat, or the opt-in 
 
 The default path keeps Blizzard chat and applies readability features such as cleaner chrome, font handling, URLs, timestamps, sound alerts, and message history.
 
-The QUI Chat module is a larger beta feature. It owns the visible chat display, supports multiple chat windows, saved tabs, whisper conversation tabs, copy tools, a custom scrollbar, tab overflow, and an embedded Combat Log tab.
+The QUI Chat module is an optional module. It owns the visible chat display, supports multiple chat windows, saved tabs, whisper conversation tabs, copy tools, a custom scrollbar, tab overflow, and an embedded Combat Log tab.
 
 ## How to Enable
 
@@ -82,4 +82,4 @@ When URL detection is enabled, clicking a URL in chat opens a small dialog where
 The edit box "position top" option moves the chat input above the chat window instead of below it. Some players prefer this layout as it keeps the input closer to the center of the screen.
 
 {: .important }
-QUI Chat is a beta takeover module. If you prefer the stock chat flow, leave the Chat module disabled and use the styling options only.
+QUI Chat is an optional replacement for the chat display. If you prefer the stock chat flow, leave the Chat module disabled and use the styling options only.
