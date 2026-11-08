@@ -10,16 +10,16 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.6-beta1**
+**Current Release: 5.5.6-beta2**
 {: .label .label-purple }
 
 {: .note }
-**Beta 5.5.6-beta1 supports live and PTR, with experimental Forever support.**
-It starts the 5.5.6 beta cycle from stable 5.5.5 with no new runtime behavior.
-It retains Forever last-name controls, castbar label fallbacks, shared background
-controls, bag window color overrides, optional level difficulty colors, and
-unit-frame text anchors above the power bar, along with all earlier features
-and fixes.
+**Beta 5.5.6-beta2 supports WoW Retail and WoW Forever.**
+Forever action bars automatically upgrade newly learned spell ranks by default,
+while preserving deliberately lower ranks. The spell picker hides lower ranks,
+and filled bars use matching rounded borders. This beta also fixes spellbook
+controls, empty bag slots, character surnames, quest-interaction cast labels,
+and a Reminders Journal error. It retains all features and fixes from stable 5.5.5.
 One archive supports interfaces **120100**, **120105**, and **16001**.
 See the [release notes](changelog) for cumulative changes and client-specific
 limits.
