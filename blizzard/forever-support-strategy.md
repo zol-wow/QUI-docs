@@ -32,8 +32,17 @@ establish native gameplay or combat compatibility.
 A native-source replay identified an empty-bag-slot styling incompatibility:
 the new `ContainerFrameItemButtonMixin:GetItemButtonBackgroundTexture()` ignores
 QUI's cleared `emptyBackgroundAtlas` and returns `bags-item-slot64`, which
-`SetItemButtonTexture(button, nil)` displays over QUI's slot background. The
-corpus refresh records this finding without changing addon runtime behavior.
+`SetItemButtonTexture(button, nil)` displays over QUI's slot background. QUI now
+overrides that getter only on its own live bag buttons, preserving empty-slot
+styling through native appearance refreshes without suppressing occupied icons.
+
+PTR external-event button refreshes and minimap scale callbacks also reapply
+Blizzard's anchor before calculating the minimap inset. QUI restores its owned
+button's position after that anchor call so the native inset uses the final
+position. Releasing minimap ownership restores Blizzard's parent and anchor;
+combat deferral and native availability, click and effect handling remain intact.
+Native-source regression tests cover these changes; in-client rendering and
+combat acceptance remain unverified.
 
 ## October 17 Alpha corpus snapshots
 
