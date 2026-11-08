@@ -32,7 +32,7 @@ these integrated changes have not been published as a new Alpha release.
 
 The latest published Alpha release remains **5.5.0-ptr-alpha10** and predates
 the branch's 12.1.7 PTR corpus refresh. Retail API documentation and FrameXML
-retain PTR build **12.1.7.70424**; Forever advances to **1.60.1.70790**.
+now use PTR build **12.1.7.70740**; Forever remains at **1.60.1.70790**.
 Mail window styling retains Alpha's native page buttons and instance refreshes,
 including newly populated inbox rows and opened-mail attachments.
 

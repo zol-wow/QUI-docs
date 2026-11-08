@@ -11,15 +11,29 @@ QUI source inspected: Alpha `ee58125e01f7b1da4d6e967a4d375ee914691c1d`.
 
 ## Unreleased Alpha integration — November 7
 
-Alpha includes Beta updates through 5.5.6-beta1 and stable 5.5.5. Retail retains
-its **12.1.7.70424** PTR snapshot at
-[`b87363e0`](https://github.com/Gethe/wow-ui-source/tree/b87363e0770c2f15b1e2f154de8ad3b0cf3ea90a),
+Alpha includes Beta updates through 5.5.6-beta1 and stable 5.5.5. Retail now uses
+the **12.1.7.70740** PTR snapshot at
+[`e927c305`](https://github.com/Gethe/wow-ui-source/tree/e927c305f67ed6b3b460bc00d0c39055747b9119),
 while Forever advances to **1.60.1.70790** at
 [`eac30af5`](https://github.com/Gethe/wow-ui-source/tree/eac30af597e5aaa43a60f6675ef5fdcea100375f).
 The latest published Alpha release remains **5.5.0-ptr-alpha10**; this
 integration does not publish a new archive. The dated receipts below describe
 their original channel snapshots and validation, including stable's separate
 Retail snapshot.
+
+The November 7 PTR refresh updates the paired API-documentation and FrameXML
+mirrors from the same pinned source: 647 generated Lua documents and 4,625
+Interface files. Relative to build 70424, it changes 31 API documents and adds
+one; the full Interface mirror changes 323 files, adds 56, and removes four.
+The Retail taint index and LuaLS definitions are regenerated from that snapshot.
+Forever's isolated corpus remains unchanged. These reference updates do not
+establish native gameplay or combat compatibility.
+
+A native-source replay identified an empty-bag-slot styling incompatibility:
+the new `ContainerFrameItemButtonMixin:GetItemButtonBackgroundTexture()` ignores
+QUI's cleared `emptyBackgroundAtlas` and returns `bags-item-slot64`, which
+`SetItemButtonTexture(button, nil)` displays over QUI's slot background. The
+corpus refresh records this finding without changing addon runtime behavior.
 
 ## October 17 Alpha corpus snapshots
 
