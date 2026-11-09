@@ -8,11 +8,11 @@ nav_order: 5
 
 This page summarizes the user-facing changes in the current beta and previous stable releases. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.6-beta2
+## Current Release: 5.5.6-beta3
 
 > **Beta release.** QUI supports WoW Retail and WoW Forever.
 
-QUI 5.5.6-beta2 continues the beta cycle started from stable 5.5.5 in beta1.
+QUI 5.5.6-beta3 continues the beta cycle started from stable 5.5.5 in beta1.
 It retains all features and fixes listed below. One archive supports interfaces
 120100, 120105, and 16001.
 
@@ -32,6 +32,10 @@ It retains all features and fixes listed below. One archive supports interfaces
 
 ### Fixed
 
+- Unit-frame castbars on Retail and Forever update their progress, countdown,
+  and finish time when damage delays a cast or changes channel timing.
+- Refreshing boss casts longer than five seconds preserves their elapsed time
+  instead of restarting the displayed duration.
 - Empty bag and bank slots retain QUI styling instead of native background art.
 - The spellbook filter dropdown uses QUI styling, and the expand/collapse
   control fits within its header.
