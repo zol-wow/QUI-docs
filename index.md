@@ -10,11 +10,14 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.6-beta2**
+**Current Release: 5.5.6-beta3**
 {: .label .label-purple }
 
 {: .note }
-**Beta 5.5.6-beta2 supports WoW Retail and WoW Forever.**
+**Beta 5.5.6-beta3 supports WoW Retail and WoW Forever.**
+Unit-frame castbars now update their progress and countdown when damage delays
+a cast or changes channel timing. Long boss casts keep their elapsed time when
+refreshed.
 Forever action bars automatically upgrade newly learned spell ranks by default,
 while preserving deliberately lower ranks. The spell picker hides lower ranks,
 and filled bars use matching rounded borders. This beta also fixes spellbook
