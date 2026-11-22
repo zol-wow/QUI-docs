@@ -8,11 +8,11 @@ nav_order: 5
 
 This page summarizes the user-facing changes in the current beta and previous stable releases. For every release entry and technical fix, see the full [CHANGELOG.md](https://github.com/zol-wow/QUI/blob/beta/CHANGELOG.md).
 
-## Current Release: 5.5.6-beta3
+## Current Release: 5.5.6-beta4
 
 > **Beta release.** QUI supports WoW Retail and WoW Forever.
 
-QUI 5.5.6-beta3 continues the beta cycle started from stable 5.5.5 in beta1.
+QUI 5.5.6-beta4 continues the beta cycle started from stable 5.5.5 in beta1.
 It retains all features and fixes listed below. One archive supports interfaces
 120100, 120105, and 16001.
 
@@ -32,6 +32,14 @@ It retains all features and fixes listed below. One archive supports interfaces
 
 ### Fixed
 
+- TradeSkillMaster's settings window opens while QUI Chat is enabled instead
+  of failing with an assertion error and an empty page.
+- A module's **Enable** switch on its settings page, in search results, and in
+  the setup wizard matches its sidebar switch when the module's addon is
+  disabled for the current character.
+- Turning a module on or off from search results or the setup wizard also
+  enables or disables its addon for the current character, as the sidebar
+  switch does.
 - Unit-frame castbars on Retail and Forever update their progress, countdown,
   and finish time when damage delays a cast or changes channel timing.
 - Refreshing boss casts longer than five seconds preserves their elapsed time
