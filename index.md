@@ -10,11 +10,14 @@ nav_order: 1
 A modular World of Warcraft UI suite for Midnight 12.1 live, Midnight 12.1.5 PTR, and experimental WoW Forever 1.60.1 that you can install, understand, and tune from one settings experience.
 {: .fs-6 .fw-300 }
 
-**Current Release: 5.5.6-beta3**
+**Current Release: 5.5.6-beta4**
 {: .label .label-purple }
 
 {: .note }
-**Beta 5.5.6-beta3 supports WoW Retail and WoW Forever.**
+**Beta 5.5.6-beta4 supports WoW Retail and WoW Forever.**
+TradeSkillMaster's settings window now opens while QUI Chat is enabled, and
+each module's Enable switch matches its sidebar switch when the module's addon
+is disabled for the current character.
 Unit-frame castbars now update their progress and countdown when damage delays
 a cast or changes channel timing. Long boss casts keep their elapsed time when
 refreshed.
